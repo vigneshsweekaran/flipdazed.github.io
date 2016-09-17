@@ -19,15 +19,14 @@ $border_color: #DDD;
 // begin header CSS code
 .site-header {
   background: #fff;
-    
   nav {
-    padding: 22px 30px;
-        
-    > a{
+    padding: 10px 0px;
+    > ul div a {
       color: #444;
       margin-right: 1.8em;
       font-weight: 600;
       font-size: 15px;
+      text-decoration: none;
       &:hover { color:$accent; }
     }
     
@@ -36,6 +35,12 @@ $border_color: #DDD;
       height:40px;
       margin-top:-2px;
       vertical-align: middle;
+    }
+    .forceleft{
+        float:left;
+    }
+    .forceright{
+        float:right;
     }
   }
 }
@@ -51,6 +56,7 @@ $border_color: #DDD;
   background-color: #111;
   background-size: cover;
   background-position: center center;
+  margin-bottom:20px;
 }
 
 .cover-caption {
