@@ -1,32 +1,36 @@
-default:                                                      # Fallback if nothing is specified
-  initial:      am                                      # used for author lookup in posts and for first two characters in the about page back button
-  name:         "Alex McFarlane"                                # used to display author name
-  cover:        /assets/piha.jpg        # OPTIONAL: defines location of cover image in about page
-  picture:      /assets/Cliffs.jpg                          # OPTIONAL: author picture
-  bio:          Nerd Stuff                          # OPTIONAL: text below author name in posts
-  location:     United Kingdom                                       # OPTIONAL: used to display location of the author
-  website:      "flipdazed.github.io"                    # OPTIONAL: link to the author of a post
-  email:                                                      # OPTIONAL: used in the about page
-  twitter:      flipdazed                                   # OPTIONAL: used in the about page
-  linkedin:     asmcfarlane                                     # OPTIONAL: used in the about page
-  xing:                                                       # OPTIONAL: used in the about page
-  github:       flipdazed                                      # OPTIONAL: used in the about page
-  stackoverflow: 4013571                                      # OPTIONAL: used in the about page
-  facebook:                                                   # OPTIONAL: used in the about page
-  gplus:                                                      # OPTIONAL: used in the about page
-  soundcloud:                                                 # OPTIONAL: used in the about page
-  youtube:                                                    # OPTIONAL: used in the about page
-  pinterest:                                                  # OPTIONAL: used in the about page
-  dribble:                                                    # OPTIONAL: used in the about page
-  behance:                                                    # OPTIONAL: used in the about page
+# Thsi is the default author if none is specified
+# It also demonstrates the options availabel when creating new authors
+default:
+  initial:       am                                  # used for author lookup in posts
+  name:          "Alex McFarlane"                    # used to display author name
+  cover:         /assets/piha.jpg                    # OPTIONAL: defines location of cover image in about page
+  picture:       /assets/Cliffs.jpg                  # OPTIONAL: author picture
+  bio:           Nerd Stuff                          # OPTIONAL: text below author name in posts
+  location:      United Kingdom                      # OPTIONAL: used to display location of the author
+  website:       "flipdazed.github.io"               # OPTIONAL: link to the author of a post
+  email:                                             # OPTIONAL: used in the about page
+  twitter:       flipdazed                           # OPTIONAL: used in the about page
+  linkedin:      asmcfarlane                         # OPTIONAL: used in the about page
+  xing:                                              # OPTIONAL: used in the about page
+  github:        flipdazed                           # OPTIONAL: used in the about page
+  stackoverflow: 4013571                             # OPTIONAL: used in the about page
+  facebook:                                          # OPTIONAL: used in the about page
+  gplus:                                             # OPTIONAL: used in the about page
+  soundcloud:                                        # OPTIONAL: used in the about page
+  youtube:                                           # OPTIONAL: used in the about page
+  pinterest:                                         # OPTIONAL: used in the about page
+  dribble:                                           # OPTIONAL: used in the about page
+  behance:                                           # OPTIONAL: used in the about page
+
+#  This is thge information that will be displayed for the author described as am
 am:
-  initial:      am
-  name:         "Alex McFarlane"        
-  cover:        /assets/piha.jpg
-  picture:      /assets/Cliffs.jpg
-  bio:          Nerd Stuff
-  location:     United Kingdom 
-  website:      "flipdazed.github.io" 
-  linkedin:     asmcfarlane
-  github:       flipdazed
-  stackoverflow: 4013571
+  initial:          am
+  name:             "Alex McFarlane"
+  cover:            /assets/piha.jpg
+  picture:          /assets/Cliffs.jpg
+  bio:              Nerd Stuff
+  location:         United Kingdom
+  website:          "flipdazed.github.io" 
+  linkedin:         asmcfarlane
+  github:           flipdazed
+  stackoverflow:    4013571

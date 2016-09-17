@@ -1,5 +1,6 @@
 @import './_color';
 @import './_size';
+@import './_fonts';
 
 html {
     height: 100%;
@@ -11,7 +12,7 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: 'Merriweather', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+    font-family: $font;
     letter-spacing: 0.01rem;
     font-size: $size-font-normal;
     line-height: 1.75em;
@@ -39,7 +40,7 @@ h6 {
     color: $color-text-header;
     line-height: 1.15em;
     margin: 0 0 0.7em 0;
-    font-family: 'Open Sans', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+    font-family: $font, sans-serif;
     text-rendering: geometricPrecision;
 }
 
