@@ -9,7 +9,7 @@ author:            am
 cover:             /assets/mountain-alternative-cover.jpg
 published:         true
 redirect_from:     "/YAML-Features-Redirect/"
-cover:             /assets/mountain-alternative-cover.jpg
+cover:             /assets/math.png
 language:          EN
 comments:          true
 ---

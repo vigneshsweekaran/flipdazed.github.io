@@ -24,8 +24,18 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Apply these base styles to all fa */
+[class^="fa-"]:before, [class*=" fa-"]:before {
+    text-decoration: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 /* Each icon is created by inserting the correct character into the
    content of the :before pseudo element. Like a boss. */
+.icon-phantom:before {
+}
+
 .icon-ghost:before {
     content: "\f600";
 }

@@ -7,7 +7,7 @@
 
 # Site settings
 title:            Alex McFarlane
-subtitle:         Nerd Stuff
+subtitle:         Quant Finance | Theoretical Physics | Mathematics
 description:      
 keywords:         physics monte-carlo mathematics hamiltonian-monte-carlo hmc
 language:         "en" # default language of the blog. Language codes: http://www.w3schools.com/tags/ref_language_codes.asp
@@ -15,14 +15,15 @@ language:         "en" # default language of the blog. Language codes: http://ww
 baseurl:          "" # the subpath of your site, e.g. /blog
 url:              "http://flipdazed.github.io" # the base hostname & protocol for your site. Have a look at robots.txt as well!
 permalink:        /blog/:categories/:title
-cover:            /assets/math.png
-disqus_shortname: #"jekylldecent"
+cover:            /assets/millford.jpg
+disqus_shortname: flipdazed
 
 # Build settings
 markdown: kramdown
 kramdown:
   syntax_highlighter_opts:
     disable: true
+  math_engine: mathjax
 include: ['_pages']
 exclude: [vendor]
 gems:

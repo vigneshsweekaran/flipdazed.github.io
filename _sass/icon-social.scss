@@ -1,4 +1,6 @@
-﻿@font-face {
+﻿@import './_fonts';
+
+@font-face {
     font-family: 'social';
     src: url('../fonts/social.eot?36242447');
     src: url('../fonts/social.eot?36242447#iefix') format('embedded-opentype'), url('../fonts/social.woff2?36242447') format('woff2'), url('../fonts/social.woff?36242447') format('woff'), url('../fonts/social.ttf?36242447') format('truetype'), url('../fonts/social.svg?36242447#social') format('svg');
@@ -49,8 +51,14 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     /* Uncomment for 3D effect */
-    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
 }
+
+/* Each icon is created by inserting the correct character into the
+   content of the :before pseudo element. Like a boss. */
+.social-phantom:before {
+}
+
 
 .social-mail-alt:before {
     content: '\e800';

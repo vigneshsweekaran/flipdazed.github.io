@@ -4,28 +4,45 @@ permalink: "/about/"
 author:    am
 keywords:  about person demo example
 title:     About Me
-menutitle: About
+menutitle: About Me
 weight:    90
 excerpt:   This page contains the curriculum vitae (CV) of the author.
 ---
 
-## Profile
+Studying towards MSc in Theoretical Physics at The University of Edinburgh with a focus on quantum field theory and lattice field theory. I spend most of my time these days coding or doing maths.
 
-Integer sit amet libero non sapien sagittis dapibus. Phasellus gravida quam ac nisl finibus dictum. Pellentesque vel orci et nisi pretium tincidunt nec a diam. Vivamus et leo eu lorem congue pellentesque id sed tortor. Nulla et nibh neque. Sed ut fermentum lectus, id rhoncus erat.
-
----
-
-## Skills
-
-- Praesent ac augue imperdiet, interdum purus id, sollicitudin sem.
-- Sed pellentesque urna a magna suscipit volutpat.
-- Donec ultricies lectus non augue dictum hendrerit ac ac lorem.
-- Integer eget dui eu purus luctus posuere in non metus.
-- Nam ac felis eget tortor blandit gravida non et diam.
+**key languages** `python` `mathematica` `Fortran` `VBA`
 
 ---
 
-## Education
+## Projects
 
-2009 - 2012
-: Mauris vitae velit vel leo suscipit tempus vel vel elit.
+I tend to keep busy. Here's a list of some of the things I have been up to.
+
+#### Current
+
+ - Deep Learning (DBNs/CNNs) for Weather Modelling `python`
+ - Further develop Hybrid Monte Carlo library `python`
+ - Basic algo. trading models: $\mu$ revert, tech. analysis, $\sigma$ target `python`
+ - Build a half pipe `plywood`
+
+#### Previous
+
+ - Autocorrelations in Generalised Hybrid Monte Carlo (HMC) `python` `Mathematica` `C++`
+ - Basic algo. trading models: momentum, historic pattern recognition `python`
+ - Web Scraping: recursive crawlers, PDF parsing, custom APIs `python` `SQL` `regex` `xpath`
+ - Time-Series forecasting: ARIMA, X11, X13, various others `python`
+ - GARCH, E-GARCH using various random distributions `Fortran`
+ - BFGS solver `Fortran`
+ - Genetic Algorithm `Fortran`
+ - Binomial pricing model `Fortran`
+ - Neural Nets `Fortran`
+
+---
+
+## Random
+I drink lots of coffee but don't really like it. Top speed on a snowboard is just under 80mph. I set my tabs to four spaces. Favourite beer is Guinness.
+
+> Physics is like sex: sure, it may give some practical results, but that's not why we do it
+>
+> <cite>Richard Feynman</cite>

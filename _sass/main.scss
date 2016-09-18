@@ -1,11 +1,6 @@
 @import './_fonts';
+@import './_color';
 
-// header
-/* Text colors */
-$text: #21272d;
-$textmuted: #848484;
-$accent: #2077b2;
-$border_color: #DDD;
 
 @mixin vertical_aligning_container {
   &:before {
@@ -96,38 +91,44 @@ $border_color: #DDD;
       h1 {
         font-size: 45px;
         line-height:1.4em;
+        text-decoration: none;
+        text-shadow: 1px 1px 5px rgba($color-black, 1);
       }
     
       h3 {
         font-size: 22px;
+        text-decoration: none;
+        text-shadow: 1px 1px 5px rgba($color-black, 1);
       }
     
       h1, h3 {
         color:#fff;
         margin:0;
         font-weight:600;
+        text-decoration: none;
+        text-shadow: 1px 1px 5px rgba($color-black, 1);
       }
 
       a:last-child {
         margin-right: 0;
       }
       a {
-        font-size:16px;
+        font-size:18px;
         color:#fff;
         border:0;
         width:36px;
         height:36px;
         border:2px solid rgba(255,255,255,1);
         display:inline-block;
-        padding:6px 0;
+        padding: 0px 0px;
         border-radius:42px;
-        margin:1.5em 1em 0em 0;
-        line-height: 0px;
-        text-align:center;
+        margin:1em 1em 0em 0;
+        
+        text-align:middle;
         opacity:1.0;
         
         &:hover { // makes the icons invert colours
-          color:#000;
+          color:$accent;
           background:#fff;
           opacity:1.0;
         }
@@ -193,7 +194,7 @@ $border_color: #DDD;
 //            font-size: 40px;
 //            font-weight: normal;
 //            text-decoration: none;
-////            text-shadow: 1px 1px 5px rgba($color-black, 1);
+////          text-shadow: 1px 1px 5px rgba($color-black, 1);
 //        }
 //    }
 //
