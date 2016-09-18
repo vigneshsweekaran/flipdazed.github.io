@@ -3,12 +3,12 @@
 default:
   initial:       am                                  # used for author lookup in posts
   name:          "Alex McFarlane"                    # used to display author name
-  cover:         /assets/piha.jpg                    # OPTIONAL: defines location of cover image in about page
-  picture:       /assets/Cliffs.jpg                  # OPTIONAL: author picture
+  cover:         /assets/nz_surfing.jpg                    # OPTIONAL: defines location of cover image in about page
+  picture:       /assets/face.jpg                  # OPTIONAL: author picture
   bio:           Quant Finance | Theoretical Physics | Mathematics                          # OPTIONAL: text below author name in posts
   location:      United Kingdom                      # OPTIONAL: used to display location of the author
   website:       http://flipdazed.github.io/about           # OPTIONAL: link to the author of a post
-  email:          alexander.mcfarlane@physics.org    # OPTIONAL: used in the about page
+  email:         alexander.mcfarlane@physics.org    # OPTIONAL: used in the about page
   twitter:                                           # OPTIONAL: used in the about page
   linkedin:      asmcfarlane                         # OPTIONAL: used in the about page
   xing:                                              # OPTIONAL: used in the about page
@@ -26,9 +26,9 @@ default:
 am:
   initial:          am
   name:             "Alex McFarlane"
-  cover:            /assets/piha.jpg
-  picture:          /assets/Cliffs.jpg
-  bio:              Quant Finance | Theoretical Physics | Applied Mathematics
+  cover:            /assets/nz_surfing.jpg
+  picture:          /assets/face.jpg
+  bio:              Quant Finance | Theoretical Physics | Mathematics
   location:         United Kingdom
   website:          http://flipdazed.github.io/about
   email:            alexander.mcfarlane@physics.org
