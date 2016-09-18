@@ -3,7 +3,7 @@
 default:
   initial:       am                                  # used for author lookup in posts
   name:          "Alex McFarlane"                    # used to display author name
-  cover:         /assets/nz_surfing.jpg                    # OPTIONAL: defines location of cover image in about page
+  cover:         /assets/nz_surfing2.jpg                    # OPTIONAL: defines location of cover image in about page
   picture:       /assets/face.jpg                  # OPTIONAL: author picture
   bio:           Quant Finance | Theoretical Physics | Mathematics                          # OPTIONAL: text below author name in posts
   location:      United Kingdom                      # OPTIONAL: used to display location of the author
@@ -26,7 +26,7 @@ default:
 am:
   initial:          am
   name:             "Alex McFarlane"
-  cover:            /assets/nz_surfing.jpg
+  cover:            /assets/nz_surfing2.jpg
   picture:          /assets/face.jpg
   bio:              Quant Finance | Theoretical Physics | Mathematics
   location:         United Kingdom
