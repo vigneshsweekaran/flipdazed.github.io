@@ -2,11 +2,11 @@
 layout:    about
 permalink: "/about/"
 author:    am
-keywords:  about person demo example
+keywords:  about profile
 title:     About Me
 menutitle: About Me
 weight:    90
-excerpt:   This page contains the curriculum vitae (CV) of the author.
+excerpt:   A simple description for a simple being.
 ---
 
 Studying towards MSc in Theoretical Physics at The University of Edinburgh with a focus on quantum field theory and lattice field theory. I spend most of my time these days coding or doing maths.
