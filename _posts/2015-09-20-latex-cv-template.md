@@ -1,10 +1,10 @@
 ---
 layout:            post
-title:             "LaTeX CV Template for a Technical Profile"
-menutitle:         "LaTeX CV Template for a Technical Profile"
+title:             "A LaTeX Template for a Technical CV"
+menutitle:         "A LaTeX Template for a Technical CV"
 date:              2016-09-20 17:31:00 +0100
 tags:              Latex Template CV Resume
-category:          Job Hunting
+category:          Jobs
 author:            am
 published:         true
 redirect_from:     "/latex-cv-template/"
