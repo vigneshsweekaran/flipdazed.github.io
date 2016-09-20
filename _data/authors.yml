@@ -8,7 +8,7 @@ default:
   bio:           Quant Finance | Theoretical Physics | Mathematics                          # OPTIONAL: text below author name in posts
   location:      United Kingdom                      # OPTIONAL: used to display location of the author
   website:       http://flipdazed.github.io/about           # OPTIONAL: link to the author of a post
-  email:         alexander.mcfarlane@physics.org    # OPTIONAL: used in the about page
+  email:         #alexander.mcfarlane@physics.org    # OPTIONAL: used in the about page
   twitter:                                           # OPTIONAL: used in the about page
   linkedin:      asmcfarlane                         # OPTIONAL: used in the about page
   xing:                                              # OPTIONAL: used in the about page
@@ -31,7 +31,7 @@ am:
   bio:              Quant Finance | Theoretical Physics | Mathematics
   location:         United Kingdom
   website:          http://flipdazed.github.io/about
-  email:            alexander.mcfarlane@physics.org
+#  email:            alexander.mcfarlane@physics.org
   linkedin:         asmcfarlane
   github:           flipdazed
   stackoverflow:    4013571
