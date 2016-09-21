@@ -2,7 +2,7 @@
 layout:            post
 title:             "15 Minute Miracle: Google Analytics & AdSense for Jekyll Blogs"
 menutitle:         "15 Minute Miracle: Google Analytics & AdSense for Jekyll Blogs"
-date:              2016-09-20 06:31:00 +0100
+date:              2016-09-21 06:31:00 +0100
 tags:              Google Analytics AdSense Jekyll Blog
 category:          Website
 author:            am
