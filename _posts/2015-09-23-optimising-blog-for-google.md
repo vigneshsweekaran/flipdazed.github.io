@@ -6,7 +6,7 @@ date:              2016-09-23 06:31:00 +0100
 tags:              Optimising Jekyll Blog Google Search
 category:          Website
 author:            am
-published:         true
+published:         false
 redirect_from:     "/optimising-blog-for-google/"
 language:          EN
 comments:          true

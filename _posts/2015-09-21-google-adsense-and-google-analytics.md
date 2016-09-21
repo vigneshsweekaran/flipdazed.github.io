@@ -6,7 +6,7 @@ date:              2016-09-21 06:31:00 +0100
 tags:              Google Analytics AdSense Jekyll Blog
 category:          Website
 author:            am
-published:         true
+published:         false
 redirect_from:     "/google-adsense-and-google-analytics/"
 language:          EN
 comments:          true
