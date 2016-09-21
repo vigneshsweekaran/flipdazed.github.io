@@ -21,7 +21,7 @@
 	
     {% include ogp.html %}
 	{% include twitter-meta.html %}
-    {% if site.google_tracking %} {% include google_analytics.html %} {% endif %}
+    {% if site.google_tracking_id %} {% include google_analytics.html %} {% endif %}
 
     <link rel="stylesheet" href="{{ "/css/screen.css" | prepend: site.github.url | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/prism.css" | prepend: site.github.url | prepend: site.baseurl}}">
