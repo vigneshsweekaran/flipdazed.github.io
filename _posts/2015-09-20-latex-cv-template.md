@@ -19,7 +19,7 @@ The whole thing is rather self-explanatory. This blog entry is not to teach $\La
 # Required Files
 
  - Style class [`res.cls`]({{ site.baseurl }}/media/latex/res.cls)
- - The CV template [`cv.tex`]({{ site.baseurl }}/media/latex/Alexander_McFarlane.tex)
+ - The CV template [`cv.tex`]({{ site.baseurl }}/media/latex/cv.tex)
 
 # Usage
 The simplest way to use this template is to ensure that `res.cls` and `cv.tex` are in the same directory and then just remember to swap out **all** my details for yours.
