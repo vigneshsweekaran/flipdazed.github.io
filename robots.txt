@@ -1,3 +1,2 @@
 User-agent: *
-Disallow:
-Host: http://flipdazed.github.io/
+Sitemap: {{ site.url }}/sitemap.xml

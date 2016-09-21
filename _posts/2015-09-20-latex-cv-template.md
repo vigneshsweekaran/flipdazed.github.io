@@ -25,7 +25,7 @@ The whole thing is rather self-explanatory. This blog entry is not to teach $\La
 The simplest way to use this template is to ensure that `res.cls` and `cv.tex` are in the same directory and then just remember to swap out **all** my details for yours.
 
 <figure>
-   <img src="{{ site.baseurl }}/media/img/latex-cv-img.png" />
+   <img src="{{ site.baseurl }}/media/img/latex-cv-img.png"/>
    <figcaption>The compiled result. I blurred it so that the content doesn't distract from the layout.'</figcaption>
 </figure>
 

@@ -13,13 +13,15 @@
 	{% elsif site.keywords %}
     <meta name="keywords" content="{{ site.keywords | split: ' ' | join: ', ' | escape }}" />
     {% endif %}
-
+    {% seo %}
+    
     <meta name="HandheldFriendly" content="True">
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
 	
     {% include ogp.html %}
 	{% include twitter-meta.html %}
+    {% if site.google_tracking %} {% include google_analytics.html %} {% endif %}
 
     <link rel="stylesheet" href="{{ "/css/screen.css" | prepend: site.github.url | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/prism.css" | prepend: site.github.url | prepend: site.baseurl}}">
