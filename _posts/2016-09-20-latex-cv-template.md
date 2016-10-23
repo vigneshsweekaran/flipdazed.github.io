@@ -18,14 +18,14 @@ The whole thing is rather self-explanatory. This blog entry is not to teach $\La
 
 # Required Files
 
- - Style class [`res.cls`]({{ site.baseurl }}/media/latex/res.cls)
- - The CV template [`cv.tex`]({{ site.baseurl }}/media/latex/cv.tex)
+ - Style class [`res.cls`]({{ site.baseurl }}/media/2016-09-20-latex-cv-template/res.cls)
+ - The CV template [`cv.tex`]({{ site.baseurl }}/media/2016-09-20-latex-cv-template/cv.tex)
 
 # Usage
 The simplest way to use this template is to ensure that `res.cls` and `cv.tex` are in the same directory and then just remember to swap out **all** my details for yours.
 
 <figure>
-   <img src="{{ site.baseurl }}/media/img/latex-cv-img.png"/>
+   <img src="{{ site.baseurl }}/media/2016-09-20-latex-cv-template/latex-cv-img.png"/>
    <figcaption>The compiled result. I blurred it so that the content doesn't distract from the layout.</figcaption>
 </figure>
 

@@ -18,11 +18,16 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
-	
+    
     {% include ogp.html %}
-	{% include twitter-meta.html %}
-    {% if site.google_tracking_id %} {% include google_analytics.html %} {% endif %}
-
+    {% include twitter-meta.html %}
+    {% if site.google_tracking_id %} 
+        {% include google_analytics.html %} 
+    {% endif %}
+    {% if site.google_ad_client %} 
+        {% include google_analytics.html %} 
+    {% endif %}
+    
     <link rel="stylesheet" href="{{ "/css/screen.css" | prepend: site.github.url | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/prism.css" | prepend: site.github.url | prepend: site.baseurl}}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.github.url | prepend: site.baseurl }}">

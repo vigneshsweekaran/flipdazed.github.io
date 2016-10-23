@@ -2,9 +2,9 @@
 layout:            post
 title:             "Quantitative Analyst Interview Questions"
 menutitle:         "Quantitative Analyst Interview Questions"
-date:              2017-01-01 17:31:00 +0100
+date:              2017-12-01 06:31:00 +0100
 tags:              Quantitative Analyst Interview Questions London
-category:          Python
+category:          Jobs
 author:            am
 published:         false
 redirect_from:     "/quant-interview-questions/"
@@ -12,13 +12,12 @@ language:          EN
 comments:          true
 ---
 
-I have interviewed for Quantitative Analyst positions (with varying success!) at most investment banks at some point in time in London. 
+I have interviewed for Quantitative Analyst positions (with varying success!) at a number of places at some point in time in London. 
 
-# Preparation
-The biggest take home is that preparation is key. Interviewing for positions without preparing is tantamount to putting a gun to your head and I learned this the hard way during my Masters degree. If you simply don't have the time to prepare for the interviews, cancel and wait until you can.
+Without ado, the first section dives straight into questions. The second is some discussion on how to prepare.
 
 # Questions
-Multiple questions given in one block correspond to the same interview session. Most interviews are equally detailed. Ones that appear short are probably because I hadn't slept in days prior to the interview and can't remember. I also tend to forget most of the statistics questions are they are so similar and there were a **lot** more than represented here.
+Multiple questions given in one block correspond to the same interview session. Most interviews are equally detailed and extremely challenging. Ones that appear short or easy are because I forgot the rest. I particularly tend to forget most of the statistics questions are they are so similar and there were a **lot** more than represented here.
 
 > What are the assumptions of the Black Scholes model? 
 > 
@@ -75,3 +74,40 @@ Multiple questions given in one block correspond to the same interview session. 
 > Simple multiple choice questions on `C#` programming (this can be passed by just being good at OO coding and having common sense). A *Codility* test that can be performed in `C#` or `python`.
 > 
 > <cite>Tibra Capital, Algo
+
+
+# Preparation
+The biggest take home is that preparation is key. Interviewing for positions without preparing is tantamount to putting a gun to your head and I learned this the hard way during my Masters degree. If you simply don't have the time to prepare for the interviews, cancel and wait until you can.
+
+To prepare, I use the following resources:
+
+  - [Heard on the Street: Quantitative Questions from Wall Street Job Interviews](https://www.amazon.co.uk/dp/0994103867)
+  - [Part 1A: Probability](https://www.dpmms.cam.ac.uk/study/IA/Probability/)
+  - [Part III: Advanced Financial Models](https://github.com/ajtulloch/CambridgeMathematicsPartIII)
+ 
+Most interview questions will be covered by one of the above. The book has some interesting logical puzzles which require nothing but thought and are excellent think about whilst doing something else.
+
+For general further nerding the following are also decent:
+ 
+  - [Part II: Advanced Probability](https://www.dpmms.cam.ac.uk/study/II/AppliedProbability/)
+  - [Part III: Advanced Probability](https://www.maths.cam.ac.uk/sites/www.maths.cam.ac.uk/files/advancedprobability.pdf)
+ 
+### Why the focus on Part III notes? 
+ 
+ The people interviewing for the top roles to be exclusively from Cambridge / Edinburgh / Oxford / UCL / Warwick from Theoretical Physics / Maths. Ordering is relative to the number of interviews I have had from these alumni (see below for a note on the bias!). Out of these programmes only Cambridge has decent notes available online and I had already solved the Edinburgh ones ! 
+ 
+Most of my interviews seem to be from teams with Cambridge or Edinburgh alumni, possibly due to the similarity between Part III and the Higgs Centre MSc. programme as the courses / exams are more or less identical to the title. It is certainly worth targeting places that have hired people from your course particularly if you took the more challenging route !
+
+### Don't give up
+
+Even after doing extremely well in an interview you may not get asked back. The team may have filled the vacancy with a previous hire or intern or friend. The headcount may no longer be present. It is impossible to know as most times feedback will not be available or is highly limited.
+
+It is key therefore to apply for a large number of positions particularly if your industry experience is lacking.
+
+Finally, to make you feel better about your own application process here are some of my best application / interview blunders ...
+
+ - The *Classic*: Sending a cover letter with the address of another firm
+ - Forgetting which gained the negative sign when taking the derivative of $sin(x)$ and $cos(x)$ and later adding a mystery $x$ by incorrectly writing $\frac{\partial}{\partial x} e^x = x e^x$
+ - $9+4 = 36$
+
+In fact, despite these being my worst incidents all resulted in positive outcomes and progression through to the following stage. If an interview seems like a lost cause it is probably not as bad as you think.

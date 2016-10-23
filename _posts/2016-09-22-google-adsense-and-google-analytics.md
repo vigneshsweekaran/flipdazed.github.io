@@ -1,22 +1,18 @@
 ---
 layout:            post
-title:             "15 Minute Miracle: Google Analytics & AdSense for Jekyll Blogs"
-menutitle:         "15 Minute Miracle: Google Analytics & AdSense for Jekyll Blogs"
-date:              2016-09-22 06:31:00 +0100
+title:             "Google Analytics & AdSense for Jekyll Blogs"
+menutitle:         "Google Analytics & AdSense for Jekyll Blogs"
+date:              2016-10-22 06:31:00 +0100
 tags:              Google Analytics AdSense Jekyll Blog
 category:          Website
 author:            am
-published:         false
+published:         true
 redirect_from:     "/google-adsense-and-google-analytics/"
 language:          EN
 comments:          true
 ---
 
-This post will get you up and running with Google Analytics and Google AdSense within 15 minutes. 
-
-Ok, so I told a white lie. You have to wait for an activation email from Google but your own time spent shouldn't be longer than 15 minutes.
-
-The following steps will get you up and running in no time.
+This post will get you up and running with Google Analytics and Google AdSense. 
 
 # Requirements
 
@@ -27,19 +23,43 @@ The following steps will get you up and running in no time.
 
 
 # Obtaining Google AdSense
+
 Phone Verification/Sign Up  **7 minutes**
-Email Validation            **Ongoing**
-Post Validation             **TBC**
+Email Validation                    **up to 3 weeks**
+Post Validation                     **TBC**
 
  - Go to the [Google AdSense website](https://www.google.co.uk/intl/en/adsense/start/)
  - Sign up with your google account.
  - Enter the details required
  - Verify your phone number by SMS or a voice message - this happened within seconds for me
- - Await the email verification (Get Google Analytics while you wait)
- - To Be Continued ...
+ - Await the email verification (I didn't actually get one!)
+ - Add the AdSense code snippet to your `<head>` tag
+ - Await another email from Google
+ 
+## Implementation
+ It has now been several weeks since applying for Google AdSense. After [logging into the site](https://www.google.com/adsense), it appeared access had been granted. I cannot determine exactly when this occurred though!
+ 
+ Upon login you will see a code snippet as shown below. Make a note of the `google_ad_client` variable. This code need to be inserted into the `<head>` portion of your personal site before continuing to the next step on the AdSense page.
+
+I made a separate file `_includes/google_adsense.html ` and included the following in `_includes/head.html`
+
+<pre class="line-numbers language-liquid"><code>{% raw %}{% if site.google_ad_client %}{% include google_analytics.html %}{% endif %}{% endraw %} </code></pre>
+
+Make the change, as highlighted below
+ so that the `google_ad_client` is now imported from your `_config.yml`.
+ 
+<pre data-line="4" class="line-numbers language-javascript"><code>&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">&lt;/script&gt;
+&lt;script&gt;
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "{% raw %}{{site.google_ad_client}}{% endraw %}",
+    enable_page_level_ads: true
+  });
+&lt;/script&gt;</code></pre>
+ 
+ Add the following variable `google_ad_client: your-adsense-code` to the `_config.yml` file. Commit the changes and proceed to the next step on the Google AdSense site as instructed.
  
 # Obtaining Google Analytics
-Completion                  **6 minutes**
+Completion                      **6 minutes**
 
  - Go to the [Google Analytics website](https://analytics.google.com/analytics/web/)
  - Sign up with your Google Account

@@ -17,7 +17,8 @@ url:              "http://flipdazed.github.io" # the base hostname & protocol fo
 permalink:        /blog/:categories/:title
 cover:            /assets/math2.jpg
 disqus_shortname: flipdazed
-google_tracking_id:  UA-84554204-1
+google_tracking_id: UA-84554204-1
+google_ad_client: ca-pub-6286561277379272
 
 # Build settings
 markdown: kramdown
