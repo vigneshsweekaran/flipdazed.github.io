@@ -7,13 +7,13 @@ tags: Adding Video GitHub Readme
 category: Website
 author: am
 published: true
-redirect_from: "/add-video-to-github-README/"
+redirect_from: "/2016-10-24-add-video-to-github-README/"
 language: EN
 comments: true
 ---
 
 <figure>
-   <img src="{{ site.baseurl }}/media/2016-10-24-add-video-to-github-README/visualise_params.gif"/>
+   <img src="{{ site.baseurl }}/media{{page.redirect_from}}visualise_params.gif"/>
    <figcaption>The cost is negative of what is should be but I reversed it in the SGD algorithm so it doesn't matter</figcaption>
 </figure>
 
@@ -43,16 +43,16 @@ Get `convert` with [`homebrew`](http://brew.sh/) as
 
 In my example this reduced the size from a whopping `147MB` to `3MB`!
 
-# Dynamically Movie format for Jekyll Sites
+# Dynamic Movie format for Jekyll Sites
 This won't work for Github README files but it is worth stating anyway for Jekyll based sites 
 that use markdown.
 
 <figure class="large">
     <div class="myvideo">
        <video  style="display:block; width:100%; height:auto;" autoplay controls loop="loop">
-           <source src="{{ site.baseurl }}/media/2016-10-24-add-video-to-github-README/visualise_params.mp4" type="video/mp4" />
-           <source src="{{ site.baseurl }}/media/2016-10-24-add-video-to-github-README/visualise_params.ogv" type="video/ogg" />
-           <source src="{{ site.baseurl }}/media/2016-10-24-add-video-to-github-README/visualise_params.webm"  type="video/webm"  />
+           <source src="{{ site.baseurl }}/media{{page.redirect_from}}visualise_params.mp4" type="video/mp4" />
+           <source src="{{ site.baseurl }}/media{{page.redirect_from}}visualise_params.ogv" type="video/ogg" />
+           <source src="{{ site.baseurl }}/media{{page.redirect_from}}visualise_params.webm"  type="video/webm"  />
        </video>
     </div>
 <figcaption>A nice movie format</figcaption>
@@ -133,9 +133,9 @@ The following HTML will then generate the correct video in your Jekyll site.
 
 <pre class="line-numbers language-html"><code>&lt;div class="myvideo"&gt;
    &lt;video  style="display:block; width:100%; height:auto;" autoplay controls loop="loop"&gt;
-       &lt;source src="{% raw %}{{ site.baseurl }}{% endraw %}/media/2016-10-24-add-video-to-github-README/visualise_params.mp4" type="video/mp4" /&gt;
-       &lt;source src="{% raw %}{{ site.baseurl }}{% endraw %}/media/2016-10-24-add-video-to-github-README/visualise_params.ogv" type="video/ogg" /&gt;
-       &lt;source src="{% raw %}{{ site.baseurl }}{% endraw %}/media/2016-10-24-add-video-to-github-README/visualise_params.webm"  type="video/webm"  /&gt;
+       &lt;source src="{% raw %}{{ site.baseurl }}{% endraw %}/media{{page.redirect_from}}visualise_params.mp4" type="video/mp4" /&gt;
+       &lt;source src="{% raw %}{{ site.baseurl }}{% endraw %}/media{{page.redirect_from}}visualise_params.ogv" type="video/ogg" /&gt;
+       &lt;source src="{% raw %}{{ site.baseurl }}{% endraw %}/media{{page.redirect_from}}visualise_params.webm"  type="video/webm"  /&gt;
    &lt;/video&gt;
 &lt;/div&gt;</code></pre>
 
@@ -145,9 +145,9 @@ site's template
 <pre class="line-numbers language-html"><code>&lt;figure class="large"&gt;
     &lt;div class="myvideo"&gt;
        &lt;video  style="display:block; width:100%; height:auto;" autoplay controls loop="loop"&gt;
-           &lt;source src="{{ site.baseurl }}/media/2016-10-24-add-video-to-github-README/visualise_params.mp4" type="video/mp4" /&gt;
-           &lt;source src="{{ site.baseurl }}/media/2016-10-24-add-video-to-github-README/visualise_params.ogv" type="video/ogg" /&gt;
-           &lt;source src="{{ site.baseurl }}/media/2016-10-24-add-video-to-github-README/visualise_params.webm"  type="video/webm"  /&gt;
+           &lt;source src="{{ site.baseurl }}/media{{page.redirect_from}}visualise_params.mp4" type="video/mp4" /&gt;
+           &lt;source src="{{ site.baseurl }}/media{{page.redirect_from}}visualise_params.ogv" type="video/ogg" /&gt;
+           &lt;source src="{{ site.baseurl }}/media{{page.redirect_from}}visualise_params.webm"  type="video/webm"  /&gt;
        &lt;/video&gt;
     &lt;/div&gt;
 &lt;figcaption&gt;A nice movie format&lt;/figcaption&gt;
