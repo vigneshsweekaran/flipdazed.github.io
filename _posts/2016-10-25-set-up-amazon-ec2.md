@@ -12,10 +12,11 @@ language: EN
 comments: true
 ---
 
-This is the first part of a two-part guide
+This is the first part of a multi-part guide on GPU cloud computing for Deep Learning
 
 1. [Set Up Amazon Elastic Compute Cloud (EC2)]({% post_url 2016-10-25-set-up-amazon-ec2 %})
-2.  [Theano on Amazon Web Services for Deep Learning]({%post_url 2016-10-25-theano-on-amazon-web-services-for-deep-learning %})
+2. [Theano on Amazon Web Services for Deep Learning]({%post_url 2016-10-25-theano-on-amazon-web-services-for-deep-learning %})
+3. [Set up Microsoft Azure for CUDA Cloud]({% post_url 2016-10-29-set-up-microsoft-azure %})
 
 This guide more generally demonstrates how to register for  Amazon Web Services and 
 set up the Amazon Elastic Compute Cloud (EC2).
@@ -27,6 +28,7 @@ set up the Amazon Elastic Compute Cloud (EC2).
  4. [Launch and Connect with SSH](#launch)
  5. [Close instance](#close)
  6. [Usage Plans for GPU Compute Instances](#usage)
+ 7. [Alternative Elastic Clouds with CUDA](#alt)
  
 <a id="reqs"></a>
 
@@ -241,6 +243,15 @@ range. It's sensible to look at price history if you wish to minimise interrupti
 See Part 2 for setting up
 [Theano on Amazon Web Services for Deep Learning]({%post_url 2016-10-25-theano-on-amazon-web-services-for-deep-learning %})
 
+<a id="alt" />
+
+# Alternatives
+
+There are [alternative offerings][7] to Amazon EC2.
+
+Out of these the only standout is [Microsoft Azure][8] which is discussed in a 
+[following blog]({% post_url 2016-10-29-set-up-microsoft-azure %})
+
 <a id="refs" />
 
 # References
@@ -250,6 +261,8 @@ See Part 2 for setting up
  - [AWS Guide: Free Tier][4]
  - [AWS Guide: Accessing Linux Instances][5]
  - [StackExchange: How to Connect to Amazon EC2 Remotely Using SSH][6]
+ - [Nvidia GPU clouds][7]
+ - [Microsoft Azure: GPU enabled Virtual Machines][8]
 
 [1]: https://aws.amazon.com
 [2]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html
@@ -257,3 +270,5 @@ See Part 2 for setting up
 [4]: https://aws.amazon.com/free/
 [5]: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html
 [6]: http://unix.stackexchange.com/a/115860
+[7]: http://www.nvidia.com/object/gpu-cloud-computing-services.html
+[8]: https://azure.microsoft.com/en-gb/pricing/details/virtual-machines/series/#n-series
