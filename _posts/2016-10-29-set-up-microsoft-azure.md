@@ -21,11 +21,17 @@ This is the third part of a multi-part guide on GPU cloud computing for Deep Lea
 This guide more generally demonstrates how to register for Microsoft Azure and set up a cloud
 instance.
 
+**At the time of writing, Microsoft the Virtual Machine Instances with NVIDIA GPUs
+ are not yet publicly available. However, it is possible to register for preview access [HERE][9]**
+ 
+ In the meantime I provide brief links and instructions on registering for Microsoft Azure services.
+
+
 # Contents
  1. [Requirements](#reqs)
  2. [Registering for Microsoft Azure](#register)
- 
- 7. [Alternative Elastic Clouds with CUDA](#alt)
+ 3. [Alternative](#alt)
+ 4. [References](#refs)
  
 <a id="reqs"></a>
 
@@ -43,7 +49,9 @@ instance.
  - Register for Microsoft Azure [here][1]
  
  The process is very similar to Amazon EC2 with personal details (again, you **need** to use a 
-real phone number), email verifications and captcha images to fill out. 
+real phone number) and email verifications. This will then take you to the default set up page.
+
+I will update with more details with GPU Compute is released.
 
 <a id="alt" />
 
@@ -66,3 +74,4 @@ Out of these the only other viable option is [Amazon EC2][8] which is discussed 
 [2]: https://azure.microsoft.com/en-gb/pricing/details/virtual-machines/series/#n-series
 [7]: http://www.nvidia.com/object/gpu-cloud-computing-services.html
 [8]: https://aws.amazon.com
+[9]: https://azure.microsoft.com/en-gb/blog/azure-n-series-preview-availability/
