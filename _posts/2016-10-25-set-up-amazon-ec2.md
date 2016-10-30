@@ -205,6 +205,10 @@ The correct DNS will be different for each Instance. Obtain this information by
 
 # Close Instance
 
+Make sure that you check the instance has been closed **in addition** to the Spot request! I 
+received a 31 hour bill for an unclosed GPU Compute instance that I had thought I closed
+ which was rather annoying.
+
 <figure>
   <img src="{{ site.baseurl }}/media{{page.redirect_from}}Cancel-request.png" />
   <figcaption>Cancel request</figcaption>

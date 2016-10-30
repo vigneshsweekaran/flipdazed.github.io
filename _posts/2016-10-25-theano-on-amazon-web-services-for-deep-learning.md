@@ -158,8 +158,14 @@ having to run again from scratch.
 
 # Close
 Don't forget to Stop or Close the instance once it has completed the task! 
-This can be automated by running the following as root after code has been executed
+
+Make sure that you check the instance has been closed **in addition** to the Spot request 
+in the dashboard! I received a 31 hour bill for an unclosed GPU Compute instance that I had 
+thought I closed which was rather annoying. 
+
+In theory this can be automated by running the following as root after code has been executed
 <pre class="line-numbers language-bash"><code>shutdown -h now</code></pre>
+but now I don't particularly trust the methodology in practice.
 
 <a id="errors" />
 
