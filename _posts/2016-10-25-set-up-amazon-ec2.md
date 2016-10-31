@@ -115,7 +115,7 @@ chmod 400 ~/.ssh/${filename}
 {
     echo "Host *amazonaws.com"
     echo "IdentityFile ~/.ssh/${filename}"
-    echo "User ec2-user" 
+    echo "User ubuntu" 
 } > ~/.ssh/config</code></pre>
 
 ## Create AMI
