@@ -1,5 +1,5 @@
 ---
-layout:            post
+layout:            minimal_debug
 title:             "Minimal Page"
 menutitle:         "Minimal Page"
 date:              2016-11-07 23:00:00 +0000
