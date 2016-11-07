@@ -86,7 +86,7 @@ sudo reboot</code></pre>
 
 After waiting about a minute for the reboot, `ssh` back into the Instance
 
-You can download this code as [`cuda_check.sh`](({{ site.baseurl }}/media{{page.redirect_from}}/cuda_check.sh))
+You can download this code as [`cuda_check.sh`]({{ site.baseurl }}/media{{page.redirect_from}}/cuda_check.sh)
 <a id="cuda-check">
 
 <pre class="line-numbers language-bash"><code># install included samples and test cuda

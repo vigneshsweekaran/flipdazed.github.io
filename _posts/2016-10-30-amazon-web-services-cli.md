@@ -326,11 +326,15 @@ which will most likely show something like
 
 # Getting the Spot Prices 
 The current spot price can be obtained from an API at this endpoint which
-can be handled in `python`
+can be handled in `python` - download my 
+script [here]({{ site.baseurl }}/media{{page.redirect_from}}/cheapest_spot.py)
 
 <pre class="line-numbers language-python"><code>import json
 import requests
-api_url="http://spot-price.s3.amazonaws.com/spot.js"
+machine_type = 'p2.xlarge'
+api_url = "http://spot-price.s3.amazonaws.com/spot.js"
+
+print "Loading spots for Machine Type: {} ...".format(machine_type)
 res = requests.get(api_url)
 cleaned = res.content[len('callback('):-len(');')]
 result = json.loads(cleaned)
@@ -347,28 +351,31 @@ reg_machine_spots = {
     for region in result['config']['regions']
 }
 
-# get all regional spots for `g2.2xlarge`
-g2x2_spots = {
-    region: prices['p2.2xlarge'] 
+# get all regional spots
+spots = {
+    region: prices[machine_type] 
     for region,prices in reg_machine_spots.iteritems()
 }
-# print the prices for g2x2
-for k,v in g2x2_spots.iteritems(): print k.ljust(15)+v</code></pre>
 
-check the StackOverflow post if the link is outdated but this should return something like the 
+# print the prices sorted lowest first
+ami_spots = sorted(ami_spots.items(), key=operator.itemgetter(1))
+for reg,spot in ami_spots: print reg.ljust(15) + spot</code></pre>
+
+check the [StackOverflow post][14] if the link is outdated but this should return something like the 
 following and is very helpful for determining instant prices
 
-    apac-sin       2.0
-    us-west        0.1579
+    Loading spots for Machine Type: p2.xlarge ...
+    us-west-2      0.1315
+    eu-ireland     0.1643
+    us-east        0.1887
+    apac-sin       N/A*
+    us-west        N/A*
     ap-northeast-2 N/A*
     us-east-2      N/A*
-    us-west-2      0.1721
-    eu-ireland     0.1097
-    apac-tokyo     0.1293
-    us-east        0.2328
-    apac-syd       0.0846
+    apac-tokyo     N/A*
+    apac-syd       N/A*
     ap-south-1     N/A*
-    eu-central-1   0.0932
+    eu-central-1   N/A*
     sa-east-1      N/A*
 
 It is also possible to obtain the historic spot prices using the CLI as follows
@@ -413,6 +420,7 @@ sure to do both as you may end up having instances running without being aware !
  - [AWS Guide: Shorthand Syntax][11]
  - [AWS Guide: Using Spot Instance Request][12]
  - [AWS Guide: Spot Request Examples][13]
+ - [StackOverflow: get ec2 pricing programmatically?][14]
 
  [1]: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html
  [2]: {% post_url 2016-10-25-set-up-amazon-ec2 %}
@@ -427,3 +435,4 @@ sure to do both as you may end up having instances running without being aware !
  [11]: http://docs.aws.amazon.com/cli/latest/userguide/shorthand-syntax.html
  [12]: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html
  [13]: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-examples.html
+ [14]: http://stackoverflow.com/questions/7334035/get-ec2-pricing-programmatically
