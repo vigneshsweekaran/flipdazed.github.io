@@ -9,9 +9,13 @@ weight:    90
 excerpt:   A simple description for a simple being.
 ---
 
-Studying towards MSc in Theoretical Physics at The University of Edinburgh with a focus on quantum field theory and lattice field theory. I spend most of my time these days coding or doing maths.
+I recently completed my master's degree in Theoretical Physics at The University of Edinburgh 
+with a focus on quantum field theory and lattice field theory. 
+I spend most of my time right now coding or doing maths, although blog entries will be quite
+code-heavy for a while !
 
-**key languages** `python` `mathematica` `Fortran` `VBA`
+**key languages** `python` `mathematica` `Fortran` `VBA`\\
+**hacky languages** `C++` `C` `SQL` `bash` `regex` `xpath` `css` `html`
 
 ---
 
@@ -23,6 +27,9 @@ I tend to keep busy. Here's a list of some of the things I have been up to.
 
  - Deep Learning (DBNs/CNNs) for Weather Modelling `python`
  - Further develop Hybrid Monte Carlo library `python`
+
+#### To Do
+
  - Basic algo. trading models: $\mu$ revert, tech. analysis, $\sigma$ target `python`
  - Build a half pipe `plywood`
 
