@@ -4,7 +4,7 @@ title: "Removing Broken OSX Launch Daemons: net.juniper.AccessService"
 menutitle: "Removing Broken OSX Launch Daemons"
 date: 2016-11-07 15:23:00 +0000
 tags: OSX LaunchDaemons net.juniper.AccessService
-category: System Maintenance
+category: OSX Maintenance
 author: am
 published: true
 redirect_from: "/2016-11-07-osx-launch-agents.md/"

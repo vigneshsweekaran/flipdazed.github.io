@@ -326,8 +326,7 @@ which will most likely show something like
 
 # Getting the Spot Prices 
 The current spot price can be obtained from an API at this endpoint which
-can be handled in `python` - download my 
-script [here]({{ site.baseurl }}/media{{page.redirect_from}}/cheapest_spot.py)
+can be handled in `python`
 
 <pre class="line-numbers language-python"><code>import json
 import requests
@@ -360,6 +359,11 @@ spots = {
 # print the prices sorted lowest first
 ami_spots = sorted(ami_spots.items(), key=operator.itemgetter(1))
 for reg,spot in ami_spots: print reg.ljust(15) + spot</code></pre>
+
+My command line version is available [here]({{ site.baseurl }}/media{{page.redirect_from}}/cheapest_spot.py)
+and can be run as
+
+    ./cheapest_spot.py -t p2.xlarge
 
 check the [StackOverflow post][14] if the link is outdated but this should return something like the 
 following and is very helpful for determining instant prices
