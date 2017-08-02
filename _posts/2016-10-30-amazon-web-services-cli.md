@@ -279,8 +279,8 @@ Spot requests can be requested with the following command
     --instance-count 2 \
     --block-duration-minutes 120 \
     --type "one-time" \
-    --launch-specification file://~/Desktop/test.json
-    --query 'SpotInstanceRequests[*].SpotInstanceRequestId'
+    --launch-specification file://~/Desktop/test.json \
+    --query 'SpotInstanceRequests[*].SpotInstanceRequestId' \
     --output text</code></pre>
 
 This will output the `SpotInstanceRequestIds` that manages requests
@@ -300,7 +300,7 @@ The file `~/Desktop/test.json` should contain something similar to
 <pre class="line-numbers language-json"><code>{
   "ImageId": "ami-0d77397e",
   "KeyName": "example-key-name",
-  "SecurityGroupIds": [ "sg-eef32088" ],
+  "SecurityGroupIds": [ "sg-youSecurityGroupID" ],
   "InstanceType": "m4.large",
   "Placement": {
       "AvailabilityvZone": "eu-west-1a"
