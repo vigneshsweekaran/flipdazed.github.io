@@ -13,7 +13,7 @@ comments:          true
 ---
 
 Storing data efficiently is the bane of my life: It is boring and mundane but doing it inefficiently
- can high horrific consequences.
+ can have dire consequences.
 
 # Contents
 {:.no_toc}
