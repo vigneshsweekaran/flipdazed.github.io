@@ -189,7 +189,11 @@ The public IP for the instance can be returned by subsequently running
 
 alternatively, the DNS can be found by using 
 
-<pre class="language-bash"><code>--query 'Reservations[0].Instances[0].PublicDncName'</code></pre>
+<pre class="language-bash"><code>--query 'Reservations[0].Instances[0].PublicDnsName'</code></pre>
+
+This can simply be adjusted to return multiple instances with the following syntax
+
+<pre class="language-bash"><code>aws ec2 describe-instances --query 'Reservations[0].Instances[*].PublicDnsName'</code></pre>
 
 # Connect
 Connecting is straightforward and simply requires
@@ -329,7 +333,9 @@ The current spot price can be obtained from an API at this endpoint which
 can be handled in `python`
 
 <pre class="line-numbers language-python"><code>import json
+import operator
 import requests
+
 machine_type = 'p2.xlarge'
 api_url = "http://spot-price.s3.amazonaws.com/spot.js"
 
@@ -357,7 +363,7 @@ spots = {
 }
 
 # print the prices sorted lowest first
-ami_spots = sorted(ami_spots.items(), key=operator.itemgetter(1))
+ami_spots = sorted(spots.items(), key=operator.itemgetter(1))
 for reg,spot in ami_spots: print reg.ljust(15) + spot</code></pre>
 
 My command line version is available [here]({{ site.baseurl }}/media{{page.redirect_from}}/cheapest_spot.py)
