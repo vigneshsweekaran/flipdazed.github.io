@@ -28,7 +28,7 @@ Below are some of the backtesting libraries I looked into
 | Library      | Language | Opensource | Speed      | Takes Custom Data Feeds | Ease of Use | Cross Platform |
 | ------------ | -------- | ---------- | ---------- | ----------------------- | ----------- | -------------- |
 | [Zorro Trader](http://www.zorro-trader.com/download.php) | C-lite   | No         | super fast | No (at least not clear) | Hard        | Windows only   |
-| [PyAlgoTrade](https://github.com/gbeced/pyalgotrade)  | Python   | Yes        | Slow       | Yes                     | Easy        | Yes            |
+| [PyAlgoTrade](https://github.com/gbeced/pyalgotrade)  | Python   | Yes        | Slow       | [Yes](https://stackoverflow.com/questions/37003788/how-do-i-feed-in-my-own-data-into-pyalgotrade)                     | Easy        | Yes            |
 | [Zipline](https://github.com/quantopian/zipline)      | Python   | Yes        | Slow       | [Yes](https://www.quantinsti.com/blog/importing-csv-data-zipline-backtesting/?utm_source=medium&utm_medium=organic&utm_campaign=forum)                     | Easy        | Yes            |
 | [AlgoCoin](https://github.com/timkpaine/algo-coin)     | Python   | Yes        | Slow       | Yes                     | Medium      | Yes            |
 |              |          |            |            |                         |             |                |
@@ -55,3 +55,6 @@ with this library is that it tries to be too many things. It is heavily under de
 see why the dev didn't subclass `PyAlgoTrade` or `Zipline` for the backtesting.
 
 This library is useful for its API endpoints, however.
+
+# A minimal backtest
+This minimal example uses the `zipline` library with a simple momentum strategy.
