@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Getting to grips with the Terminal"
-menutitle: "Getting to grips with the Terminal"
+title: "Basic Terminal Skills"
+menutitle: "Basic Terminal Skills"
 date: 2019-10-15 22:32 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
 published: true
-redirect_from: "/2019-10-15-Getting-to-grips-with-the-Terminal/"
+redirect_from: "/2019-10-15-Basic-Terminal-Skills/"
 language: EN
 comments: true
 ---
