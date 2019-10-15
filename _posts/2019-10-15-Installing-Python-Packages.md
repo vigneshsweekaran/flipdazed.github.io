@@ -66,17 +66,27 @@ Downsides are that not all libraries are supported by `conda` and there is less 
 
 # Exercises
 
-  1. Try and figure out what the `-IU` means and notice that you can stack single letter flags on a single `-`. The combination of `-IU` is usually only used when an installation is broken or doing something weird and won't work.
+### 4.1. Supplying arguments to a program
 
-  2. Why does `$ python - m pip -h` not work?
+Try and figure out what the `-IU` means and notice that you can stack single letter flags on a single `-`. The combination of `-IU` is usually only used when an installation is broken or doing something weird and won't work.
 
-  3. Recall that the first command must be an executable program. Why does `$ pip -h` work?
+### 4.2. Debugging bad command
 
-    Hint: On Windows powershell type `$ $env:PATH` or on Mac OS X type `$ echo $PATH`.
-    You can use `ls` to display files that match patterns, for example
-    ```
-    $ ls "/a/directory/*pip*"
-    ```
-    use this on the `/bin` directory for anaconda.
+Why does `$ python - m pip -h` not work?
 
-  4. If you are on a coporate network find your proxy. In windows follow [this guide](https://superuser.com/a/346376). On Mac OS X follow [this guide](https://askubuntu.com/a/924676)
+### 4.3. Understanding importance of `$PATH`
+
+Recall that the first command must be an executable program. Why does `$ pip -h` work?
+
+Hint: On Windows powershell type `$ $env:PATH` or on Mac OS X type `$ echo $PATH`.
+You can use `ls` to display files that match patterns, for example
+
+```
+$ ls "/a/directory/*pip*"
+```
+
+use this on the `/bin` directory for anaconda.
+
+### 4.4 Corporate Proxies
+
+If you are on a coporate network find your proxy. In windows follow [this guide](https://superuser.com/a/346376). On Mac OS X follow [this guide](https://askubuntu.com/a/924676)
