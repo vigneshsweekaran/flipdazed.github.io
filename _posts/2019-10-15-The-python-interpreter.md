@@ -31,8 +31,9 @@ comments: true
 
 Open the `Terminal` and type
 
-    $ python
-
+```sh
+$ python
+```
 This should then load the **basic** python interpreter. When we are in a python interpreter, I will use the following syntax: `>>>` for new logical blocks, `...` for line continuations or logical block continuations and results will be without padding.
 
 Try entering the following to print thing to the console window
@@ -60,11 +61,11 @@ or another example is the `assert` statement which throws an error unless the fo
 
 You may be familiar with some other statements like
 
-    - `break`
-    - `continue`
-    - `return`
-    - `yeild`
-    - `raise`
+  - `break`
+  - `continue`
+  - `return`
+  - `yeild`
+  - `raise`
 
 amongst others which can be found on the [docs page](https://docs.python.org/3/reference/simple_stmts.html#grammar-token-expression-stmt)
 
