@@ -6,7 +6,7 @@ date:              2017-08-24 20:43:00 +0000
 tags:              Backtesting Quantitative Strategies Quant Trading
 category:          Quant Trading
 author:            am
-published:         true
+published:         false
 redirect_from:     "/backtesting-quant-strategies/"
 language:          EN
 comments:          true
