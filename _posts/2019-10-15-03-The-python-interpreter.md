@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "The Python Interpreter"
-menutitle: "The Python Interpreter"
+title: "03: The Python Interpreter"
+menutitle: "03: The Python Interpreter"
 date: 2019-10-15 22:32 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
 published: true
-redirect_from: "/2019-10-15-The-Python-Interpreter/"
+redirect_from: "/2019-10-15-03-The-Python-Interpreter/"
 language: EN
 comments: true
 ---

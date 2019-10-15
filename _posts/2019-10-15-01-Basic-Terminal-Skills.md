@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Basic Terminal Skills"
-menutitle: "Basic Terminal Skills"
+title: "01: Basic Terminal Skills"
+menutitle: "01: Basic Terminal Skills"
 date: 2019-10-15 22:32 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
 published: true
-redirect_from: "/2019-10-15-Basic-Terminal-Skills/"
+redirect_from: "/2019-10-15-01-Basic-Terminal-Skills/"
 language: EN
 comments: true
 ---

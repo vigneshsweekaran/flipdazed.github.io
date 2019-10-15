@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Installing Python for Mac OS X / Windows"
-menutitle: "Installing Python for Mac OS X / Windows"
+title: "02: Installing Python for Mac OS X / Windows"
+menutitle: "02: Installing Python for Mac OS X / Windows"
 date: 2019-10-15 22:32 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
 published: true
-redirect_from: "/2019-10-15-Installing-Python-for-Mac-OS-X-Windows/"
+redirect_from: "/2019-10-15-02-Installing-Python-for-Mac-OS-X-Windows/"
 language: EN
 comments: true
 ---

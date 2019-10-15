@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Installing Python Packages"
-menutitle: "Installing Python Packages"
+title: "04: Installing Python Packages"
+menutitle: "04: Installing Python Packages"
 date: 2019-10-15 22:32 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
 published: true
-redirect_from: "/2019-10-15-Installing-Python-Packages/"
+redirect_from: "/2019-10-15-04-Installing-Python-Packages/"
 language: EN
 comments: true
 ---
