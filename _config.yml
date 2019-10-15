@@ -7,10 +7,11 @@
 
 # Site settings
 title:              Alex McFarlane
-subtitle:           Quant Finance | Theoretical Physics | Mathematics
+subtitle:           Useful Stuff
 description:        
 keywords:           physics monte-carlo mathematics hamiltonian-monte-carlo hmc
-                    quantitative-finance deep learning neural networks cloud
+                    quantitative-finance deep learning neural networks cloud python
+                    learning blog
 language:           "en" # default language of the blog. Language codes:
                          # www.w3schools.com/tags/ref_language_codes.asp
 baseurl:            ""   # the subpath of your site, e.g. /blog
