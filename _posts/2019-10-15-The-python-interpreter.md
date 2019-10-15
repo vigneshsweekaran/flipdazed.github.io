@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "The `python` interpreter"
-menutitle: "The `python` interpreter"
+title: "The Python Interpreter"
+menutitle: "The Python Interpreter"
 date: 2019-10-15 22:32 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
 published: true
-redirect_from: "/2019-10-15-The-python-interpreter/"
+redirect_from: "/2019-10-15-The-Python-Interpreter/"
 language: EN
 comments: true
 ---
@@ -104,6 +104,9 @@ If you are in the middle of executing code, you can force code to stop by enteri
 
 
 # Exercises
+
+
+### 3.1 The issue with just-in-time (jit) complilation
 
 In the `python` console
 
