@@ -12,11 +12,18 @@ language: EN
 comments: true
 ---
 
-Learning outcomes
+## Learning Outcomes
+{:.no_toc}
 
  - Be able to find / open the terminal
  - Be able to navigate filesystem within the Terminal
  - Basic usage of linux commands
+
+## Contents
+{:.no_toc}
+
+* This will become a table of contents (this text will be scraped).
+{:toc}
 
 
 # Opening the `Terminal`
