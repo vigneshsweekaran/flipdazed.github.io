@@ -96,18 +96,23 @@ All of these commands e.g. `ls`, `rm`, `mkdir` are all programs themselves that 
 
 Your *local* machine home directory is always denoted by `~/` (`~\` on Windows)
 
-  1. Create a new directory named `temp` in this directory
+### 1.1 Creating directories
+Create a new directory named `temp` in this directory
 
-  2. Change the name of this directory to `pylrn`
+### 1.2 Renaming directories
 
-  3. Run the following command to create a new file
+Change the name of this directory to `pylrn`
 
-        $ touch ~/pylrn/test.py
+### 1.3. Create a file with contents
 
-    verify it is there with
-        ```
-        $ ls ~/pylrn/*.py
-        ```
-    Put something inside it
+Run the following command to create a new file
 
-        $ echo "print('Hello World')" >> ~/pylrn/test.py
+    $ touch ~/pylrn/test.py
+
+verify it is there with
+
+    $ ls ~/pylrn/*.py
+
+Put something inside it
+
+    $ echo "print('Hello World')" >> ~/pylrn/test.py
