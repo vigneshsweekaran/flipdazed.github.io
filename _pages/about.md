@@ -25,16 +25,18 @@ I tend to keep busy. Here's a list of some of the things I have been up to.
 
 #### Current
 
- - Deep Learning (DBNs/CNNs) for Weather Modelling `python`
- - Further develop Hybrid Monte Carlo library `python`
+ - A python course for finance
+ - Reinforcement learning for market making
 
 #### To Do
 
- - Basic algo. trading models: $\mu$ revert, tech. analysis, $\sigma$ target `python`
  - Build a half pipe `plywood`
 
 #### Previous
 
+ - Deep Learning (DBNs/CNNs) for Weather Modelling `python`
+ - Further develop Hybrid Monte Carlo library `python`
+ - Basic algo. trading models: $\mu$ revert, tech. analysis, $\sigma$ target `python`
  - Autocorrelations in Generalised Hybrid Monte Carlo (HMC) `python` `Mathematica` `C++`
  - Basic algo. trading models: momentum, historic pattern recognition `python`
  - Web Scraping: recursive crawlers, PDF parsing, custom APIs `python` `SQL` `regex` `xpath`
