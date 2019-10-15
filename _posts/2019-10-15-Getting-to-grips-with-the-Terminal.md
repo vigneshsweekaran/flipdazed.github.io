@@ -105,10 +105,9 @@ Your *local* machine home directory is always denoted by `~/` (`~\` on Windows)
         $ touch ~/pylrn/test.py
 
     verify it is there with
-
+        ```
         $ ls ~/pylrn/*.py
-
+        ```
     Put something inside it
 
         $ echo "print('Hello World')" >> ~/pylrn/test.py
-
