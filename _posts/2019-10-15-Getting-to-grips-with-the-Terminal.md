@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Learning Python: Getting to grips with the Terminal"
-menutitle: "Learning Python: Getting to grips with the Terminal"
+title: "Getting to grips with the Terminal"
+menutitle: "Getting to grips with the Terminal"
 date: 2019-10-15 22:32 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
