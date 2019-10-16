@@ -138,3 +138,8 @@ and then
 this is one of the biggest weaknesses of `python` and why most core quant libraries are still built in `java` or `C++`. Most of the bugs you create will be due to this.
 
 NB: You're not expected to fix this code yet! Just move onto the next exercise :)
+
+### Next Topic
+{:toc}
+
+[04: Installing Python Packages]({% post_url 2019-10-15-04-Installing-Python-Packages %})

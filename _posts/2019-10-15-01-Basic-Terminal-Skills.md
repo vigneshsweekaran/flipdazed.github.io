@@ -170,3 +170,8 @@ Put something inside it
 ```sh
 $ echo "print('Hello World')" >> ~/pylrn/test.py
 ```
+
+### Next Topic
+{:toc}
+
+[02: Installing Python for Mac OS X / Windows]({% post_url 2019-10-15-02-Installing-Python-for-Mac-OS-X-Windows %})

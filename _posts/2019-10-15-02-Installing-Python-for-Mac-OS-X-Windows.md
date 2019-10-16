@@ -74,7 +74,7 @@ Check what `python` is your system default
 
 On Windows
 
-    $ where python
+    $ Get-Command python
 
 On Mac OS X
 
@@ -91,3 +91,8 @@ If you don't get `"Python 3.x.x :: Anaconda, Inc."` for `python` 3.6.5 or greate
 ### 2.3 Running a `.py` file in `python`
 
 Run the file `~/pylrn/test.py` with `python`
+
+### Next Topic
+{:toc}
+
+[03: The Python Interpreter]({% post_url 2019-10-15-03-The-Python-Interpreter %})
