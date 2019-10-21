@@ -135,6 +135,10 @@ These exercises aim to get you more comfortable with using the command line rath
 - `cd` into the directory `~`
 - Create a new directory named `temp` in this directory
 
+## Exercise 1.2: Renaming directories
+
+Change the name of this directory to `pylrn`
+
 You can test this worked by doing
 
 ```sh
@@ -142,10 +146,6 @@ $ ls ~/pyl*
 ```
 
 the `*` will wildcard all text following it
-
-## Exercise 1.2: Renaming directories
-
-Change the name of this directory to `pylrn`
 
 ## Exercise 1.3: Create a file with contents
 
