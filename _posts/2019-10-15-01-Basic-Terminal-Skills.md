@@ -159,7 +159,7 @@ $ echo print('Hello World') >> ~/pylrn/test.py
 
 **Windows users do this**
 ```sh
-$ print('Hello World') | Out-File ~/pylrn/test.py -encoding ascii
+$ "print('Hello World')" | Out-File ~/pylrn/test.py -encoding ascii
 ```
 
 verify it is there with
