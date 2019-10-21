@@ -28,7 +28,9 @@ comments: true
 
 Run the following
 
-    $ python -c "import requests"
+```sh
+$ python -c "import requests"
+```
 
 we will see how to fix this issue
 
@@ -39,18 +41,23 @@ we will see how to fix this issue
 
 Install a new `PACKAGE` with
 
-    $ python -m pip install PACKAGE
+```sh
+$ python -m pip install PACKAGE
+```
 
 for example
 
-    $ python -m pip install requests --proxy https://path.to.my.proxy:1234 -IU
+```sh
+$ python -m pip install requests --proxy https://path.to.my.proxy:1234 -IU
+```
 
 Here we introduce three very useful flags when in a corporate environment. Almost all corporations will have proxies. You need to specify the proxy to hit the internet programmatically.
 
 To see other flags type
 
-    $ python -m pip install -h
-
+```sh
+$ python -m pip install -h
+```
 
 # `conda`
 Recall `anaconda` is what we installed `python` with. This is a more sophisticated python package manager.
@@ -59,37 +66,52 @@ Some libraries like `scipy` require advanced C++ libraries (LAPACK / BLAS) in th
 
 `conda` comes with prebuilt versions and compilers which mean you get scipy in under a minute
 
-    $ conda install scipy
+```sh
+$ conda install scipy
+```
 
 Downsides are that not all libraries are supported by `conda` and there is less help on Stackoverflow for it.
 
 
 # Exercises
 
-### 4.1. Supplying arguments to a program
+## Exercise 4.1: Supplying arguments to a program
+This exercise is to help you get used to the idea of self help in coding.
 
 Try and figure out what the `-IU` means and notice that you can stack single letter flags on a single `-`. The combination of `-IU` is usually only used when an installation is broken or doing something weird and won't work.
 
-### 4.2. Debugging bad command
+## Exercise 4.2: Debugging bad command
+I can't really tell you the aim of this exercise without giving away the answer :)
 
-Why does `$ python - m pip -h` not work?
+Why does this not work?
 
-### 4.3. Understanding importance of `$PATH`
+```sh
+$ python - m pip -h
+```
+
+**Hint** It shouldn't just take you to the `python` console. It should show you the Help for `pip`!
+
+## Exercise 4.3: Understanding importance of `$PATH`
+This exercise aims to educate you at how your machine works under the hood. How does your machine know how to execute programs in `Program Files` or other obscure locations? This should make that clear.
 
 Recall that the first command must be an executable program. Why does `$ pip -h` work?
 
-Hint: On Windows powershell type `$ $env:PATH` or on Mac OS X type `$ echo $PATH`.
+**Hint** On Windows powershell type `$ $env:PATH` or on Mac OS X type `$ echo $PATH`.
 You can use `ls` to display files that match patterns, for example
 
-```
+```sh
 $ ls "/a/directory/*pip*"
 ```
 
 use this on the `/bin` directory for anaconda.
 
-### 4.4 Corporate Proxies
+## Exercise 4.4: Corporate Proxies
+This exercise is really more of an example to make a point that most people in corporate environments think IT have *blocked them* from using `python` - genuinely some of the smartest quants I know have also thought this. When in fact it's nothing of the sort. Instead it's just a symptom of being behind a firewall.
 
-If you are on a coporate network find your proxy. In windows follow [this guide](https://superuser.com/a/346376). On Mac OS X follow [this guide](https://askubuntu.com/a/924676)
+If you are on a corporate network find your proxy. In windows follow [this guide](https://superuser.com/a/346376). On Mac OS X follow [this guide](https://askubuntu.com/a/924676)
+
+This proxy is hardcoded in your browser e.g. Google Chrome / IE and is how it hits the internet. The example above shows how to `pip install` using a proxy.
+
 
 ### Next Topic
 {:toc}
