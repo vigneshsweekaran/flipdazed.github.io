@@ -95,4 +95,4 @@ Run the file `~/pylrn/test.py` with `python`
 ### Next Topic
 {:toc}
 
-[03: The Python Interpreter]({% post_url 2019-10-15-03-The-Python-Interpreter %})
+[03: The Python Interpreter](https://flipdazed.github.io/blog/python%20tutorial/03-The-python-interpreter)
