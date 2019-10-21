@@ -99,7 +99,6 @@ You can exit `python` by entering
 >>> exit()
 ```
 
-but most usually `Control+D` (I usually jam it a few times to avoid the "Are you sure" etc.)
 If you are in the middle of executing code, you can force code to stop by entering `Control+C`. Sometimes you may have to hold `Control+C` or press it quite a few times to actually register particularly if you are doing something where the interpreter hasn't got time to register your command!
 
 
