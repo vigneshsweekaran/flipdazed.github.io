@@ -174,4 +174,4 @@ $ echo "print('Hello World')" >> ~/pylrn/test.py
 ### Next Topic
 {:toc}
 
-[02: Installing Python for Mac OS X / Windows]({% post_url 2019-10-15-02-Installing-Python-for-Mac-OS-X-Windows %})
+[02: Installing Python for Mac OS X / Windows](https://flipdazed.github.io/blog/python%20tutorial/02-Installing-Python-for-Mac-OS-X-Windows)
