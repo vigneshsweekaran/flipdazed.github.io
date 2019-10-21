@@ -142,4 +142,4 @@ NB: You're not expected to fix this code yet! Just move onto the next exercise :
 ### Next Topic
 {:toc}
 
-[04: Installing Python Packages]({% post_url 2019-10-15-04-Installing-Python-Packages %})
+[04: Installing Python Packages](https://flipdazed.github.io/blog/python%20tutorial/04-Installing-Python-Packages)
