@@ -154,23 +154,18 @@ Run the following command to create a new file
 **Max OS X users do this**
 ```sh
 $ touch ~/pylrn/test.py
+$ echo print('Hello World') >> ~/pylrn/test.py
 ```
 
 **Windows users do this**
 ```sh
-$ New-Item ~/pylrn/test.py -type file
+$ print('Hello World') | Out-File ~/pylrn/test.py -encoding ascii
 ```
 
 verify it is there with
 
 ```sh
 $ ls ~/pylrn/*.py
-```
-
-Put something inside it
-
-```sh
-$ echo print('Hello World') >> ~/pylrn/test.py
 ```
 
 ### Next Topic
