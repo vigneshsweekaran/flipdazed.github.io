@@ -127,9 +127,11 @@ All of these commands e.g. `ls`, `rm`, `mkdir` are all programs themselves that 
 
 # Exercises
 
-Your *local* machine home directory is always denoted by `~/` (`~\` on Windows)
+Your *local* machine home directory is always denoted by `~/` (note the slashes are backwards in Windows so this is `~\`for Windows machines)
 
-### 1.1 Creating directories
+These exercises aim to get you more comfortable with using the command line rather than being an actual problem solving task
+
+## Exercise 1.1: Creating directories
 - `cd` into the directory `~`
 - Create a new directory named `temp` in this directory
 
@@ -141,11 +143,11 @@ $ ls ~/pyl*
 
 the `*` will wildcard all text following it
 
-### 1.2 Renaming directories
+## Exercise 1.2: Renaming directories
 
 Change the name of this directory to `pylrn`
 
-### 1.3. Create a file with contents
+## Exercise 1.3: Create a file with contents
 
 Run the following command to create a new file
 
@@ -156,7 +158,7 @@ $ touch ~/pylrn/test.py
 
 **Windows users do this**
 ```sh
-$ New-Item ~/pylrn/test.py
+$ New-Item ~/pylrn/test.py -type file
 ```
 
 verify it is there with
@@ -168,7 +170,7 @@ $ ls ~/pylrn/*.py
 Put something inside it
 
 ```sh
-$ echo "print('Hello World')" >> ~/pylrn/test.py
+$ echo print('Hello World') >> ~/pylrn/test.py
 ```
 
 ### Next Topic
