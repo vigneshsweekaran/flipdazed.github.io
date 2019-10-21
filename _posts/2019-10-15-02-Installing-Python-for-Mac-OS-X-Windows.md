@@ -68,7 +68,8 @@ If you ever have weird things happen in the future when using `brew` check out h
 
 # Exercises
 
-### 2.1 Verifying your `python` executable
+## Exercise 2.1: Verifying your `python` executable
+This exercise shows you how to debug a fairly common issue where users are running a different `python` executable to the one that they just installed.
 
 Check what `python` is your system default
 
@@ -80,7 +81,8 @@ On Mac OS X
 
     $ which python
 
-### 2.2 Verifying your `python` version
+## Exercise 2.2: Verifying your `python` version
+This exercise helps you check your python version. Another source of confusion for some beginners.
 
 Check you have python 3.6.5 or greater
 
@@ -88,7 +90,8 @@ Check you have python 3.6.5 or greater
 
 If you don't get `"Python 3.x.x :: Anaconda, Inc."` for `python` 3.6.5 or greater than seek help / reinstall.
 
-### 2.3 Running a `.py` file in `python`
+## Exercise 2.3: Running a `.py` file in `python`
+This exercise aims to show you how python files can be executed from the command line.
 
 Run the file `~/pylrn/test.py` with `python`
 
