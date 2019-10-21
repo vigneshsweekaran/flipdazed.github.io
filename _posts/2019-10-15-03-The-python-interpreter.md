@@ -31,9 +31,8 @@ comments: true
 
 Open the `Terminal` and type
 
-```sh
-$ python
-```
+    $ python
+
 This should then load the **basic** python interpreter. When we are in a python interpreter, I will use the following syntax: `>>>` for new logical blocks, `...` for line continuations or logical block continuations and results will be without padding.
 
 Try entering the following to print thing to the console window
@@ -61,11 +60,11 @@ or another example is the `assert` statement which throws an error unless the fo
 
 You may be familiar with some other statements like
 
-  - `break`
-  - `continue`
-  - `return`
-  - `yeild`
-  - `raise`
+    - `break`
+    - `continue`
+    - `return`
+    - `yield`
+    - `raise`
 
 amongst others which can be found on the [docs page](https://docs.python.org/3/reference/simple_stmts.html#grammar-token-expression-stmt)
 
@@ -107,12 +106,13 @@ If you are in the middle of executing code, you can force code to stop by enteri
 # Exercises
 
 
-### 3.1 The issue with just-in-time (jit) complilation
+## Exercise 3.1: The issue with just-in-time (jit) complilation
+This exercise is designed to demonstrate a common issue that can be caused by `python`'s JIT compilation (i.e. the fact that it runs one line at a time). In comparision `Fortran`, `java` & `c++` will check syntax across all the code (as well as numerous other checks) before you can run a single line.
 
-In the `python` console
+In the `python` console type (this is meant to give a bug!)
 
 ```python
->>> HelloWorld
+>>> print(HelloWorld)
 ```
 
 Notice that the compiler tells you three things
@@ -122,22 +122,25 @@ Notice that the compiler tells you three things
  - an arrow signalling which bit of code was bad
  - An error type and description of the error
 
-Now try
+Lets write your first function (Note we will cover functions properly in section 8) as follows
 
 ```python
 >>> def hello_world():
 ...     print(HelloWorld)
 ```
 
-and then
+This function will execute everything indented until it hits a non-indented block (or a `return` / `yeild` statement). If this was `c++` we would instantly get an error as before.
+
+However in `python` we won't get an error until the line itself is actually ran - similar to `VBA`
 
 ```python
 >>> hello_world()
 ```
 
-this is one of the biggest weaknesses of `python` and why most core quant libraries are still built in `java` or `C++`. Most of the bugs you create will be due to this.
+This is one of the biggest weaknesses of `python` and why most core quant libraries are still built in `java` or `C++`. Most of the bugs you create will be due to this.
 
-NB: You're not expected to fix this code yet! Just move onto the next exercise :)
+**NB** You're not expected to fix this code yet! Just move onto the next exercise :)
+
 
 ### Next Topic
 {:toc}
