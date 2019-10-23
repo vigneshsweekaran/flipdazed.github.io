@@ -300,46 +300,62 @@ Understand why the following does't return `25` and fix the issue below
 
 
 ```python
-def my_func(x):
-    return x**2
+>>> def my_func(x):
+...     print('Inside `my_func`')
+...     print('This is x:', x, 'This is the type of x:', type(x))
+...     print('leaving `my_func`')
+...     return x**2
 
-class MyClass:
+>>> class MyClass:
+...
+...     def another_func(self, y):
+...         print('Inside `another_func`')
+...         print('This is y:', y)
+...         print('This is the type of y:', type(y))
+...         print('This is self:', self)
+...         print('This is the type of self:', type(self))
+...         print('leaving `another_func`')
+...         return my_func(self)
 
-    def another_func(self, y):
-        return my_func(self)
+>>> MyClass().another_func(5)
 
-MyClass().another_func(5)
+Inside `another_func`
+This is y: 5
+This is the type of y: <class 'int'>
+This is self: <__main__.MyClass object at 0x1092a1128>
+This is the type of self: <class '__main__.MyClass'>
+leaving `another_func`
+Inside `my_func`
+This is x: <__main__.MyClass object at 0x1092a1128> This is the type of x: <class '__main__.MyClass'>
+leaving `my_func`
+---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+<ipython-input-9-3fd527e264f1> in <module>()
+      7         return my_func(self)
+      8 
+----> 9 MyClass().another_func(5)
+
+
+<ipython-input-9-3fd527e264f1> in another_func(self, y)
+      5 
+      6     def another_func(self, y):
+----> 7         return my_func(self)
+      8 
+      9 MyClass().another_func(5)
+
+
+<ipython-input-9-3fd527e264f1> in my_func(x)
+      1 def my_func(x):
+----> 2     return x**2
+      3 
+      4 class MyClass:
+      5 
+
+
+TypeError: unsupported operand type(s) for ** or pow(): 'MyClass' and 'int'
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    <ipython-input-9-3fd527e264f1> in <module>()
-          7         return my_func(self)
-          8 
-    ----> 9 MyClass().another_func(5)
-    
-
-    <ipython-input-9-3fd527e264f1> in another_func(self, y)
-          5 
-          6     def another_func(self, y):
-    ----> 7         return my_func(self)
-          8 
-          9 MyClass().another_func(5)
-
-
-    <ipython-input-9-3fd527e264f1> in my_func(x)
-          1 def my_func(x):
-    ----> 2     return x**2
-          3 
-          4 class MyClass:
-          5 
-
-
-    TypeError: unsupported operand type(s) for ** or pow(): 'MyClass' and 'int'
-
 
 
 ```python
