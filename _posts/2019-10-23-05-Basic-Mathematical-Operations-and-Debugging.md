@@ -396,4 +396,4 @@ Lets increase the volatility $\sigma$ significantly to 1000% and now model the s
 ### Next Topic
 {:toc}
 
-[04: Installing Python Packages](https://flipdazed.github.io/blog/python%20tutorial/05-Basic-Mathematical-Operations-and-Debugging)
+Coming soon ...
