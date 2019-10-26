@@ -397,7 +397,7 @@ Equities cannot have a value less than zero, $S_{t} \ge0\ \forall t$
 
 Lets increase the volatility $\sigma$ significantly to 1000% and now model the stock price until it goes to zero.
 
-**Modify the earlier example to:**
+**Modify the earlier Fibonacci Series example to:**
 1. Set `sigma` to have a value of 1000%
 2. print the current price `s_t` at each time step
 3. Stop the similution once the stock price reaches zerov
