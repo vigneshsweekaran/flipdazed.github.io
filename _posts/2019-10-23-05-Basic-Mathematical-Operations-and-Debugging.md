@@ -305,6 +305,7 @@ def my_func(a, b):
 
 Here is the question... Understand why the below function does't return `25` and fix the issue below. You will need to run the functions below in `python`
 
+**Trick** In ipython you can copy blocks of python code to your clipboard and paste them directly in by typing %paste in the ipython terminal
 ```python
 def first_func(x, y):
     return second_func(x, y)
