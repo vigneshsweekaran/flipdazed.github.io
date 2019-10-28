@@ -396,10 +396,10 @@ Equities cannot have a value less than zero, $S_{t} \ge0\ \forall t$
 
 Lets increase the volatility $\sigma$ significantly to 1000% and now model the stock price until it goes to zero.
 
-**Modify the loop in the earlier Fibonacci Series example to:**
+**Modify the earlier Fibonacci Series example to loop the calculation of $S_{t+1}$:**
 1. Set `sigma` to have a value of 1000%
 2. print the current price `s_t` at each time step
-3. Stop the similution once the stock price reaches zerov
+3. Stop the similution once the stock price reaches zero
 
 **Hint** Remember that you can reassign the variable `s_t` and you will want a new `epsilon = np.random.standard_normal()` to be calculated at each iteration. Also using `0` exactly might take a while to converge, for example $10^{-250}$ is still not zero but in finance anything less than $0.01 is essentially zero. Another way you can represent `0.01` is in exponential form as `1e-2` which stands for $10^{-2}$ 
 
