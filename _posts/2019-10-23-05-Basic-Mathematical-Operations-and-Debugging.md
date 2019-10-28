@@ -289,7 +289,15 @@ class MyClass:
 
 # Exercises
 
-It is assumed that you will get multiple tracebacks in the questions. Some will be very long and really obscure - stick to the recipie above and you should surface! 
+It is assumed that you will get multiple tracebacks in the questions. Some will be very long and really obscure - stick to the recipie above and you should surface!
+
+For these exercises, we will use `ipython`. You may need to `pip install` it, google how to do this and once installed you can simply type
+
+```bash
+$ ipython
+```
+
+in the terminal
 
 ## Exercise 5.1: Debugging confusing code
 This example shows some code that you may not understand. This is common when using libraries such as `pandas` and `numpy` which may throw some really obscure errors. This exercise is to help you realise that all problems are debuggable if you read the traceback carefully and don't get bogged down in that what you may not understand.
@@ -305,7 +313,7 @@ def my_func(a, b):
 
 Here is the question... Understand why the below function does't return `25` and fix the issue below. You will need to run the functions below in `python`
 
-**Trick** In ipython you can copy blocks of python code to your clipboard and paste them directly in by typing %paste in the ipython terminal
+**Trick** In `ipython` you can copy blocks of python code to your clipboard and paste them directly in by typing %paste in the ipython terminal
 ```python
 def first_func(x, y):
     return second_func(x, y)
@@ -388,7 +396,7 @@ Equities cannot have a value less than zero, $S_{t} \ge0\ \forall t$
 
 Lets increase the volatility $\sigma$ significantly to 1000% and now model the stock price until it goes to zero.
 
-**Modify the earlier Fibonacci Series example to:**
+**Modify the loop in the earlier Fibonacci Series example to:**
 1. Set `sigma` to have a value of 1000%
 2. print the current price `s_t` at each time step
 3. Stop the similution once the stock price reaches zerov
