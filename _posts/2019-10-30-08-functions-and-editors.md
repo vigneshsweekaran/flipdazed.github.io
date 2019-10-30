@@ -312,6 +312,10 @@ False
 
 write a function for this in python taking in two varibles `a` and `b` as arguments. Write the four test cases in the doctstring in `doctest` format and test that the function works as expected by running `doctest`
 
+```python
+# Solve Me!
+```
+
 ## Exercise 8.4: Functions called from functions
 
 Let us introduce a new method of doing loops for this example:
