@@ -370,4 +370,8 @@ $$
 
 where the null product is defined as equal to 1.
 
-Explicitly $0! = 1$ , $1! = 1$ and $5! = 1\times2\times3\times4\times5 = 120$.
+Explicitly
+
+- $0! = 1$
+- $1! = 1$
+- $5! = 1\times2\times3\times4\times5 = 120$.
