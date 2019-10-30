@@ -363,15 +363,3 @@ def fibonacci(n):
 ```
 
 The factorial function `n!` is defined as the product of all numbers 1 to `n` (including `n`) i.e. `1 * 2 * ... * (n - 1) * n`. Explicitly $0! = 1$ , $1! = 1$ and $5! = 1\times2\times3\times4\times5 = 120$.
-
-## Exercise 8.6 [Hard]: Recursive Brownian Motion
-
-Write a recursive geometric brownian motion as a recursive function for `n` steps. You will be able to test it against your solution from 8.3
-
-```python
-import numpy as np
-np.random.seed(42)
-
-
-# Solve Me!
-```
