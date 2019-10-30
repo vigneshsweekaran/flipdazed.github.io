@@ -352,6 +352,8 @@ def fibonacci(n):
         n: An positive integer
 
     Example:
+        We can compare to the a theoretical value
+
         >>> z = (5**0.5 + 1) / 2
         >>> theoretical = int((z**10 - (-z)**-10) * 5**-0.5)
         >>> fibonacci(10) == theoretical
