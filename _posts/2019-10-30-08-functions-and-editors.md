@@ -365,7 +365,7 @@ def fibonacci(n):
 The factorial function `n!` is defined as the product of all numbers 1 to `n` (including `n`) i.e. 
 
 $$
-n! \equiv \prod_{x=0}^n x = 1 \times 2 \times ... \times (n - 2) \times (n - 1) \times n
+n! \equiv \prod_{x=0}^n x = 1 \times 2 \times \dots \times (n - 2) \times (n - 1) \times n
 $$
 
 where the null product is defined as equal to 1.
