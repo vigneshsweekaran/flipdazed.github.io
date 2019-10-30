@@ -2,7 +2,7 @@
 layout: post
 title: "04: Installing Python Packages"
 menutitle: "04: Installing Python Packages"
-date: 2019-10-15 22:32 +0000
+date: 2019-10-23 22:32 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am

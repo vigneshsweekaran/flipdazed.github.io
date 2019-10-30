@@ -2,7 +2,7 @@
 layout: post
 title: "07: Flow Control"
 menutitle: "07: Flow Control"
-date: 2019-10-15 22:32 +0000
+date: 2019-10-30 19:35:00 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
@@ -12,13 +12,21 @@ language: EN
 comments: true
 ---
 
-Learning Outcomes:
+# Learning Outcomes
+{:.no_toc}
+
  - Understand how to use `if`, `else` and `elif`
  - Construct for statements across an iterator
  - Understand basics of for loop iteration in python
  - Refresh Terminal skills
 
 **NB** *As a reminder you should be using `ipython` now!*
+
+## Contents
+{:.no_toc}
+
+* This will become a table of contents (this text will be scraped).
+{:toc}
 
 # `if` statements
 
@@ -195,3 +203,8 @@ Find all files containing the string `'test'` and modify it to be `'test2'`. Che
  - Then read the file contents to a temporary object
  - Then open a new file protocol with `'w'` to **overwrite** the entire contents back to the file
 
+
+### Next Topic
+{:toc}
+
+[08: Functions and Editors](https://flipdazed.github.io/blog/python%20tutorial/08-functions-and-editors)

@@ -2,7 +2,7 @@
 layout: post
 title: "05: Basic Mathematical Operations & Debugging"
 menutitle: "05: Basic Mathematical Operations & Debugging"
-date: 2019-10-15 22:32 +0000
+date: 2019-10-23 22:32 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
