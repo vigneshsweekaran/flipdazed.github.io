@@ -362,4 +362,11 @@ def fibonacci(n):
         return fibonacci(n - 1) + fibonacci(n - 2)
 ```
 
-The factorial function `n!` is defined as the product of all numbers 1 to `n` (including `n`) i.e. `1 * 2 * ... * (n - 1) * n`. Explicitly $0! = 1$ , $1! = 1$ and $5! = 1\times2\times3\times4\times5 = 120$.
+The factorial function `n!` is defined as the product of all numbers 1 to `n` (including `n`) i.e. 
+
+$$
+n! \equiv \prod_{x=0}^n x = 1 \times 2 \times ... \times (n - 2) \times (n - 1) \times n
+$$
+where the null product is defined as equal to 1.
+
+Explicitly $0! = 1$ , $1! = 1$ and $5! = 1\times2\times3\times4\times5 = 120$.
