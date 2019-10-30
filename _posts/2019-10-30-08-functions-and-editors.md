@@ -365,3 +365,10 @@ def fibonacci(n):
 
 Write a recursive geometric brownian motion as a recursive function for `n` steps. You will be able to test it against your solution from 8.3
 
+```python
+import numpy as np
+np.random.seed(42)
+
+
+# Solve Me!
+```
