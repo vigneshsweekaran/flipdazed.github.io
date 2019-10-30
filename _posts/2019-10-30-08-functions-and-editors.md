@@ -266,12 +266,7 @@ Note that `pass` is used as above for placeholder functions that contain nothing
 
 
 ```python
-import numpy as np
-np.random.seed(42)
-
-def gbm(s, r=0.02, sigma=0.1, dt=1/252):
-    epsilon = np.random.standard_normal()
-    return s*np.exp((r - .5*sigma**2)*dt + sigma*epsilon*np.sqrt(dt))
+# Solve Me!
 ```
 
 
