@@ -333,9 +333,7 @@ np.random.seed(42)
 # Solve Me!
 ```
 
-## Exercise 8.4 [Hard]: Recursion
-
-This exercise might be quite tricky but it is worthwhile at least playing with the Fibonacci Series example below...
+## Exercise 8.4: Recursion
 
 You can also call a function itself from within itself! As an example the Fibonacci Series can be written
 
@@ -363,6 +361,16 @@ def fibonacci(n):
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)
 ```
+
+The factorial function `n!` is defined as the product of all numbers 1 to `n` (including `n`) i.e. `1 * 2 * ... * (n - 1) * n`. Explicitly $0! = 1$ , $1! = 1$ and $5! = 1\times2\times3\times4\times5 = 120$.
+
+Write a function to calculate `factorial(n)`. You can check this against `np.math.factorial`. Note just calling `np.math.factorial` is not the solution haha!
+
+```python
+# Solve Me!
+```
+
+## Exercise 8.5: [Hard] Recursive Brownian Motion
 
 Write a recursive geometric brownian motion as a recursive function for `n` steps. You will be able to test it against your solution from 8.3
 
