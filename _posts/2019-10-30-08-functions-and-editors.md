@@ -350,21 +350,21 @@ def fibonacci(n):
 
     Args:
         n: An positive integer
-    
+
     Example:
         >>> z = (5**0.5 + 1) / 2
         >>> theoretical = int((z**10 - (-z)**-10) * 5**-0.5)
         >>> fibonacci(10) == theoretical
         True
     """
-    if n<0: 
-        raise ValueError('... no comment')
-    elif n==0: # force first number to be 0
+    if n < 0 or not isinstance(n, int):
+        raise ValueError('`n` must be a positive integer')
+    elif n == 0:
         return 0
-    elif n==1: # force second number to be 1
+    elif n == 1:
         return 1
-    else: 
-        return fibonacci(n - 1) + fibonacci(n - 2) 
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
 ```
 
 Write a recursive geometric brownian motion as a recursive function for `n` steps. You will be able to test it against your solution from 8.3
