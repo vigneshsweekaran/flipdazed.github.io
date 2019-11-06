@@ -798,7 +798,7 @@ Now plot with the default `pandas` plot function. Make sure to pass the argument
 # Solve me!
 ```
 
-## [Optional] Exercise 2.5: Prove empirically GBM returns are Normally distributed 
+## Exercise 2.5: Prove empirically GBM returns are Normally distributed 
 Prove that the 1-step stock returns are normally distributed under the GBM model by fitting a Gaussian distribution to the probability distribution function of the 1-day returns - Don't worry it's not as hard as it sounds :)
 
 
