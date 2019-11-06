@@ -35,26 +35,17 @@ A `tuple` consists of a number of values separated by commas, for instance:
 
 
 ```python
-t = 12345, 54321, 'hello!'
-t[0]
+>>> t = 12345, 54321, 'hello!'
+>>> t[0]
+12345
 ```
-
-
-
-
-    12345
-
 
 
 
 ```python
-t
+>>> t
+(12345, 54321, 'hello!')
 ```
-
-
-
-
-    (12345, 54321, 'hello!')
 
 
 
@@ -62,15 +53,10 @@ They may be nested
 
 
 ```python
-u = t, (1, 2, 3, 4, 5)
-u
+>>> u = t, (1, 2, 3, 4, 5)
+>>> u
+((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))
 ```
-
-
-
-
-    ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))
-
 
 
 As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they may be input with or without surrounding parentheses
@@ -79,41 +65,23 @@ As you see, on output tuples are always enclosed in parentheses, so that nested 
 
 
 ```python
+>>> (1,)
 (1,)
 ```
 
-
-
-
-    (1,)
-
-
-
-
+else it doesn't create a tuple
 ```python
-(1)  # else it doesn't create a tuple
+>>> (1)
+1
 ```
 
-
-
-
-    1
-
-
-
-
+empty tuples can be created without a comma
 ```python
-()   # but empty tuples can be created without a comma!?
+>>> ()
+()
 ```
 
-
-
-
-    ()
-
-
-
-this is also the same with an empty tuple
+this is also the same with an empty list
 
 # Indexing
 
@@ -121,28 +89,20 @@ Access items by referring to the index number (starting from `0`)
 
 
 ```python
-t = 12345, 54321, 'hello!', 'goodbye!'
-t[1]
+>>> t = 12345, 54321, 'hello!', 'goodbye!'
+>>> t[1]
+54321
 ```
-
-
-
-
-    54321
-
 
 
 Negative indices start from the back and in the reverse
 
 
 ```python
-t[-1], t[-2], t[-3], t[-len(t)]
+>>> t[-1], t[-2], t[-3], t[-len(t)]
+('goodbye!', 'hello!', 54321, 12345)
 ```
 
-
-
-
-    ('goodbye!', 'hello!', 54321, 12345)
 
 
 
@@ -152,29 +112,19 @@ Ranges of indices can be specified by the function `slice` which specifies the s
 
 
 ```python
-a_tuple = 0, 1, 2, 3, 4, 5, 6, 7,
-a_tuple[slice(0, 2)]
+>>> a_tuple = 0, 1, 2, 3, 4, 5, 6, 7,
+>>> a_tuple[slice(0, 2)]
+(0, 1)
 ```
-
-
-
-
-    (0, 1)
-
 
 
 An optional thirs argument (the step) can also be specified like
 
 
 ```python
-a_tuple[slice(0, None, 2)]
+>>> a_tuple[slice(0, None, 2)]
+(0, 2, 4, 6)
 ```
-
-
-
-
-    (0, 2, 4, 6)
-
 
 
 Here we gave a step of `2` so it starts at the 0th item and returns every 2nd index until the end.
@@ -183,13 +133,9 @@ In the `slice` object providing `None` gives the default behaviour which is to s
 
 
 ```python
-a_tuple[slice(None, None, None)]
+>>> a_tuple[slice(None, None, None)]
+(0, 1, 2, 3, 4, 5, 6, 7)
 ```
-
-
-
-
-    (0, 1, 2, 3, 4, 5, 6, 7)
 
 
 
@@ -199,61 +145,40 @@ When used between square brackets as an indexing operation is effectively separa
 
 
 ```python
-a_tuple[3:]
+>>> a_tuple[3:]
+(3, 4, 5, 6, 7)
 ```
 
 
+remember slices are up until (NOT INCLUSIVE) of the end index
+
+```python
+>>> a_tuple[-4:-1]
+(4, 5, 6)
+```
 
 
-    (3, 4, 5, 6, 7)
+this is the same as `slice(0, 5, 2)`
 
+```python
+>>> a_tuple[0:5:2]
+(0, 2, 4)
+```
+
+
+this is the same as `slice(1, None, 2)`
+
+```python
+>>> a_tuple[1::2]
+(1, 3, 5, 7)
+```
 
 
 
 ```python
-a_tuple[-4:-1]  # remember slices are up until (NOT INCLUSIVE) of the end index
+>>> a_tuple[::-2]  # same as slice(None, None, -2)
+(7, 5, 3, 1)
 ```
-
-
-
-
-    (4, 5, 6)
-
-
-
-
-```python
-a_tuple[0:5:2]  # this is the same as slice(0, 5, 2)
-```
-
-
-
-
-    (0, 2, 4)
-
-
-
-
-```python
-a_tuple[1::2]  # this is the same as slice(1, None, 2)
-```
-
-
-
-
-    (1, 3, 5, 7)
-
-
-
-
-```python
-a_tuple[::-2]  # same as slice(None, None, -2)
-```
-
-
-
-
-    (7, 5, 3, 1)
 
 
 
@@ -263,33 +188,25 @@ We have used `range` a few times. It is worth pointing out that its arguments op
 
 
 ```python
-a = range(5)
-for i in a:
-    print(i, end=', ')
-a
+>>> a = range(5)
+>>> for i in a:
+...     print(i, end=', ')
+0, 1, 2, 3, 4,
 ```
 
-    0, 1, 2, 3, 4, 
-
-
-
-
-    range(0, 5)
-
+```python
+>>> a
+range(0, 5)
+```
 
 
 This can be converted to a `list` or `tuple` if we wish to use it as such
 
 
 ```python
-list(range(5)), tuple(range(6, 2, -1))
+>>> list(range(5)), tuple(range(6, 2, -1))
+([0, 1, 2, 3, 4], (6, 5, 4, 3))
 ```
-
-
-
-
-    ([0, 1, 2, 3, 4], (6, 5, 4, 3))
-
 
 
 # `list` types
@@ -298,69 +215,43 @@ A list is a collection which is ordered and changeable. In Python lists are writ
 
 
 ```python
-this_list = ["apple", "banana", "cherry"]
-this_list
+>>> this_list = ["apple", "banana", "cherry"]
+>>> this_list
+['apple', 'banana', 'cherry']
 ```
-
-
-
-
-    ['apple', 'banana', 'cherry']
-
-
 
 Lists are indexed in eactly the same ways as tuples
 
 
 ```python
-this_list[1::-1]
+>>> this_list[1::-1]
+['banana', 'apple']
 ```
-
-
-
-
-    ['banana', 'apple']
-
-
 
 We have already encountered `.append`. There are also other additional things with lists as we have extra methods available, some are shown below
 
 
 ```python
-fruits = ['pear', 'banana', 'kiwi', 'apple', 'banana', 'grape']
-fruits.index('banana', 4) # Find next banana starting a position 4
+>>> fruits = ['pear', 'banana', 'kiwi', 'apple', 'banana', 'grape']
+>>> fruits.index('banana', 4)  # Find next banana starting a position 4
+4
 ```
 
-
-
-
-    4
-
-
-
+if no argument is provided it will pop `-1`
 
 ```python
-fruits.pop(0)  # if no argument is provided it will pop -1
+>>> fruits.pop(0)
+'pear'
 ```
-
-
-
-
-    'pear'
-
 
 
 pop will also remove that item from the list
 
 
 ```python
-fruits
+>>> fruits
+['banana', 'kiwi', 'apple', 'banana', 'grape']
 ```
-
-
-
-
-    ['banana', 'kiwi', 'apple', 'banana', 'grape']
 
 
 
@@ -368,25 +259,15 @@ Both `list` and `tuple` types can be multiplied
 
 
 ```python
-fruits[:2] * 2
+>>> fruits[:2] * 2
+['banana', 'kiwi', 'banana', 'kiwi']
 ```
-
-
-
-
-    ['banana', 'kiwi', 'banana', 'kiwi']
-
-
 
 
 ```python
-[tuple(fruits[:2])] * 2
+>>> [tuple(fruits[:2])] * 2
+[('banana', 'kiwi'), ('banana', 'kiwi')]
 ```
-
-
-
-
-    [('banana', 'kiwi'), ('banana', 'kiwi')]
 
 
 
@@ -398,54 +279,37 @@ Here we use use the slice notation and python's builtin `sum` function to simpli
 
 
 ```python
-result = [0, 1]
-for i in range(5):
-    result.append(sum(result[-2:]))
+>>> result = [0, 1]
+>>> for i in range(5):
+...     result.append(sum(result[-2:]))
+>>> result
+[0, 1, 1, 2, 3, 5, 8]
 ```
-
-
-```python
-result
-```
-
-
-
-
-    [0, 1, 1, 2, 3, 5, 8]
-
 
 
 ### Example: A common misunderstood feature with the python `list`
 
 
 ```python
-a_list = list(range(3))
-b_list = [a_list] * 3
-a_list.append('test')
-b_list
+>>> a_list = list(range(3))
+>>> b_list = [a_list] * 3
+>>> a_list.append('test')
+>>> b_list
+[[0, 1, 2, 'test'], [0, 1, 2, 'test'], [0, 1, 2, 'test']]
 ```
-
-
-
-
-    [[0, 1, 2, 'test'], [0, 1, 2, 'test'], [0, 1, 2, 'test']]
-
 
 
 Whereas with tuples...
 
 
 ```python
-a_tuple = tuple(range(3))
-b_tuple = (a_tuple,) * 3
-a_tuple += ('test',)
-b_tuple
+>>> a_tuple = tuple(range(3))
+>>> b_tuple = (a_tuple,) * 3
+>>> a_tuple += ('test',)
+>>> b_tuple
+((0, 1, 2), (0, 1, 2), (0, 1, 2))
 ```
 
-
-
-
-    ((0, 1, 2), (0, 1, 2), (0, 1, 2))
 
 
 
@@ -459,36 +323,30 @@ Though tuples may seem similar to lists, they are often used in different situat
 
 
 ```python
-example_tuple = 1, 2, 3, 4
-example_tuple[2] = 5
+>>> example_tuple = 1, 2, 3, 4
+>>> example_tuple[2] = 5
+
+---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+<ipython-input-36-3faa60cab3a6> in <module>()
+      1 example_tuple = 1, 2, 3, 4
+----> 2 example_tuple[2] = 5
+
+
+TypeError: 'tuple' object does not support item assignment
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    <ipython-input-36-3faa60cab3a6> in <module>()
-          1 example_tuple = 1, 2, 3, 4
-    ----> 2 example_tuple[2] = 5
-    
-
-    TypeError: 'tuple' object does not support item assignment
-
 
 **Mutable object types like lists can be mutated by assignment**
 
 
 ```python
-example_list = [1, 2, 3, 4]
-example_list[2] = 5
-example_list
+>>> example_list = [1, 2, 3, 4]
+>>> example_list[2] = 5
+>>> example_list
+[1, 2, 5, 4]
 ```
-
-
-
-
-    [1, 2, 5, 4]
 
 
 
@@ -499,15 +357,10 @@ We can query what the address location of each python object is by doing
 
 
 ```python
-id(0)   # always put comments at least 1 space away from the last code piece
-id([0]) # unless visually making a block like this
+>>> id(0)    # always put comments at least 1 space away from the last code piece
+>>> id([0])  # unless visually making a block like this
+4532216456
 ```
-
-
-
-
-    4532216456
-
 
 
 From this we can see that the object `0` has an address location and the object `[0]` has another different address location
@@ -516,29 +369,20 @@ What a mutable type **really** means is that we can change the address location 
 
 
 ```python
-example_list = list(range(5)) # remember that a range(n) give an iterable from 0 to n-1
-id(example_list), example_list
+>>> example_list = list(range(5))  # remember that a range(n) give an iterable from 0 to n-1
+>>> id(example_list), example_list
+(4534667592, [0, 1, 2, 3, 4])
 ```
-
-
-
-
-    (4534667592, [0, 1, 2, 3, 4])
-
 
 
 **whilst keeping the memory address of the container the same**
 
 
 ```python
-example_list += [5]            # note that you can put any math operator infront of =
-id(example_list), example_list # to do an inplace assignment! e.g. -=, /=, %= etc
+>>> example_list += [5]             # note that you can put any math operator infront of =
+>>> id(example_list), example_list  # to do an inplace assignment! e.g. -=, /=, %= etc
+(4534667592, [0, 1, 2, 3, 4, 5])
 ```
-
-
-
-
-    (4534667592, [0, 1, 2, 3, 4, 5])
 
 
 
@@ -546,14 +390,10 @@ Whereas with the `tuple`
 
 
 ```python
-example_tuple = tuple(range(5))
-id(example_tuple), id(example_tuple)
+>>> example_tuple = tuple(range(5))
+>>> id(example_tuple), id(example_tuple)
+(4532001432, 4532001432)
 ```
-
-
-
-
-    (4532001432, 4532001432)
 
 
 
@@ -561,14 +401,10 @@ id(example_tuple), id(example_tuple)
 
 
 ```python
-example_tuple += (5,)
-id(example_tuple), example_tuple
+>>> example_tuple += (5,)
+>>> id(example_tuple), example_tuple
+(4531868968, (0, 1, 2, 3, 4, 5))
 ```
-
-
-
-
-    (4531868968, (0, 1, 2, 3, 4, 5))
 
 
 
@@ -578,42 +414,28 @@ If the variable is assigned to another variable, the variable *points to* the sa
 
 
 ```python
-example_tuple = tuple(range(5))
-another_variable = example_tuple
-id(example_tuple), id(another_variable)
+>>> example_tuple = tuple(range(5))
+>>> another_variable = example_tuple
+>>> id(example_tuple), id(another_variable)
+(4532001784, 4532001784)
 ```
-
-
-
-
-    (4532001784, 4532001784)
-
-
 
 However, if we then change the address location of the original variable **we break the link!**
 
 
 ```python
-example_tuple += (5,)
-id(example_tuple), id(another_variable)
+>>> example_tuple += (5,)
+>>> id(example_tuple), id(another_variable)
+(4531868872, 4532001784)
 ```
-
-
-
-
-    (4531868872, 4532001784)
 
 
 
 
 ```python
-example_tuple, another_variable
+>>> example_tuple, another_variable
+((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4))
 ```
-
-
-
-
-    ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4))
 
 
 
@@ -621,16 +443,12 @@ Whereas with mutable types like lists this reference persists!
 
 
 ```python
-example_list = list(range(5))
-another_variable = example_list
-example_list += (5,)
-id(example_list) == id(another_variable)
+>>> example_list = list(range(5))
+>>> another_variable = example_list
+>>> example_list += (5,)
+>>> id(example_list) == id(another_variable)
+True
 ```
-
-
-
-
-    True
 
 
 
@@ -638,28 +456,18 @@ A better way of checking the variables are exactly the same **object value** is 
 
 
 ```python
-example_list is another_variable
+>>> example_list is another_variable
+True
 ```
-
-
-
-
-    True
-
 
 
 A slice, will create a copy of a `list` object to a new address location. A blank slice will also do this
 
 
 ```python
-example_list[:] is another_variable
+>>> example_list[:] is another_variable
+False
 ```
-
-
-
-
-    False
-
 
 
 For a more detailed overview of how exactly this works check out https://realpython.com/pointers-in-python/#immutable-vs-mutable-objects
@@ -671,27 +479,25 @@ This exercise is to help you understand iteration across more than one dimension
 
 Find the trace of the matrix `a`. The trace is defined as the sum of all the diagonal elements.
 
+```python
+a = np.array([[1, 3, 5],[1, 4, 6],[7, 6, 9]])
+```
+
+```python
+>>> a
+array([[1, 3, 5],
+       [1, 4, 6],
+       [7, 6, 9]])
+```
+
+
 **Hint** You may also want to play with
 
 ```python
-for i, ai in enumerate(a):
-    print(i, ai)
+>>> for i, ai in enumerate(a):
+...     print(i, ai)
 ```
 recalling how multiple variable assignment works. Google may be your friend here!
-
-
-```python
-np.array([[1, 3, 5],[1, 4, 6],[7, 6, 9]])
-```
-
-
-
-
-    array([[1, 3, 5],
-           [1, 4, 6],
-           [7, 6, 9]])
-
-
 
 **Hint** For the less maths-inclined the diagonal is `[1, 4, 9]`. We don't want the anti-diagonal of `[5, 4, 7]`.
 
