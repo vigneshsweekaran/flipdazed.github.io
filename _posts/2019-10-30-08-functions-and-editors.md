@@ -214,6 +214,7 @@ I'll only bother introducing 2 options to keep it simple (and for my own sanity)
 
  - `PyCharm` as an IDE
  - `SublimeText3` as a Text Editor
+ - `Jupyter` as an IDE
  
 Choosing your text editor / IDE is a fairly lifelong commitment so like marriage you will be stuck in it for better or for worse; for richer or for poorer. You may get into arguments with other people about their editors. Occasionally people cheat on their first editor but this is an unusual move.
 
@@ -345,7 +346,7 @@ def fibonacci(n):
         n: An positive integer
 
     Example:
-        We can compare to the a theoretical value
+        We can compare to a theoretical value
 
         >>> z = (5**0.5 + 1) / 2
         >>> theoretical = int((z**10 - (-z)**-10) * 5**-0.5)
