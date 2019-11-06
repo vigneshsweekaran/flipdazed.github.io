@@ -375,3 +375,8 @@ Explicitly
 - $0! = 1$
 - $1! = 1$
 - $5! = 1\times2\times3\times4\times5 = 120$.
+
+### Next Topic
+{:toc}
+
+[09: Lists and Tuples](https://flipdazed.github.io/blog/python%20tutorial/09-lists-and-tuples)
