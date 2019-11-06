@@ -117,13 +117,21 @@ will iterate 4 times
  - once for `dir2` returning `('./root/dir2', ['dir21'], ['f2.csv', 'data.xlsx'],)`
  - finally, once for `dir21` returning `('./root/dir2', [], [],)`
 
+**Note** that if you type `os.walk('./root')` it will return a `generator` object. To see the output of `generator` objects
+you can just *generate* them by calling `list(the_object)` for for example here we would do `list(os.walk('./root'))`
+
 ### Exercise 7.1.1: Create the directory structure above using the Terminal commands we have learned in the first section
- - **Hint** You will need `touch` / `mkdir`. `ls` and `mv` may also be helpful
+ - **Hint** You will need `touch` / `mkdir`. `ls` and `mv` may also be helpful (On Windows just do `echo $null >> filename` instead of `touch`)
 
 ### Exercise 7.1.2: Print the path of all files that have an extension of `.py`
  - **Hint** A modified form of the expression `if '.py' in 'files.py':` will be key
  - **Hint** You can combine the `root` and the `filename` with `os.path.join`
-
+ - **Hint** Remember how to iterate an object that contains multiple items at each iteration. Multiple variable assignment! The following snippets might help you understand this
+ ```python
+ >>> for i, j, k in [['a0', ['b0', 'c0'], ['d0', 'e0']], ['a1', ['b1', 'c1'], ['d1', 'e1']]]:
+ >>>     for l in k:
+ >>>         print('second list elements', k)
+ ```
 
 ```python
 # Solve me!
