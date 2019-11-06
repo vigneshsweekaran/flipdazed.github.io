@@ -19,8 +19,8 @@ comments: true
  - Differences between `list` and `tuple`
  - Some `list` operations
  - Mutable vs. immutable types
-<!--  - numpy arrays
- - vector operations on numpy arrays -->
+ - numpy arrays
+ - vector operations on numpy arrays
 
 ## Contents
 {:.no_toc}
@@ -472,9 +472,153 @@ False
 
 For a more detailed overview of how exactly this works check out https://realpython.com/pointers-in-python/#immutable-vs-mutable-objects
 
+# Numpy Arrays
+
+Numpy arrays are **exceeedingly important** to your future career as a python expert!
+They offer a way of doing optimised mathematics on lists.
+
+
+## The need for `numpy` arrays
+Take the following as an example:
+```python
+>>> arr = list(range(3))
+```
+
+Note that we can't simply multiply a normal list and expect its elements to be doubled! The example below is expected behavour.
+```python
+>>> arr * 2
+[[1, 2, 3], [1, 2, 3]]
+```
+
+Think of a list like an object e.g. like an apple. If you multiply 10xApples you don't suddenly expect 10x the number of seeds and one apple. As with the 10 apples you should expect 10 lists.
+
+Thus we are required to do something like
+```python
+>>> arr2 = arr.copy()  # As a teaser, try without .copy() and see what happens to arr!
+>>> for i in arr:
+...     arr2[i] = arr[i] * 2
+```
+
+## The `numpy` solution
+
+Compare to the numpy solution
+```python
+>>> import numpy as np
+>>> arr = np.array([1, 2, 3])
+>>> np.array(arr) * 2
+array([0, 2, 4])
+```
+
+> In fact we can use `np.arange` to further simplify
+> ```python
+> >>> np.arange(3) * 2
+> ```
+
+Not only is this more concise, but `numpy` uses optimised C++ libraries that are incredibly difficult for humans to beat in terms of speed. Thus all operations we can push to the C++ part of `numpy` are as fast if not faster than some seriously intense C++ code (As a reminder C++ is a very fast language and what most core quant pricers are written in as a result)
+
+As an example you may have a look at [this `numpy` module](https://github.com/numpy/numpy/blob/master/numpy/core/src/umath/matmul.c.src) which does matrix multiplication (note `matmul` is actually `arr * arr.T` not `arr * 2`) this will call a library called [BLAS](https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms) if possible which is a **highly optimised** linear algebra module written in Fortran and C++. In a nutshell: Goodluck at writing faster code than the authors of BLAS routines.
+
+## Iteration and indexing in `numpy`
+Iteration and indexing in numpy are somewhat funky and this can make newwer users veryu confused between `list` and `numpy.array` iteration... I will try to not confuse you by making explicit what is specifically only allowed in numpy and what is allowed in `list` objects as well
+
+All normal list indexing tricks can be used on `numpy` arrays
+```python
+>>> import numpy as np
+>>> arr = np.arange(10)
+>>> arr[::-1]
+array([9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
+>>> arr[:9]
+array([0, 1, 2, 3, 4, 5, 6, 7, 8])
+```
+
+### Masking
+However **only in `numpy` arrays** we can use an array itself to **mask** or select items
+```python
+>>> arr[arr > 5]
+array([6, 7, 8, 9])
+```
+
+This will not work in a normal python list!
+```python
+>>> l = list(range(10))
+>>> l[l > 5]
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-24-33f477ef3cbe> in <module>()
+      1 l = list(range(10))
+----> 2 l[l > 5]
+
+TypeError: '>' not supported between instances of 'list' and 'int'
+```
+
+This works because solely because
+
+```python
+>>> arr > 5
+array([False, False, False, False, False, False,  True,  True, True, True])
+```
+
+as a comparison see what happens when we do 
+```python
+>>> arr[[True] * 3 + [False] * 7]
+array([0, 1, 2])
+```
+
+similarly we could do (remember the bitwise logic?)
+
+```python
+>>> arr[(arr == 2) | (arr == 5)]
+array([2, 5])
+```
+
+### Fancy indexing
+
+Another thing we can do in `numpy` is index explicitly with another array
+
+```python
+>>> arr = np.arange(10)**2
+>>> idx = np.arange(10) * 3
+>>> arr[idx[idx < 10]]  # take this statement apart to understand it!
+array([ 0,  9, 36, 81])
+```
+
+Whereas a similar statement won't work with lists
+```python
+>>> l = list(range(10))
+>>> l[[0, 2, 4]]
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-38-5efbb062c778> in <module>()
+      1 l = list(range(10))
+----> 2 l[[0, 2, 4]]
+
+TypeError: list indices must be integers or slices, not list
+```
+
+Confusingly, we can actually use a raw `list` to index a numpy array in fact we can use both `list` and `tuple`
+
+```python
+>>> arr = np.arange(10)**2
+>>> l = [3, 7, 9]
+>>> arr[l]
+array([ 9, 49, 81])
+```
+
+
+## Optimising code for `numpy`
+> The key takeaway is to push all our compute into `numpy`'s C++ core
+
+How do we achieve this in practice?
+
+It can be tricky but in short use `numpy` arrays where possible for any math that needs to be done on every element this includes `**` `+` `/` `-` `*` `%` `//` `^` `|` `&` as examples.
+
+```python
+>>> np.arange(100)
+```
+
 # Exercises
 
-## Exercise 1: Nested loops
+## Exercise 9.1: Nested loops
 This exercise is to help you understand iteration across more than one dimension.
 
 Find the trace of the matrix `a`. The trace is defined as the sum of all the diagonal elements.
@@ -506,14 +650,14 @@ recalling how multiple variable assignment works. Google may be your friend here
 # Solve me!
 ```
 
-## Exercise 2: Monte Carlo modelling using Geometric Brownian Motion
+## Exercise 9.2: Monte Carlo modelling using Geometric Brownian Motion
 This exercise is to expand on the previous example with a bit of quantitative finance (Don't worry though the maths will all be solved out for you!).
 
 Here you will be guided through a monte carlo stock price model using Geometric Brownian Motion. You will also show that the returns from a GBM model follow a normal distribution.
 
 This exercise is intended to be partcularly challenging and may require some googling but don't give up - 99% of coding is being frustrated and feeling stupid... I sort of didn't tell you that when you signed up haha!
 
-### Exercise 2.1: Storing iteration results in a list
+### Exercise 9.2.1: Storing iteration results in a list
 
 Modify your previous example to the brownian motion exercise so that you store the results in a list named `path` while the stock price is greater than 0. Set `path_len = 504` (i.e. 2 years) and only run for this many time steps.
 
@@ -528,7 +672,7 @@ sigma = 1000
 # solve me
 ```
 
-### Exercise 2.2: Plotting results
+### Exercise 9.2.2: Plotting results
 Plot your stock path using `matplotlib` - you will certainly want to google this
 
 **Hint** Just use `plt.plot` nothing fancy!
@@ -538,9 +682,9 @@ Plot your stock path using `matplotlib` - you will certainly want to google this
 # Solve me!
 ```
 
-### Exercise 2.3: Monte Carlo
+### Exercise 9.2.3: Monte Carlo
 
-In Exercise 2.1 you simulated a single path of a stock using GBM. Now create `paths_num = 1000` paths and store each of these paths in another list named `paths`
+In Exercise 9.2.1 you simulated a single path of a stock using GBM. Now create `paths_num = 1000` paths and store each of these paths in another list named `paths`
 
 **Hint** `paths` will be a list of lists & you will require two `for` loops. I have declared the empty list for you to fill below
 
@@ -550,7 +694,7 @@ paths = []
 # Solve me!
 ```
 
-### Exercise 2.4: Plotting multiple lines on one plot
+### Exercise 9.2.4: Plotting multiple lines on one plot
 Plot all 1000 paths with `pandas` using `dt` as the index. This is a little more involved so read carefully!
 
 When we created `paths` we created an object like
@@ -604,11 +748,11 @@ Now plot with the default `pandas` plot function. Make sure to pass the argument
 # Solve me!
 ```
 
-## Exercise 2.5: Prove empirically GBM returns are Normally distributed 
+## Exercise 9.2.5: Prove empirically GBM returns are Normally distributed 
 Prove that the 1-step stock returns are normally distributed under the GBM model by fitting a Gaussian distribution to the probability distribution function of the 1-day returns - Don't worry it's not as hard as it sounds :)
 
 
-### Exercise 2.5.1: Calculate 1-day returns using a `pandas` object
+### Exercise 9.2.5.1: Calculate 1-day returns using a `pandas` object
 You will need to calculate 1-day returns. You have two options for this:
 
  1. Absolute returns $\frac{s_{t} - s_{t-1}}{s_{t-1}}$
@@ -625,7 +769,7 @@ Without proof 2 is equal to 1 if $\Delta t \ll T$
 # Solve me!
 ```
 
-### Exercise 2.5.3: Check your results
+### Exercise 9.2.5.3: Check your results
 This isn't so much of an exercise but simply a check for the previous exercise to ensure you have it correct! The maths isn't too important. If you like, you can ignore it all and just run the code below. **You should expect differences less than 1% if you have it correct**
 
 Without proof (see [here](https://quant.stackexchange.com/questions/17287/why-is-rate-of-return-on-the-stock-normally-distributed-under-gbm) for one) we state that the n-day returns, $R_n$ follow a Normal distribution
@@ -658,7 +802,7 @@ print(f'Difference in stdv samples vs theory: {100*(stdv_th - stdv_ac)/stdv_ac:5
 # Solve me
 ```
 
-### Exercise 2.5.3: Plot theory vs. empirical results (reusing `matplotlib` axes)
+### Exercise 9.2.5.3: Plot theory vs. empirical results (reusing `matplotlib` axes)
 This exercise isn't so much an exercise rather than an example of how to resuse a `matplotlib` axis object to draw another line.
 
 Compare this with the theory visually by plotting the theoretical distribution and showing its equivalence with the following code
@@ -688,7 +832,7 @@ ax.legend()
 # Solve me!
 ```
 
-### [Optional] Exercise 2.5.4: Show this holds for 20-day returns
+### [Optional] Exercise 9.2.5.4: Show this holds for 20-day returns
 Show the same is true for 20day returns by plotting the relationship with 20-day returns
 
 Note that this exercise is really aimed at structurers, derivatives traders and quants - if you haven't studied stochastic calculus at university then just ignore this question or ask a quant if you find it interesting
