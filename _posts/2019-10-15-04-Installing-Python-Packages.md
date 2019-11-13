@@ -113,7 +113,7 @@ If you are on a corporate network find your proxy. In windows follow [this guide
 This proxy is hardcoded in your browser e.g. Google Chrome / IE and is how it hits the internet. The example above shows how to `pip install` using a proxy.
 
 
-### Next Topic
+# Next Topic
 {:toc}
 
 [05: Basic Mathematical Operations & Debugging](https://flipdazed.github.io/blog/python%20tutorial/05-Basic-Mathematical-Operations-and-Debugging)
