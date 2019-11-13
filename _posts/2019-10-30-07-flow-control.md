@@ -212,7 +212,7 @@ Find all files containing the string `'test'` and modify it to be `'test2'`. Che
  - Then open a new file protocol with `'w'` to **overwrite** the entire contents back to the file
 
 
-### Next Topic
+# Next Topic
 {:toc}
 
 [08: Functions and Editors](https://flipdazed.github.io/blog/python%20tutorial/08-functions-and-editors)
