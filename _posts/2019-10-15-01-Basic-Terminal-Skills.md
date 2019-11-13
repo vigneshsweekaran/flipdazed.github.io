@@ -168,7 +168,7 @@ verify it is there with
 $ ls ~/pylrn/*.py
 ```
 
-### Next Topic
+# Next Topic
 {:toc}
 
 [02: Installing Python for Mac OS X / Windows](https://flipdazed.github.io/blog/python%20tutorial/02-Installing-Python-for-Mac-OS-X-Windows)
