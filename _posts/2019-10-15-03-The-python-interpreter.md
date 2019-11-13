@@ -141,7 +141,7 @@ This is one of the biggest weaknesses of `python` and why most core quant librar
 **NB** You're not expected to fix this code yet! Just move onto the next exercise :)
 
 
-### Next Topic
+# Next Topic
 {:toc}
 
 [04: Installing Python Packages](https://flipdazed.github.io/blog/python%20tutorial/04-Installing-Python-Packages)
