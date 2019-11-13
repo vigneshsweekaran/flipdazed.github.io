@@ -95,7 +95,7 @@ This exercise aims to show you how python files can be executed from the command
 
 Run the file `~/pylrn/test.py` with `python`
 
-### Next Topic
+# Next Topic
 {:toc}
 
 [03: The Python Interpreter](https://flipdazed.github.io/blog/python%20tutorial/03-The-python-interpreter)
