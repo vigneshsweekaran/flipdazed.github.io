@@ -842,7 +842,7 @@ Note that this exercise is really aimed at structurers, derivatives traders and 
 # Solve me!
 ```
 
-### Next Topic
+# Next Topic
 {:toc}
 
 Coming soon!
