@@ -845,5 +845,4 @@ Note that this exercise is really aimed at structurers, derivatives traders and 
 # Next Topic
 {:toc}
 
-Coming soon!
 [10: Dictionaries and Sets](https://flipdazed.github.io/blog/python%20tutorial/10-dictionaries-and-sets)
