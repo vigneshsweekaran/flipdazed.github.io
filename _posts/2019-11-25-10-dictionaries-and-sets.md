@@ -520,7 +520,7 @@ Calculate the $\beta_{unlev}$ for each comp in a new column called `'beta_unlev'
 
 
 
-## Exercise 10.3.5: Calculate the $\beta_{}$ for Microsoft
+## Exercise 10.3.5: Calculate the beta for Microsoft
 We now need to relever the $\beta$ with the debt-equity ratio and effective tax rate of microsoft.
 
 ### Exercise 10.3.5: Obtain $D/E$ and Effective Tax rate for Microsoft
