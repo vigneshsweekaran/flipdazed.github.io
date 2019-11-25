@@ -26,7 +26,7 @@ comments: true
 * This will become a table of contents (this text will be scraped).
 {:toc}
 
-# Sets 
+# Sets
 
 Sets only contain unique items
 
@@ -40,7 +40,7 @@ We can also iterate a set like:
 
 ```python
 >>> for i in trade_ids:
->>>     print(i, end=',')
+...     print(i, end=',')
 12342,324562,12342,36452,54767,
 ```
 
