@@ -79,16 +79,15 @@ but not a set of lists
 
 ```python
 >>> {[1, 2], [3, 4]}
+---------------------------------------------------------------------------
 
-    ---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
 
-    TypeError                                 Traceback (most recent call last)
+<ipython-input-2-a0ff115cb325> in <module>()
+----> 1 {[1, 2], [3, 4]}
 
-    <ipython-input-2-a0ff115cb325> in <module>()
-    ----> 1 {[1, 2], [3, 4]}
-    
 
-    TypeError: unhashable type: 'list'
+TypeError: unhashable type: 'list'
 ```
 
 # Dictionaries
