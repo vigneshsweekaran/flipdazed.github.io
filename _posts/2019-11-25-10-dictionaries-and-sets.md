@@ -298,11 +298,11 @@ You are working on an end-of-day regulatory risk model that requires the revalua
 Assume your pricing function to get the PV of the trade is this:
 
 ```python
-import time
-def dodgy_pricer(trade_id):
-    """Gets the given a trade_id and returns a random pv"""
-    time.sleep(.1)
-    return 2e9 * np.random.random() - 1e9
+>>> import time
+>>> def dodgy_pricer(trade_id):
+...     """Gets the given a trade_id and returns a random pv"""
+...     time.sleep(.1)
+...     return 2e9 * np.random.random() - 1e9
 ```
 and it is called in Excel something like `=DODGY_PRICER($B3)`
 
@@ -568,18 +568,6 @@ $$
 $$
 where $r_T$ is the effective tax rate for Microsoft and D/E is the Debt-to-Equity ratio for Microsoft and we already calcualted $\beta_{unlev}$ above
 
-
-```python
-# Solve me
-```
-
-
-
-```python
-from yahoofinancials import YahooFinancials
-parser = YahooFinancials("MSFT")
-parser.get_beta()
-```
 
 ```python
 # Solve me
