@@ -488,7 +488,7 @@ You will want to iterate through each ticker and column combination to fill the 
 
 
 
-## Exercise 10.3.3: Calculate the $\beta$ for each comp
+## Exercise 10.3.3: Calculate the beta for each comp
 This example requires you to read the technical documentation for a repository and utilise it for a solution.
 
 Create a new column for the $\beta$ for each comp.
@@ -502,7 +502,7 @@ Explore the documentation at https://github.com/JECSand/yahoofinancials to find 
 
 
 
-## Exercise 10.3.4: Calculate $\beta_{unlev}$ as a new column
+## Exercise 10.3.4: Calculate unlevered beta as a new column
 This example uses some basic vectorised mathematics with pandas DataFrames
 
 
@@ -538,7 +538,7 @@ Repeat just the vital steps above to obtain `'debtToEquity'` and `effectiveTax` 
 
 
 
-### Exercise 10.3.5: Calculate the estimate of $\beta_{unlev}$ as the median of the comps
+### Exercise 10.3.5: Calculate the estimate of unlevered beta as the median of the comps
 The exercise demonstrates how we can use `numpy` functionality through `pandas` 
 
 This is a maths problem and so naturally we use `numpy` which has the function `np.median`. We can use this on the column of the `pd.DataFrame` containing the `'beta_unlev'` to obtain the median, remembering that Pandas DataFrames are really just wrappers around numpy arrays
@@ -559,9 +559,7 @@ Assign the median beta to a variable name `beta_unlev_msft`
 ```
 
 
-
-
-### Exercise 10.3.5: Calculate the estimate of $\beta$
+### Exercise 10.3.5: Calculate the estimate of beta
 The calculate $\beta$ for Microsoft as
 $$
 \beta_{unlev}\left(1 + (1-r_T)\frac{D}{E}\right) = \beta
@@ -577,7 +575,7 @@ where $r_T$ is the effective tax rate for Microsoft and D/E is the Debt-to-Equit
 # Appendix: Calculate WACC for Microsoft from comparables
 This exercise is really aimed at those in Investment Banking roles because it's nice to complete the picture
 
-## Calculate $\beta$ based upon comparables D/E
+## Calculate beta based upon comparables D/E
 
 As a guess of an "optimal" capital structure from comparables, take the median debt and median equity from the comparables. Calculate the D/E ratio from these medians and use it to create a $\beta$, using the same `effectixeTax`. Add a new row containing `['debtToEquity', 'effectiveTax', 'beta']` for this new $\beta$ and D/E using the index name: `'MSFT_beta_optcap'`
 
@@ -954,7 +952,7 @@ Create new 'optimal' capital structure by taking the medians of the comps Debt a
   </tbody>
 </table>
 
-### Create $\beta$ values for the various capital structures
+### Create beta values for the various capital structures
 
 ```python
 >>> df_msft.loc[i, 'totalDebt'] = df_msft.loc[i, 'ratioDebt'] * (df_msft.loc[f'{ticker}_beta_hist', 'totalDebt'] + df_msft.loc[f'{ticker}_beta_hist', 'totalStockholderEquity'])
