@@ -846,4 +846,4 @@ Note that this exercise is really aimed at structurers, derivatives traders and 
 {:toc}
 
 Coming soon!
-<!-- [09: Lists and Tuples](https://flipdazed.github.io/blog/python%20tutorial/09-lists-and-tuples) -->
+[10: Dictionaries and Sets](https://flipdazed.github.io/blog/python%20tutorial/dictionaries-and-sets/)
