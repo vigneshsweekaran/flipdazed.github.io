@@ -495,7 +495,7 @@ Think of a list like an object e.g. like an apple. If you multiply 10xApples you
 Thus we are required to do something like
 ```python
 >>> arr2 = arr.copy()  # As a teaser, try without .copy() and see what happens to arr!
->>> for i in arr:
+>>> for i in range(arr.shape[0]):
 ...     arr2[i] = arr[i] * 2
 ```
 
