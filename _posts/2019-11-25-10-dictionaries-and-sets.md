@@ -79,8 +79,6 @@ but not a set of lists
 
 ```python
 >>> {[1, 2], [3, 4]}
-```
-
 
     ---------------------------------------------------------------------------
 
@@ -91,7 +89,7 @@ but not a set of lists
     
 
     TypeError: unhashable type: 'list'
-
+```
 
 # Dictionaries
 Dictionaries are python's version of that is known as a **hash map** or **hash table** in other languages. If anyone in an interview asks you for a hash map in `python` you'll know they just mean a `dict` (also they probably don't really know `python` that well!)
