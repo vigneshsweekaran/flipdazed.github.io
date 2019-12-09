@@ -86,7 +86,7 @@ class DogBase:
 
 but the we cannot specify any defining characteristics about `DogBase` so it kind of loses it's individual charm - there are cases where `DogBase` would be increadibly useful but we won't touch on those at this level.
 
-# What is `self` in a class
+## What is `self` in a class
 
 *Functions* within classes are known as *class methods*. This new namenclature kind of gives us a hint at a few things...
 
@@ -99,7 +99,7 @@ I can define a function outside of the class which doesn't overwrite the functio
 'woof'
 ```
 
-## Why is it called `self`?
+### Why is it called `self`?
 
 Secondly, notice that all my *class methods* contain the variable name `self` as the first argument whereas my *function* did not have this requirement.
 
@@ -109,7 +109,7 @@ Secondly, notice that all my *class methods* contain the variable name `self` as
 
 The reason we use `self` is because it's refers to the class object *itself*
 
-## What does `self` do?
+### What does `self` do?
 
 Lets create an instance of `Dog`
 
@@ -132,19 +132,19 @@ what happens internally is actually
 thus `self` becomes `rover`!
 
 
-# Interacting with class attributes
+## Interacting with class attributes
 
 Class attributes can be interacted with 
 
 
-# When to use Classes
+## When to use Classes
 
 This is all great but you don't work in a Game Studio. This is geared towards banking so why do we care about Dogs?! We don't, so lets start looking at trading strategies.
 
 > Just as a heasd up: This has no relation to how Nomura QIS calculate momentum.
 > This is just a simple demonstration to how we would want to utilise classes for signals
 
-## Start with ideas as snippets then functions
+### Start with ideas as snippets then functions
 
 The best way to start is normally with functions or single lines of code. As you become comfortable
 with components move then into functions.
@@ -194,7 +194,7 @@ This function is pretty generic bcause it will just give the signal on whatever 
 
 These two conditions generate the need for a class
 
-## When to avoid classes
+### When to avoid classes
 
 As a beginner classes will almost always make debugging more complicated if you dive into them head first. 
 
@@ -206,7 +206,7 @@ Remember that abstraction is a tool: You should only use tools if they make your
 > that you may misconfigure it and have a lot of issues as a result! Pick the right tool for the right job!
 
 
-### Example: A bad class 
+#### Example: A bad class 
 I regularly see code from juniors that will define a single `class` in a module that will never
 change in its parameterisation and will only ever be called once with functions that do indepedent tasks.
 
@@ -283,7 +283,7 @@ class TradeThingyForReportX:
 
 Given that this report will never be used outside of this junior's function: I would say that this is a **bad example of writing a class**.
 
-### Example: Avoiding bad classes 
+#### Example: Avoiding bad classes 
 
 Instead I would write the above example as below which results in far less complexity and less code
 
@@ -333,7 +333,7 @@ def pv_for_report_x(my_trades, new_data):
 
 
 
-## When to move into a class
+### When to move into a class
 
 In my opinion there are two good reasonas to use classes in `python`
 
@@ -341,12 +341,12 @@ In my opinion there are two good reasonas to use classes in `python`
 2. You have many **functions** that are constantly **passing around the same objects** 
 
 
-## A class for our backtesting
+### A class for our backtesting
 
 Lets create an engine that can give us the signal at any given historic timepoint for our momentum strategy
 
 
-### Use `pandas` for timeseries analysis!
+#### Use `pandas` for timeseries analysis!
 Doing timeseries analysis without using `pandas` is asking for trouble unless you're an advanced programmer. 
 
 This is because `pandas` contains an index which travels with the arrays that prevents you tying youeslf in knots. A single bad index can and will totally breakdown any systemmatic signal. 
@@ -354,7 +354,7 @@ This is because `pandas` contains an index which travels with the arrays that pr
 Therefore let us start the creation of our strategy using a pandas Series (a `pd.Series` is just a single column of a `pd.DataFrame`) check this by creating `df = pd.DataFrame({'a': [5, 6, 10]})` and selecting the column `'a'` like `df['a']`
 
 
-### Writing the base logic
+#### Writing the base logic
 
 The following incorporates the basic framework in which we want to operate
 
