@@ -169,7 +169,7 @@ class Demo:
             >>> d.res - (x**y + z) * a * b  < 1e-6
             True
         """
-        self.tmp = x**y + z
+        self.tmp = self.x**self.y + self.z
         self.res = self.tmp * a * b
         return self.res
 ```
