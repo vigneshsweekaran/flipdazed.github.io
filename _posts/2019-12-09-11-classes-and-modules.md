@@ -134,8 +134,49 @@ thus `self` becomes `rover`!
 
 ## Interacting with class attributes
 
-Class attributes can be interacted with 
+Anything that is assigned to `self` becomes an attribute that we can interact with. This is another very useful property of a class: For storing intermediate results.
 
+```python
+class Demo:
+    """
+    A demo taking in 3 integers, x, y, z
+
+    Example:
+        >>> d = Demo(1, 2, 3)
+        >>> (d.x == 1) & (d.y == 2) & (d.z == 3)
+        True
+    """
+    def __init__(self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z
+
+    def method(self, a, b):
+        """
+        Calculates ``(x^y + z) * a * b``
+
+        Example:
+            >>> x, y, z, a, b = 1, 5, 76, 89, 2
+            >>> d = Demo(x, y, z)
+            >>> d.method(a, b) - (x**y + z) * a * b  < 1e-6
+            True
+
+            We can also extract the temporary reuslt afterwards
+            >>> d.tmp - (x**y + z) < 1e-6
+            True
+
+            and we also stored the result
+            >>> d.res - (x**y + z) * a * b  < 1e-6
+            True
+        """
+        self.tmp = x**y + z
+        self.res = self.tmp * a * b
+        return self.res
+```
+
+
+**Testing Tip** *As a side note I actually got the variable names on this really simple function
+wrong several times simply because I decided to rename them all! THe doctests saved me actually putting up incorrect code.*
 
 ## When to use Classes
 
