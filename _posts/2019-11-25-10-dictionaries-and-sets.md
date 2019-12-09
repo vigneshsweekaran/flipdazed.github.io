@@ -1172,8 +1172,8 @@ so we can calculate in `python` as
 
 It turns out that this is slightly off the mark with what I found on the internet but I suspect that is due to the $\beta$ on Yahoo Finance being paticularly high compared to other sources
 
+
 # Next Topic
 {:toc}
 
-Coming soon!
-<!-- [09: Lists and Tuples](https://flipdazed.github.io/blog/python%20tutorial/09-lists-and-tuples) -->
+[11: Classes and Modules](https://flipdazed.github.io/blog/python%20tutorial/11-classes-and-modules)
