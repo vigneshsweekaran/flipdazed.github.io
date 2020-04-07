@@ -70,42 +70,14 @@ stable.plot(title='Acceleration of Cumulative UK Deaths in NHS Hospitals',
 unstable.plot(ax=ax, color='red', ls='--', label='unstable data')
 ```
 
-We now want to annotate where the UK government introduced quarantine phases. We can annotate like this https://matplotlib.org/2.0.1/examples/pylab_examples/annotation_demo2.html where I chose the bendy lines. I found the parameters for the offset of 13 days byreading a load of medical papers which showed it took 13 days from infection to fatality as the low end of the interquartile range. I assume this would be where we start to see effects really feeding back into the data.
+We can now plot the unstable dataset like
 
 ```python
-d0 = datetime.datetime(2020, 3, 16)
-d1 = datetime.datetime(2020, 3, 23)
-d2 = d0 + datetime.timedelta(days=13)
-d3 = d1 + datetime.timedelta(days=13)
-
-y0 = smoothed[d0]
-y1 = smoothed[d1]
-y2 = smoothed[d2]
-
 fig, ax = plt.subplots()
 stable.plot(title='Acceleration of Cumulative UK Deaths in NHS Hospitals',
             label='stable data',
             ax=ax) 
 unstable.plot(ax=ax, color='red', ls='--', label='unstable data')
-
-
-ax.annotate('blanket symptomatic isolation',
-            xy=(d0, y0), xycoords='data',
-            xytext=(-80, -60), textcoords='offset points',
-            arrowprops=dict(arrowstyle="->",
-                            connectionstyle="arc3,rad=.2"))
-
-ax.annotate('national isolation',            
-            xy=(d1, y1), xycoords='data',
-            xytext=(-30, -50), textcoords='offset points',
-            arrowprops=dict(arrowstyle="->",
-                            connectionstyle="arc3,rad=-.2"))
-
-ax.annotate('blanket symptomatic isolation + 2wks',
-            xy=(d2, y2), xycoords='data',
-            xytext=(-220, -50), textcoords='offset points',
-            arrowprops=dict(arrowstyle="->",
-                            connectionstyle="arc3,rad=-.2"))
 
 ax.set_ylabel('change in daily fatalities')
 ```
@@ -236,15 +208,23 @@ unstable_adj.plot(ax=ax, color='green', ls='--',
 ax.legend(loc='lower left', fontsize=8)
 ```
 
-I didn't put error bars on because I was lazy. We can also add an annotation in the future (on the 6th) as follows. At the time of writing this will error as we don't have data for the 6th yet.
+# Estimating Impact of Government Measures
+
+We now want to annotate where the UK government introduced quarantine phases. I found the parameters for the offset of 13 days byreading a load of medical papers which showed it took 13 days from infection to fatality as the low end of the interquartile range. I assume this would be where we start to see effects really feeding back into the data.
+
+We can add labels for where we expect the data to be affected by isolation like
 
 ```python
-y3 = smoothed_adj[d3]
-ax.annotate('national isolation + 2wks',
-            xy=(d3, y3), xycoords='data',
-            xytext=(-150, -50), textcoords='offset points',
-            arrowprops=dict(arrowstyle="->",
-                            connectionstyle="arc3,rad=.2"))
+d0 = datetime.datetime(2020, 3, 16)
+d1 = datetime.datetime(2020, 3, 23)
+d2 = d0 + datetime.timedelta(days=13)
+d3 = d1 + datetime.timedelta(days=13)
+
+ax.axvspan(d3, smoothed_adj.index[-1], color='darkred', alpha=0.3, lw=0,
+           label='national isolation + 13 days')
+ax.axvspan(d2, d3, color='darkorange', alpha=0.3, lw=0,
+           label='blanket symptomatic isolation + 13 days')
+ax.legend(loc='lower left', fontsize=8)
 ```
 
 # Full Example Script
@@ -281,34 +261,11 @@ d1 = datetime.datetime(2020, 3, 23)
 d2 = d0 + datetime.timedelta(days=13)
 d3 = d1 + datetime.timedelta(days=13)
 
-y0 = smoothed[d0]
-y1 = smoothed[d1]
-y2 = smoothed[d2]
-
 fig, ax = plt.subplots()
 stable.plot(title='Acceleration of Cumulative UK Deaths in NHS Hospitals',
             label='stable data',
             ax=ax) 
 unstable.plot(ax=ax, color='red', ls='--', label='unstable data')
-
-
-ax.annotate('blanket symptomatic isolation',
-            xy=(d0, y0), xycoords='data',
-            xytext=(-80, -60), textcoords='offset points',
-            arrowprops=dict(arrowstyle="->",
-                            connectionstyle="arc3,rad=.2"))
-
-ax.annotate('national isolation',            
-            xy=(d1, y1), xycoords='data',
-            xytext=(-30, -50), textcoords='offset points',
-            arrowprops=dict(arrowstyle="->",
-                            connectionstyle="arc3,rad=-.2"))
-
-ax.annotate('blanket symptomatic isolation + 2wks',
-            xy=(d2, y2), xycoords='data',
-            xytext=(-220, -50), textcoords='offset points',
-            arrowprops=dict(arrowstyle="->",
-                            connectionstyle="arc3,rad=-.2"))
 
 ax.set_ylabel('change in daily fatalities')
 
@@ -406,10 +363,9 @@ unstable_adj.plot(ax=ax, color='green', ls='--',
               label='unstable data taking into account expected future adjustments')
 ax.legend(loc='lower left', fontsize=8)
 
-y3 = smoothed_adj[d3]
-ax.annotate('national isolation + 2wks',
-            xy=(d3, y3), xycoords='data',
-            xytext=(-150, -50), textcoords='offset points',
-            arrowprops=dict(arrowstyle="->",
-                            connectionstyle="arc3,rad=.2"))
+ax.axvspan(d3, smoothed_adj.index[-1], color='darkred', alpha=0.3, lw=0,
+           label='national isolation + 13 days')
+ax.axvspan(d2, d3, color='darkorange', alpha=0.3, lw=0,
+           label='blanket symptomatic isolation + 13 days')
+ax.legend(loc='lower left', fontsize=8)
 ```
