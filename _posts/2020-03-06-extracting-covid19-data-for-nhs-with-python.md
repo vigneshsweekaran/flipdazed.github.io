@@ -242,9 +242,9 @@ I didn't put error bars on because I was lazy. We can also add an annotation in 
 y3 = smoothed_adj[d3]
 ax.annotate('national isolation + 2wks',
             xy=(d3, y3), xycoords='data',
-            xytext=(-0, -70), textcoords='offset points',
+            xytext=(-150, -50), textcoords='offset points',
             arrowprops=dict(arrowstyle="->",
-                            connectionstyle="arc3,rad=-.2"))
+                            connectionstyle="arc3,rad=.2"))
 ```
 
 # Full Example Script
@@ -345,7 +345,7 @@ updates_pct = updates_raw.copy()
 all_cols = set(updates_raw.columns)
 for i in reversed(sorted(updates_raw.columns)):
     # this is because of some errors in the data
-    raw_as_of_date = (diff1 - updates_raw[all_cols].sum(axis=1))
+    raw_as_of_date = (raw_diffs - updates_raw[all_cols].sum(axis=1))
     raw_as_of_date.iloc[-i-1:] = 0
     updates_pct[i] = updates_raw[i] / raw_as_of_date
     all_cols.remove(i)
@@ -409,7 +409,7 @@ ax.legend(loc='lower left', fontsize=8)
 y3 = smoothed_adj[d3]
 ax.annotate('national isolation + 2wks',
             xy=(d3, y3), xycoords='data',
-            xytext=(-0, -70), textcoords='offset points',
+            xytext=(-150, -50), textcoords='offset points',
             arrowprops=dict(arrowstyle="->",
-                            connectionstyle="arc3,rad=-.2"))
+                            connectionstyle="arc3,rad=.2"))
 ```
