@@ -198,14 +198,13 @@ unstable_adj = smoothed_adj.iloc[-unstable_region:]
 fig3, ax3 = plt.subplots()
 raw_diffs.plot(title='Daily fatalities in NHS Hospitals',
                label='original data', ax=ax3)
-raw_diffs_adj.iloc[-unstable_region:].plot(ax=ax3, color='red', ls='--',
-                   label='taking into account expected future adjustments')
+raw_diffs_adj.iloc[-unstable_region:].plot(ax=ax3, color='green', ls='--',
+                   label='expected future adjustments')
 ax3.set_ylabel('Fatalities attributed to each date')
 ax3.legend(loc='upper left')
 
 unstable_adj.plot(ax=ax, color='green', ls='--',
-              label='unstable data taking into account expected future adjustments')
-ax.legend(loc='lower left', fontsize=8)
+              label='expected future adjustments')
 ```
 
 # Estimating Impact of Government Measures
@@ -225,6 +224,12 @@ ax.axvspan(d3, smoothed_adj.index[-1], color='darkred', alpha=0.3, lw=0,
 ax.axvspan(d2, d3, color='darkorange', alpha=0.3, lw=0,
            label='blanket symptomatic isolation + 13 days')
 ax.legend(loc='lower left', fontsize=8)
+```
+
+Layout is better with
+
+```python
+fig.tight_layout()
 ```
 
 # Full Example Script
@@ -255,11 +260,6 @@ smoothed = raw_diffs.diff().ewm(span=span).mean()
 
 stable = smoothed.iloc[:-unstable_region+1]
 unstable = smoothed.iloc[-unstable_region:]
-
-d0 = datetime.datetime(2020, 3, 16)
-d1 = datetime.datetime(2020, 3, 23)
-d2 = d0 + datetime.timedelta(days=13)
-d3 = d1 + datetime.timedelta(days=13)
 
 fig, ax = plt.subplots()
 stable.plot(title='Acceleration of Cumulative UK Deaths in NHS Hospitals',
@@ -354,18 +354,23 @@ unstable_adj = smoothed_adj.iloc[-unstable_region:]
 fig3, ax3 = plt.subplots()
 raw_diffs.plot(title='Daily fatalities in NHS Hospitals',
                label='original data', ax=ax3)
-raw_diffs_adj.iloc[-unstable_region:].plot(ax=ax3, color='red', ls='--',
+raw_diffs_adj.iloc[-unstable_region-1:].plot(ax=ax3, color='red', ls='--',
                    label='taking into account expected future adjustments')
 ax3.set_ylabel('Fatalities attributed to each date')
 ax3.legend(loc='upper left')
 
 unstable_adj.plot(ax=ax, color='green', ls='--',
-              label='unstable data taking into account expected future adjustments')
-ax.legend(loc='lower left', fontsize=8)
+              label='expected future adjustments')
+
+d0 = datetime.datetime(2020, 3, 16)
+d1 = datetime.datetime(2020, 3, 23)
+d2 = d0 + datetime.timedelta(days=13)
+d3 = d1 + datetime.timedelta(days=13)
 
 ax.axvspan(d3, smoothed_adj.index[-1], color='darkred', alpha=0.3, lw=0,
            label='national isolation + 13 days')
 ax.axvspan(d2, d3, color='darkorange', alpha=0.3, lw=0,
            label='blanket symptomatic isolation + 13 days')
 ax.legend(loc='lower left', fontsize=8)
+fig.tight_layout()
 ```
