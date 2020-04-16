@@ -100,13 +100,13 @@ The trick is to realise that we can just logically stack two perceptrons. Two pe
 
 ## Learning parameters
 
-The "knowledge" of a neural network is all contained in the learned parameters whcih are the weights and bias. The weights are multiplied to each signal sent by their respective perceptrons and the bias are added. They change the signal from a 1/0 an input like $y(x) = wx + b$ where here $x$ is the sigmoid that approximately sends outs 1/0, $w$ is the weight and $b$ is the bias.
+The "knowledge" of a neural network is all contained in the learned parameters whcih are the weights and bias. The weights are multiplied to each signal sent by their respective perceptrons and the bias are added as $y(x) = wx + b$ where $w$ is the weight and $b$ is the bias.
 
 The backpropagation algorithm (backprop.) is the key method by which we seqeuntially adjust the weights by backpropagating the errors from the final output neuron.
 
-We define define the error as anything that will decrease as we approach the target distribution. Let $E$ is the total error given by 
+We define define the error as anything that will decrease as we approach the target distribution. Let $E$ be the error function given by 
 
-$$E = \frac{1}{2}(y - y_{o})$$
+$$E = \frac{1}{2}(y - y_{o})^2$$
 
 where $y_o$ is the result of the output layer (the prediction) and $y$ is the true value given in the training data.
 
