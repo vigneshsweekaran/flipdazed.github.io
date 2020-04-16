@@ -155,7 +155,7 @@ $$
 \frac{\partial a_o}{\partial w_{o}}
 $$
 
-This is true because the output layer $y_o = \sigmoid(a_o)$ varies with respect to the activation $a_o = w_o \dot y_h + b_o$ in the output layer. The activation in the output layer varies with respect to the weights of the output layer. Recall that this is a partial derivative so we hold the bias of the output layer and the hidden layer output as constants. We can calculate all these terms.
+This is true because the output layer $y_o = \sigma(a_o)$ varies with respect to the activation $a_o = w_o \dot y_h + b_o$ in the output layer. The activation in the output layer varies with respect to the weights of the output layer. Recall that this is a partial derivative so we hold the bias of the output layer and the hidden layer output as constants. We can calculate all these terms.
 
 The derivative of the Error with respect to the output layer is just 
 
