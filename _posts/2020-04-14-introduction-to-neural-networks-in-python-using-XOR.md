@@ -564,4 +564,4 @@ A converged result should have hyperplanes that separate the True and False valu
 - [Solving XOR with a Single Perceptron](https://medium.com/@lucaspereira0612/solving-xor-with-a-single-perceptron-34539f395182)
 - [Training Neural Networks with Genetic Algorithms](https://blog.abhranil.net/2015/03/03/training-neural-networks-with-genetic-algorithms/)
 - [Stanford CS Vanishing Gradient Example](https://cs224d.stanford.edu/notebooks/vanishing_grad_example.html)
-- [Wikipedia Signoid Function]](https://en.wikipedia.org/wiki/Sigmoid_function)
+- [Wikipedia Signoid Function](https://en.wikipedia.org/wiki/Sigmoid_function)
