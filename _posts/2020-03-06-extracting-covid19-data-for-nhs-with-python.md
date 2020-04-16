@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Extrating Covid19 Data for NHS with Python"
-menutitle: "Extrating Covid19 Data for NHS with Python"
+title: "Extracting Covid19 Data for NHS with Python"
+menutitle: "Extracting Covid19 Data for NHS with Python"
 date: 2020-03-05 21:35:00 +0000
 tags: Python Tutorial Learning covid19 coronavirus 2019-nCov SARS-CoV-2
 category: Python Tutorial
