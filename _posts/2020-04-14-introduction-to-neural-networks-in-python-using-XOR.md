@@ -88,7 +88,7 @@ A single perceptron, therefore, cannot separate our XOR gate because it can only
 
 <figure>
   <img src="{{ site.baseurl }}/media{{page.redirect_from}}xor_1.png" />
-  <figcaption>How do we draw two straight lines? (from <a href="http://www.cs.stir.ac.uk/courses/ITNP4B/lectures/kms/2-Perceptrons.pdf">Kevin Swingler</a> via <a href="https://medium.com/@lucaspereira0612/solving-xor-with-a-single-perceptron-34539f395182">Lucas Araújo</a>a>)</figcaption>
+  <figcaption>How do we draw two straight lines? (from <a href="http://www.cs.stir.ac.uk/courses/ITNP4B/lectures/kms/2-Perceptrons.pdf">Kevin Swingler</a> via <a href="https://medium.com/@lucaspereira0612/solving-xor-with-a-single-perceptron-34539f395182">Lucas Araújo</a>)</figcaption>
 </figure>
 
 The trick is to realise that we can just logically stack two perceptrons. Two perceptrons that will draw straight lines, and another perceptron that serves to combine these two separate signals into a single signal that just has to differntiate between a single True / False boundary.
@@ -114,17 +114,19 @@ Later we will require the derivative of this function so we can add in a factor 
 
 ```python
 def error(target, prediction):
-    return .5*(target - prediction)**2
+    return .5 * (target - prediction)**2
 ```
+
+### Algorithm
 
 The learning algorithm consists of the following steps:
 
 1. Randomly initialise bias and weights
 2. Iterate the training data
-  a. Forward propagate: Calculate the neural net the output
-  b. Compute a "loss function"
-  c. Backwards propagate: Calculate the gradients with respect to the weights and bias
-  d. Adjust weights and bias by gradient descent
+  - Forward propagate: Calculate the neural net the output
+  - Compute a "loss function"
+  - Backwards propagate: Calculate the gradients with respect to the weights and bias
+  - Adjust weights and bias by gradient descent
 3. Exit when error is minimised to some criteria
 
 Note that here we are trying to replicate the exact functional form of the input data. This is not probabilistic data so we do not need a train / validation / test split as overtraining here is actually the aim.
@@ -491,7 +493,7 @@ There are several workarounds for this problem which largely fall into architect
 
 The sigmoid, is a key offender in the mix. It maps input numbers onto a "small" range of [0, 1]. There are large regions of the input space which are mapped to an extremely small range. In these regions of the input space, even a large change will produce a small change in the output.
 
-The following notebook is an excellent example of choosing Relu instead of sigmoid to avoid the vanishing gradient problem: https://cs224d.stanford.edu/notebooks/vanishing_grad_example.html 
+[This notebook](https://cs224d.stanford.edu/notebooks/vanishing_grad_example.html) is an excellent example of choosing Relu instead of sigmoid to avoid the vanishing gradient problem.
 
 
 ## Decision regions
@@ -547,7 +549,7 @@ A converged result should have hyperplanes that separate the True and False valu
 
 # References
 
-- https://towardsdatascience.com/implementing-the-xor-gate-using-backpropagation-in-neural-networks-c1f255b4f20d
-- https://medium.com/@lucaspereira0612/solving-xor-with-a-single-perceptron-34539f395182
-- https://blog.abhranil.net/2015/03/03/training-neural-networks-with-genetic-algorithms/
-- https://cs224d.stanford.edu/notebooks/vanishing_grad_example.html
+- [Implementing the XOR Gate using Backprop. in a Neural Network](https://towardsdatascience.com/implementing-the-xor-gate-using-backpropagation-in-neural-networks-c1f255b4f20d)
+- [Solving XOR with a Single Perceptron](https://medium.com/@lucaspereira0612/solving-xor-with-a-single-perceptron-34539f395182)
+- [Training Neural Networks with Genetic Algorithms](https://blog.abhranil.net/2015/03/03/training-neural-networks-with-genetic-algorithms/)
+- [Stanford CS Vanishing Gradient Example](https://cs224d.stanford.edu/notebooks/vanishing_grad_example.html)
