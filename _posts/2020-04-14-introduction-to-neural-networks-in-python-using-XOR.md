@@ -136,13 +136,13 @@ Note that here we are trying to replicate the exact functional form of the input
 
 We want to find the minimum loss given a set of parameters (the weights and biases). Recalling some AS level maths, we can find the minima of a function by minimising the gradient (each minima has zero gradient). Also luckily for us, this problem has no local minima so we don't need to do any funny business to guarantee convergence. 
 
-Real world problems require stoastic gradient descents which "jump about" as they descend giving them the ability to find the global minima given a long enough time.
+Real world problems require stochastic gradient descents which "jump about" as they descend giving them the ability to find the global minima given a long enough time.
 
 We therefore have several quantitites that require calculation
 $\frac{\partial E}{\partial w_{o}}$,
 $\frac{\partial E}{\partial w_{h}}$,
 $\frac{\partial E}{\partial b_{o}}$
-and $\frac{\partial E}{\partial w_{h}}$ where $h$ and $o$ denote hidden and output layers and $E$ is the total error given by $\frac{1}{2}(y - y_{o})$
+and $\frac{\partial E}{\partial w_{h}}$ where $h$ and $o$ denote hidden and output layers and $E$ is the total error given by $\frac{1}{2}(y - y_{o})^2$
 
 ### Output layer gradient
 
