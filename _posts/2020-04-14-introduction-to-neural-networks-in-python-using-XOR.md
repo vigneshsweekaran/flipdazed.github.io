@@ -147,6 +147,7 @@ and $\frac{\partial E}{\partial w_{h}}$ where $h$ and $o$ denote hidden and outp
 ### Output layer gradient
 
 Starting at the output layer, and by chain rule,
+
 $$
 \frac{\partial E}{\partial w_{o}} =
 \frac{\partial E}{\partial y_{o}}
@@ -157,9 +158,11 @@ $$
 This is true because the output layer $y_o = \sigmoid(a_o)$ varies with respect to the activation $a_o = w_o \dot y_h + b_o$ in the output layer. The activation in the output layer varies with respect to the weights of the output layer. Recall that this is a partial derivative so we hold the bias of the output layer and the hidden layer output as constants. We can calculate all these terms.
 
 The derivative of the Error with respect to the output layer is just 
+
 $$
 \frac{\partial E}{\partial y_{o}} = -(y - y_o)
 $$
+
 due to the sneaky extra half
 
 ```python
@@ -168,6 +171,7 @@ def error_derivative(target, prediction):
 ```
 
 The derivative of the output layer with respect to the sigmoid is 
+
 $$
 \frac{\partial y_o}{\partial a_{o}} = \frac{\partial \sigma(a_o)}{\partial a_o} = \sigma(a_o) (1 - \sigma(a_o)) = y_o (1 - y_o)
 $$
@@ -178,9 +182,11 @@ def sigmoid_derivative(sigmoid_result):
 ```
 
 The derivative of the activation function with respect to the weights is
+
 $$
 \frac{\partial a_o}{\partial w_{o}} = y_h
 $$
+
 which is just the result from the hidden layer.
 
 The same is true for the bias (changing $w_o$ for $b_o$) except
@@ -194,6 +200,7 @@ For the hidden layer we just keep expanding. Instead of taking $y_h$ as a variab
 Recall, if we vary $w_h$, $y_h = \sigma(a_h)$ and further, $a_h = w_h \cdot x + b$ where $x$ is the input training data.
 
 Starting at the output layer, and by chain rule,
+
 $$
 \frac{\partial E}{\partial w_h} =
 \frac{\partial E}{\partial y_o}
@@ -204,19 +211,23 @@ $$
 $$
 
 the three extra derivatives we need to calculate are
+
 $$
 \frac{\partial a_o}{\partial y_h} = w_o
 $$
 
 then recall the derivative of the sigmoid from before
+
 $$
 \frac{\partial y_h}{\partial a_h} = y_h (1 - y_h)
 $$
 
 and finally
+
 $$
 \frac{\partial a_h}{\partial w_h} = x
 $$
+
 and again the bias are the same except $\frac{\partial a_h}{\partial b_h} = 1$
 
 
