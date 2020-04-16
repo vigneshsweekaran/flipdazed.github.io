@@ -244,8 +244,8 @@ where $\alpha$ is the learning rate that is fixed at some constant (mysteriously
 Explicitly for $w_o, b_o$ this would be,
 
 $$
-w_o \to w_o + \alpha y^T_h \left((y_o - y) y_o (1 - y_o)\right)\\
-b_o \to b_o + \alpha (y_o - y) y_o (1 - y_o)
+w_o \leftarrow w_o + \alpha y^T_h \left((y_o - y) y_o (1 - y_o)\right)\\
+b_o \leftarrow b_o + \alpha (y_o - y) y_o (1 - y_o)
 $$
 
 where the $y_h^T$ denotes the transpose of the vector $y_h$. I was a bit underhand in the maths to simplify, but as we will see there is some care required with transposing of dot products when multiplying the weights and layers.
