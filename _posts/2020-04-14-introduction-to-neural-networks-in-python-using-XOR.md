@@ -100,7 +100,7 @@ The trick is to realise that we can just logically stack two perceptrons. Two pe
 
 ## Learning parameters
 
-The "knowledge" of a neural network is all contained in the learned parameters whcih are the weights and bias. The weights are multiplied to each signal sent by their respective perceptrons and the bias are added as $y(x) = wx + b$ where $w$ is the weight and $b$ is the bias.
+The "knowledge" of a neural network is all contained in the learned parameters which are the weights and bias. The weights are multiplied to each signal sent by their respective perceptrons and the bias are added as $y(x) = wx + b$ where $w$ is the weight and $b$ is the bias.
 
 The backpropagation algorithm (backprop.) is the key method by which we seqeuntially adjust the weights by backpropagating the errors from the final output neuron.
 
@@ -116,6 +116,9 @@ Later we will require the derivative of this function so we can add in a factor 
 def error(target, prediction):
     return .5 * (target - prediction)**2
 ```
+
+*Note: Explicitly we should define as the norm like, $E = \frac{1}{2}||y - y_{o}||^2$ since $y$ and $y_{o}$ are vectors but practically it makes no difference and so I prefer to keep it simple for this tutorial.*
+
 
 ### Algorithm
 
@@ -139,10 +142,18 @@ We want to find the minimum loss given a set of parameters (the weights and bias
 Real world problems require stochastic gradient descents which "jump about" as they descend giving them the ability to find the global minima given a long enough time.
 
 We therefore have several quantitites that require calculation
+
 $\frac{\partial E}{\partial w_{o}}$,
+
 $\frac{\partial E}{\partial w_{h}}$,
+
 $\frac{\partial E}{\partial b_{o}}$
-and $\frac{\partial E}{\partial w_{h}}$ where $h$ and $o$ denote hidden and output layers and $E$ is the total error given by $\frac{1}{2}(y - y_{o})^2$
+
+and $\frac{\partial E}{\partial w_{h}}$ where $h$ and $o$ denote hidden and output layers and $E$ is the total error given by
+
+$$
+\frac{1}{2}(y - y_{o})^2
+$$
 
 ### Output layer gradient
 
