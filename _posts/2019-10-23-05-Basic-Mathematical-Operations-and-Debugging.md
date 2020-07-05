@@ -364,10 +364,11 @@ TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'str'
 ## Exercise 5.2: Geometric Brownian Motion (GBM)
 This exercise builds on your ability to translate mathematical operations into code
 
+In this exercise we will look at solving the recursive equation for brownian motion, which can be used to model an asset price
+
 $S_{t+1} = S_t e^{(r - \frac{1}{2}\sigma^2) \Delta t + \sigma\epsilon\sqrt{\Delta t}}$
 
-We introduce the `numpy` library and note that you can rename library names on import with `as` to make it more convinient. Traditionally, most users will rename `numpy as np`
-
+TO do so we introduce the `numpy` library and note that you can rename library names on import with `as` to make it more convinient. Traditionally, most users will rename `numpy as np`
 
 ```python
 import numpy as np  # style tip: Put imports at the top and separate from statements
