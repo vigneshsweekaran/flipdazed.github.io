@@ -336,6 +336,8 @@ np.random.seed(42)
 
 ## Exercise 8.5: Recursion
 
+This is not really an exercise but it is worth being aware of as recursion is a typical interview question.
+
 You can also call a function itself from within itself! As an example the Fibonacci Series can be written
 
 ```python
