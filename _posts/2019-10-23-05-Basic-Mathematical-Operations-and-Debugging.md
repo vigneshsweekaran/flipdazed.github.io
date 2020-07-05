@@ -409,6 +409,8 @@ Lets increase the volatility $\sigma$ significantly to 1000% and now model the s
 # Solve me!
 ```
 
+This example should frustrate you. Bear in mind that frustration is part of the journey and don't be afraid to ask. If you don't mess up, you won't learn!
+
 # Next Topic
 {:toc}
 
