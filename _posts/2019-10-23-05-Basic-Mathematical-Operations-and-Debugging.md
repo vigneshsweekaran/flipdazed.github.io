@@ -368,7 +368,7 @@ In this exercise we will look at solving the recursive equation for brownian mot
 
 $S_{t+1} = S_t e^{(r - \frac{1}{2}\sigma^2) \Delta t + \sigma\epsilon\sqrt{\Delta t}}$
 
-TO do so we introduce the `numpy` library and note that you can rename library names on import with `as` to make it more convinient. Traditionally, most users will rename `numpy as np`
+To do so we introduce the `numpy` library and note that you can rename library names on import with `as` to make it more convinient. Traditionally, most users will rename `numpy as np`
 
 ```python
 import numpy as np  # style tip: Put imports at the top and separate from statements
