@@ -290,30 +290,49 @@ Here the lookup method is exceedingly fast and creating it only requires us to u
 ## Exercise 10.1: Dimensionality reduction
 This example aims to build on previous examples to reinforce the idea of hash maps for reducing complexity. 
 
-You are working on an end-of-day regulatory risk model that requires the revaluation of all trades (e.g. [Basel III: FRTB Sensitivities Based Approach](https://www.bis.org/bcbs/publ/d352.pdf)). You have been instructed to calculate the present value (PV) as a new column in an Excel sheet. Someone else has done this and complained it was impossibly long and took over 40 hours to calculate. They have requested access to a compute grid to speed up their Excel sheet worth $10k per year 
+You are working on an end-of-day regulatory risk model that requires the revaluation of all trades (e.g. [Basel III: FRTB Sensitivities Based Approach](https://www.bis.org/bcbs/publ/d352.pdf)).
+
+You have been instructed to calculate the present value (PV) as a new column in an Excel sheet. Someone else has done this and complained it was impossibly long and took over 40 hours to calculate. They have requested access to a compute grid to speed up their Excel sheet worth $10k per year.
 
 Assume your pricing function to get the PV of the trade is this:
 
 ```python
 >>> import time
->>> def dodgy_pricer(trade_id):
+>>> import numpy as np
+>>> np.random.seed(42)
+>>> def my_pricing_function(trade_id):
 ...     """Gets the given a trade_id and returns a random pv"""
 ...     time.sleep(.1)
 ...     return 2e9 * np.random.random() - 1e9
 ```
 and it is called in Excel something like `=DODGY_PRICER($B3)`
 
-Assume we have already read the Excel sheet with python (use our previous example `data` and make 1.5m rows as the example sheet data)
+Assume we have already read the Excel sheet with python and it gives us a dataframe like below
 
 ```python
+>>> import pandas as pd
+>>> data = [['rates', 346455, 568789.345],
+...         ['rates', 3467457, 4568679.345],
+...         ['rates', 56858, -6578965789.45],
+...         ['fx', 93875, 67896789.34],
+...         ['fx', 34896, -3464754.456],
+...         ['fx', 30986, 0.3456457],
+...         ['credit', '234537', 45765.456],
+...         ['credit', '457568', -3455436.213],
+...         ['credit', '3467457', 456546.034],
+...         ['commodities', '93875', -34563456.23235],
+...         ['commodities', '34457', 4560456.4567],
+...         ['commodities', '457478', 4575678.345346],
+...         ['equities', 3466, -457567.345],
+...         ['equities', 564756, -12.93045],
+...         ['equities', 457568, 546636.438996]]
 >>> df = pd.DataFrame(data * 10000, columns=['risk', 'trade_id', 'dv01'])
 ```
 
-Given that
+Currently this pricing function is being called like
 
 ```python
->>> .1 * 15e5 / 60 / 60
-41.666666666666664
+>>> df['pv'] = df['trade_id'].apply(my_pricing_function)
 ```
 
 Use your knowledge of dictionaries to reduce the problem set and claim a portion of the cost savings for your bonus. 
@@ -323,8 +342,7 @@ Use your knowledge of dictionaries to reduce the problem set and claim a portion
 # Solve me
 ```
 
-
-## Exercise 10.2: Extracting corporate financials via an API
+<!-- ## Exercise 10.2: Extracting corporate financials via an API
 This example aims to help you understand how to navigate a simple dictionary object and also that there is a library for almost every problem. *You should note that in a real Investment Banking use case there will be an API for internal / paid datasets and I would recommend you talk to your IT / Data desk / Strat emphasising that every dataset available in Excel will be available in `python`*
 
 I googled `"python get balance sheet"` and found the following decent library: https://github.com/JECSand/yahoofinancials 
@@ -1177,3 +1195,4 @@ It turns out that this is slightly off the mark with what I found on the interne
 {:toc}
 
 [11: Classes and Modules](https://flipdazed.github.io/blog/python%20tutorial/11-classes-and-modules)
+ -->
