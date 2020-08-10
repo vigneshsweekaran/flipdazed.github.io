@@ -126,7 +126,7 @@ def foo(x):
 ```
 
 
-## Single Calls: Creating a Decorator
+## As a Decorator
 
 For single calls then it makes sense to create a decorator like below
 
@@ -192,7 +192,7 @@ The worthwhile part of this is to note that we can pass keyword arguments to the
         return functools.partial(killer_call, timeout=timeout)
 ```
 
-## Parallelism
+## Parallel Calls
 
 Finally, we may also stumble into the issue of daemonic processes not being able to spawn children. I find this error hilarious. This will occur if you try to parallelise a `multiprocessing.Process` within another `multiprocessing.Process` that has the `daemon` attribute set as True
 
@@ -202,7 +202,7 @@ The requirement is then that we should have a parallel map function for our func
 
 We can do this by modifying the above script to pass the function parameters about via and input queue and an output queue using the `multiprocessing.Queue` objects to their potential.
 
-### parallel map function
+### A Parallel Map
 
 I will start at the outside as this is how I approached the problem myself.
 
@@ -272,7 +272,7 @@ def killer_pmap(func: Callable, iterable: Iterable, cpus: int, timeout: int = 4)
 ```
 
 
-## Managing the in/out queues
+### Managing the in/out queues
 
 The in/out queues can be managed by looping until `q_in` is depleted of items. Therein the function isn't too dissimilar to the one we previously wrote.
 
