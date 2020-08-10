@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Functions and Multiprocessing with Timeouts in Python"
-menutitle: "Functions and Multiprocessing with Timeouts in Python"
+title: "Functions with Timeouts and Multiprocessing in Python"
+menutitle: "Functions with Timeouts and Multiprocessing in Python"
 date: 2020-08-10 22:22:00 +0000
 tags: functions multiprocessing timeouts python time out Windows Mac OS X
 category: Quant Dev
 author: am
 published: true
-redirect_from: "/2020-08-10-functions-and-multiprocessing-with-timeouts-in-python/"
+redirect_from: "/2020-08-10-functions-with-timeouts-and-multiprocessing-in-python/"
 language: EN
 comments: true
 ---
