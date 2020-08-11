@@ -105,7 +105,7 @@ Now I actually found a few cases where the `proc` failed to terminate with an `A
 ## Avoiding AttributeError when doing multiprocessing
 
 One of the most annoying things when doing multiprocessing in python is the need to protect all the functions
-and routines using
+and routines using.
 
 ```python
 <<functions>>
@@ -114,7 +114,7 @@ if '__main__' == __name__:`
     <<parallel spawning>>
 ```
 
-To get around this we can use `dill` to compress the function into a string and pass that instead with `dill.dumps(func)` and `dill.loads(func_string)(*args, **kwargs)`
+To get around thisto ome extent I found using `dill` to compress the function into a string and pass that instead with `dill.dumps(func)` and `dill.loads(func_string)(*args, **kwargs)` can help.
 
 The only real drawback of doing this is that now we need to declare all our imports that are useful to the function inside the function like
 

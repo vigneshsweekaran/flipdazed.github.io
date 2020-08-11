@@ -305,7 +305,7 @@ Assume your pricing function to get the PV of the trade is this:
 ...     time.sleep(.1)
 ...     return 2e9 * np.random.random() - 1e9
 ```
-and it is called in Excel something like `=DODGY_PRICER($B3)`
+and it is called in Excel something like `=MY_PRICING_FUNCTION($B3)` where `$B3` references the `trade_id` and is dragged down the column `B` for all 10000 rows.
 
 Assume we have already read the Excel sheet with python and it gives us a dataframe like below
 
