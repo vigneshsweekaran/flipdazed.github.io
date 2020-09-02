@@ -6,7 +6,7 @@ date: 2019-10-15 22:32 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
-published: true
+published: false
 redirect_from: "/2019-10-15-02-Installing-Python-for-Mac-OS-X-Windows/"
 language: EN
 comments: true

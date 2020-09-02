@@ -6,7 +6,7 @@ date: 2019-12-09 00:35:00 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
-published: true
+published: false
 redirect_from: "/2019-12-09-11-classes-and-modules/"
 language: EN
 comments: true

@@ -6,7 +6,7 @@ date: 2019-11-06 01:35:00 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
-published: true
+published: false
 redirect_from: "/2019-11-06-09-lists-and-tuples/"
 language: EN
 comments: true
