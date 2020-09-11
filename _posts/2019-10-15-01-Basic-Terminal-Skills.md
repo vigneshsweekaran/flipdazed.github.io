@@ -57,14 +57,14 @@ From this point onwards anything denoted like
 $ program
 ```
 
-will represent a `Terminal` interface (this is not python!). The above represents running a command named `program` in the `Terminal`.
+will represent a `Terminal` interface (this is not python!). The above represents running a command named `program` in the `Terminal`. The `$` sign will just signify that we are in a terminal.
 
 
 ## Moving around directories
 
 These commands will soon become second nature & after some practice they are quite a lot faster than navigating the user interface file explorer!
 
-Check what directory you are in
+Check what directory you are in (remember the command is just `pwd` not `$ pwd` because the `$` just means you are in the terminal)
 
 ```sh
 $ pwd
@@ -76,7 +76,7 @@ show what's in the current directory
 $ ls
 ```
 
-make a new directory
+make a new directory (Check that this is there in the file explorer. This is a real folder that you created!)
 
 ```sh
 $ mkdir newdirectory
@@ -94,7 +94,7 @@ go up one directory
 $ cd ..
 ```
 
-show whats inside the directory
+show whats inside the directory (This is l for Llama and not the number 1!)
 
 ```sh
 $ ls directory/
@@ -132,7 +132,7 @@ Your *local* machine home directory is always denoted by `~/` (note the slashes 
 These exercises aim to get you more comfortable with using the command line rather than being an actual problem solving task
 
 ## Exercise 1.1: Creating directories
-- `cd` into the directory `~`
+- `cd` into the directory `~`. This symbol will default to the user's home directory.
 - Create a new directory named `temp` in this directory
 
 ## Exercise 1.2: Renaming directories
@@ -158,6 +158,8 @@ $ echo print('Hello World') >> ~/pylrn/test.py
 ```
 
 **Windows users do this**
+*Don't worry about what this means - accept it just creates a file with `print('Hello World')` inside. This had to be changed from a previous neater command as Windows keeps changing the powershell syntax and this was the only command I could gurantee worked on everyone's machines!*
+
 ```sh
 $ "print('Hello World')" | Out-File ~/pylrn/test.py -encoding ascii
 ```
