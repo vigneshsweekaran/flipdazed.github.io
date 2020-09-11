@@ -6,7 +6,7 @@ date: 2019-10-15 22:32 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
-published: false
+published: true
 redirect_from: "/2019-10-15-02-Installing-Python-for-Mac-OS-X-Windows/"
 language: EN
 comments: true
@@ -98,4 +98,5 @@ Run the file `~/pylrn/test.py` with `python`
 # Next Topic
 {:toc}
 
-[03: The Python Interpreter](https://flipdazed.github.io/blog/python%20tutorial/03-The-python-interpreter)
+This will be released next friday evening (18th)!
+<!-- [03: The Python Interpreter](https://flipdazed.github.io/blog/python%20tutorial/03-The-python-interpreter) -->
