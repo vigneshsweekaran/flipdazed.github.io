@@ -57,7 +57,7 @@ To do this we use a command to create a file if it doesn't exist
 
 The `~/` is a shortcut for your *root user file* or *home directory*. On Windows this is `C:\users\yourname`. The `.` at the beginning just denotes a hidden file.
 
-We can then add the `PATH` to the python executable to this file by
+We can then add the `PATH` to the python executable to this file by (please don't just copy this and run it - you are required to fill in the blanks!)
 
     $ echo 'export PATH=/path/to/your/conda/bin:"$PATH"' >>  ~/.bash_profile
 
