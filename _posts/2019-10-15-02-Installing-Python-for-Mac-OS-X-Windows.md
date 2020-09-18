@@ -98,5 +98,4 @@ Run the file `~/pylrn/test.py` with `python`
 # Next Topic
 {:toc}
 
-This will be released next friday evening (18th)!
-<!-- [03: The Python Interpreter](https://flipdazed.github.io/blog/python%20tutorial/03-The-python-interpreter) -->
+[03: The Python Interpreter](https://flipdazed.github.io/blog/python%20tutorial/03-The-python-interpreter)

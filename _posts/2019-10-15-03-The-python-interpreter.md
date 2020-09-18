@@ -6,7 +6,7 @@ date: 2019-10-15 22:32 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
-published: false
+published: true
 redirect_from: "/2019-10-15-03-The-Python-Interpreter/"
 language: EN
 comments: true
@@ -144,4 +144,5 @@ This is one of the biggest weaknesses of `python` and why most core quant librar
 # Next Topic
 {:toc}
 
-[04: Installing Python Packages](https://flipdazed.github.io/blog/python%20tutorial/04-Installing-Python-Packages)
+Wait until next week for next topic!
+<!-- [04: Installing Python Packages](https://flipdazed.github.io/blog/python%20tutorial/04-Installing-Python-Packages) -->
