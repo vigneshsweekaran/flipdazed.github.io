@@ -106,9 +106,13 @@ $ ls "/a/directory/*pip*"
 use this on the `/bin` directory for anaconda.
 
 ## Exercise 4.4: Corporate Proxies
+
 This exercise is really more of an example to make a point that most people in corporate environments think IT have *blocked them* from using `python` - genuinely some of the smartest quants I know have also thought this. When in fact it's nothing of the sort. Instead it's just a symptom of being behind a firewall.
 
-If you are on a corporate network find your proxy. In windows follow [this guide](https://superuser.com/a/346376). On Mac OS X follow [this guide](https://askubuntu.com/a/924676)
+If you are on a corporate network find your proxy. 
+
+**NB: If you are working in a bank (e.g. Nomura) please check internally what the correct proxy is to use - doing the below is NOT the correct thing to do if there is a specific PyPi server internally (Nomura employees see confluence page on this)**
+In windows follow [this guide](https://superuser.com/a/346376). On Mac OS X follow [this guide](https://askubuntu.com/a/924676)
 
 This proxy is hardcoded in your browser e.g. Google Chrome / IE and is how it hits the internet. The example above shows how to `pip install` using a proxy.
 
