@@ -144,5 +144,4 @@ This is one of the biggest weaknesses of `python` and why most core quant librar
 # Next Topic
 {:toc}
 
-Wait until next week for next topic!
-<!-- [04: Installing Python Packages](https://flipdazed.github.io/blog/python%20tutorial/04-Installing-Python-Packages) -->
+[04: Installing Python Packages](https://flipdazed.github.io/blog/python%20tutorial/04-Installing-Python-Packages)
