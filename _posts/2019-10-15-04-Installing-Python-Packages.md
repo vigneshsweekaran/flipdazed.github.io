@@ -112,7 +112,8 @@ This exercise is really more of an example to make a point that most people in c
 If you are on a corporate network find your proxy. 
 
 **NB: If you are working in a bank (e.g. Nomura) please check internally what the correct proxy is to use - doing the below is NOT the correct thing to do if there is a specific PyPi server internally (Nomura employees see confluence page on this)**
-In windows follow [this guide](https://superuser.com/a/346376). On Mac OS X follow [this guide](https://askubuntu.com/a/924676)
+
+If you do not have any specific internal instructions then the following is how to find a Corporate Proxy: In windows follow [this guide](https://superuser.com/a/346376). On Mac OS X follow [this guide](https://askubuntu.com/a/924676)
 
 This proxy is hardcoded in your browser e.g. Google Chrome / IE and is how it hits the internet. The example above shows how to `pip install` using a proxy.
 
