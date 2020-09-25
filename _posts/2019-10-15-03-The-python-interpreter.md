@@ -39,7 +39,7 @@ Try entering the following to print thing to the console window
 
 ```python
 >>> 'Hello World'
-Hello World
+'Hello World'
 ```
 
 This gives the string representation of the string `'Hello World'` which is by definition `Hello World`
