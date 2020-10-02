@@ -15,7 +15,7 @@ comments: true
 # Learning Outcomes
 {:.no_toc}
 
- - Be able to use python as a caculator
+ - Be able to use python as a calculator
  - Understand logical and boolean operations available
  - lazy boolean evaluation
  - Read a traceback to debug code
@@ -381,7 +381,7 @@ dt = 1/252                              # using annualised vol so need days as f
 r = 0.02                                # annualised expected return
 ```
 
-### Exercise 5.2.2: Calculate the value of $S_{t+1}$ for a single time step
+### Exercise 5.2.1: Calculate the value of $S_{t+1}$ for a single time step
 
 Use the function `np.exp()` as the exponential function `e` and `np.sqrt` for the squareroot function
 
@@ -390,7 +390,13 @@ Use the function `np.exp()` as the exponential function `e` and `np.sqrt` for th
 # Solve me!
 ```
 
-### Exercise 5.2.3: GBM for an Equity
+Your answer should be exactly (the last digit may be different but no others!)
+
+```python
+100.31936176261115
+```
+
+### Exercise 5.2.2: GBM for an Equity
 This exercise will reinforce the learning in 5.2.2 and also require knowledge of the boolean operations covered earlier in this section.
 
 Equities cannot have a value less than zero, $S_{t} \ge0\ \forall t$
@@ -400,7 +406,7 @@ Lets increase the volatility $\sigma$ significantly to 1000% and now model the s
 **Modify the earlier Fibonacci Series example to loop the calculation of $S_{t+1}$:**
 1. Set `sigma` to have a value of 1000%
 2. print the current price `s_t` at each time step
-3. Stop the similution once the stock price reaches zero
+3. Stop the simulation once the stock price reaches zero
 
 **Hint** Remember that you can reassign the variable `s_t` and you will want a new `epsilon = np.random.standard_normal()` to be calculated at each iteration. Also using `0` exactly might take a while to converge, for example $10^{-250}$ is still not zero but in finance anything less than $0.01 is essentially zero. Another way you can represent `0.01` is in exponential form as `1e-2` which stands for $10^{-2}$ 
 
@@ -411,8 +417,43 @@ Lets increase the volatility $\sigma$ significantly to 1000% and now model the s
 
 This example should frustrate you. Bear in mind that frustration is part of the journey and don't be afraid to ask. If you don't mess up, you won't learn!
 
+To check your solution, you should get **exactly** the following:
+
+```python
+100
+112.13879641805384
+84.29357966694793
+103.95704620173869
+222.53025983690668
+157.4687454246345
+111.43051850624998
+247.12109431827315
+328.64678816306173
+200.519035767586
+231.44830683293753
+141.75461677171188
+86.6937688048521
+82.80352071570734
+20.345992875883873
+5.629128022692305
+3.239481761504343
+1.4036225060502883
+1.4030946735581837
+0.6494337451435577
+0.2187872467390197
+0.4517091002626084
+0.3213334455297651
+0.2749762670387091
+0.0919131825252341
+0.05349468201249927
+0.04704589325853863
+0.01868521263246368
+0.019415400963917445
+0.010906582129479083
+```
+
 # Next Topic
 {:toc}
-Wait until next week for "05: Basic Mathematical Operations & Debugging"
+Wait until next week for "06: Libraries"
 
 <!-- [06: Libraries](https://flipdazed.github.io/blog/python%20tutorial/06-Libraries) -->
