@@ -6,7 +6,7 @@ date: 2019-10-23 22:32 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
-published: false
+published: true
 redirect_from: "/2019-10-23-05-Basic-Mathematical-Operations-and-Debugging/"
 language: EN
 comments: true
@@ -413,5 +413,6 @@ This example should frustrate you. Bear in mind that frustration is part of the 
 
 # Next Topic
 {:toc}
+Wait until next week for "05: Basic Mathematical Operations & Debugging"
 
-[06: Libraries](https://flipdazed.github.io/blog/python%20tutorial/06-Libraries)
+<!-- [06: Libraries](https://flipdazed.github.io/blog/python%20tutorial/06-Libraries) -->

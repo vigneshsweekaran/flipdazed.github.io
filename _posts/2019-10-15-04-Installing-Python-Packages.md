@@ -121,6 +121,4 @@ This proxy is hardcoded in your browser e.g. Google Chrome / IE and is how it hi
 # Next Topic
 {:toc}
 
-Wait until next week for "05: Basic Mathematical Operations & Debugging"
-
-<!-- [05: Basic Mathematical Operations & Debugging](https://flipdazed.github.io/blog/python%20tutorial/05-Basic-Mathematical-Operations-and-Debugging) -->
+[05: Basic Mathematical Operations & Debugging](https://flipdazed.github.io/blog/python%20tutorial/05-Basic-Mathematical-Operations-and-Debugging)
