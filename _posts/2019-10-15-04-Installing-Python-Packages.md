@@ -29,7 +29,7 @@ comments: true
 Run the following
 
 ```sh
-$ python -c "import requests"
+$ python -c "import pyfolio"
 ```
 
 we will see how to fix this issue
@@ -48,7 +48,7 @@ $ python -m pip install PACKAGE
 for example
 
 ```sh
-$ python -m pip install requests --proxy https://path.to.my.proxy:1234 -IU
+$ python -m pip install pyfolio --proxy https://path.to.my.proxy:1234 -IU
 ```
 
 Here we introduce three very useful flags when in a corporate environment. Almost all corporations will have proxies. You need to specify the proxy to hit the internet programmatically.
