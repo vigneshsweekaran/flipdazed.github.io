@@ -15,7 +15,7 @@ comments: true
 # Learning Outcomes
 {:.no_toc}
 
- - Be able to use pytthon as a caculator
+ - Be able to use python as a caculator
  - Understand logical and boolean operations available
  - lazy boolean evaluation
  - Read a traceback to debug code
