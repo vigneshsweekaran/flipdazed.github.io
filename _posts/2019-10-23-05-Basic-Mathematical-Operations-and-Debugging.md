@@ -454,6 +454,5 @@ To check your solution, you should get **exactly** the following:
 
 # Next Topic
 {:toc}
-Wait until next week for "06: Libraries"
 
-<!-- [06: Libraries](https://flipdazed.github.io/blog/python%20tutorial/06-Libraries) -->
+[06: Libraries](https://flipdazed.github.io/blog/python%20tutorial/06-Libraries)
