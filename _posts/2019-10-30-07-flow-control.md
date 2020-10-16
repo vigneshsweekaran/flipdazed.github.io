@@ -6,7 +6,7 @@ date: 2019-10-30 19:35:00 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
-published: false
+published: true
 redirect_from: "/2019-10-30-07-flow-control/"
 language: EN
 comments: true
@@ -203,7 +203,7 @@ This exercise is a recap of the terminal skills in session 1. It is also extreme
 
 ### Exercise 7.2.4: Find and replace!
 
-Find all files containing the string `'test'` and modify it to be `'test2'`. Check your solution.
+Find all files containing the string `'test'` and modify it to be `'test2'`. (This assumes you have ran the example above to create a file with `'test'` inside it). Check your solution.
 
 **Hint** If you simply use `fobj.write('test2')` you will overwrite the entire file contents! This may not be ideal in most scenarios. 
 
@@ -215,4 +215,6 @@ Find all files containing the string `'test'` and modify it to be `'test2'`. Che
 # Next Topic
 {:toc}
 
-[08: Functions and Editors](https://flipdazed.github.io/blog/python%20tutorial/08-functions-and-editors)
+Wait until next week for "08: Functions and Editors"
+
+<!-- [08: Functions and Editors](https://flipdazed.github.io/blog/python%20tutorial/08-functions-and-editors) -->
