@@ -6,7 +6,7 @@ date: 2019-10-30 19:35:00 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
-published: false
+published: true
 redirect_from: "/2019-10-30-08-functions-and-editors/"
 language: EN
 comments: true
@@ -381,5 +381,6 @@ Explicitly
 
 # Next Topic
 {:toc}
+Wait until next week for "09: Lists and Tuples"
 
-[09: Lists and Tuples](https://flipdazed.github.io/blog/python%20tutorial/09-lists-and-tuples)
+<!-- [09: Lists and Tuples](https://flipdazed.github.io/blog/python%20tutorial/09-lists-and-tuples) -->

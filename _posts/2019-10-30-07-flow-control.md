@@ -215,6 +215,6 @@ Find all files containing the string `'test'` and modify it to be `'test2'`. (Th
 # Next Topic
 {:toc}
 
-Wait until next week for "08: Functions and Editors"
+<!-- Wait until next week for "08: Functions and Editors" -->
 
-<!-- [08: Functions and Editors](https://flipdazed.github.io/blog/python%20tutorial/08-functions-and-editors) -->
+[08: Functions and Editors](https://flipdazed.github.io/blog/python%20tutorial/08-functions-and-editors)
