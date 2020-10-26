@@ -288,6 +288,14 @@ True
 
 Use this example to write a proper docstring for the function `gbm` and run the test case with the `doctest` module as shown further up the page in an earlier example.
 
+A good way of running the test cases in `ipython` is below
+```python
+import doctest
+doctest.run_docstring_examples(the_function_you_want_to_test, globals(), True)
+```
+`globals()` is a function that contains all the global variables currently defined (in your ipython session). It might be worth searching the internet for the difference between `globals()` and `locals()` to further get an idea of how functions are used in python!
+
+
 ## Exercise 8.3: The `XOR` function
 
 Given two variables `a` and `b` the `OR` function will return `True` for every instance except when
@@ -332,6 +340,11 @@ np.random.seed(42)
 
 
 # Solve Me!
+```
+
+The following will help you check your code
+```python
+assert gbms(100, 4, 0.02, .1, 1/252) - 101.4864244028311 < 1e10
 ```
 
 ## Exercise 8.5: Recursion
