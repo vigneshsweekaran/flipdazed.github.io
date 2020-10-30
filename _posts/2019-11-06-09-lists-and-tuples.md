@@ -6,7 +6,7 @@ date: 2019-11-06 01:35:00 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
-published: false
+published: true
 redirect_from: "/2019-11-06-09-lists-and-tuples/"
 language: EN
 comments: true
@@ -621,7 +621,7 @@ It can be tricky but in short use `numpy` arrays where possible for any math tha
 ## Exercise 9.1: Nested loops
 This exercise is to help you understand iteration across more than one dimension.
 
-Find the trace of the matrix `a`. The trace is defined as the sum of all the diagonal elements.
+Find the trace of the matrix `a`. The trace is defined as the sum of all the diagonal elements (this is 14 from visual inspection).
 
 ```python
 a = np.array([[1, 3, 5],[1, 4, 6],[7, 6, 9]])
@@ -665,12 +665,25 @@ Use the same values for `dt = 1/252`, `sigma`, `mean` etc that you used before, 
 
 
 ```python
-path_len = 504
-dt = 1/252
-r = 1.02
-sigma = 1000
+import numpy as np
+
+np.random.seed(42)
+sigma = .6729                           # annualised volatility of 67.29%
+dt = 1/252                              # using annualised vol so need days as frac of yr
+r = 0.02                                # annualised expected return
+path_len = 504                          # 2 years of 252 business days
 # solve me
 ```
+
+as a check you should get the following
+```python
+>>> path[:5]
+[100,
+ 102.04421752046065,
+ 101.36484570799986,
+ 104.10104255605592,
+ 110.95250573627207]
+ ```
 
 ### Exercise 9.2.2: Plotting results
 Plot your stock path using `matplotlib` - you will certainly want to google this
@@ -682,17 +695,49 @@ Plot your stock path using `matplotlib` - you will certainly want to google this
 # Solve me!
 ```
 
+you should get the following
+<figure>
+  <img src="{{ site.baseurl }}/media{{page.redirect_from}}sln_img_0.png" />
+  <figcaption>Stonks!</figcaption>
+</figure>
+
 ### Exercise 9.2.3: Monte Carlo
 
 In Exercise 9.2.1 you simulated a single path of a stock using GBM. Now create `paths_num = 1000` paths and store each of these paths in another list named `paths`
 
 **Hint** `paths` will be a list of lists & you will require two `for` loops. I have declared the empty list for you to fill below
+and to help you on the way I have done the first loop... You will need to finish the code off by adding another loop and the formula for caluclating $s_t$.
 
+Lets restrict this time to one year of simulation to save our CPUs.
 
 ```python
+import numpy as np
+
+np.random.seed(42)
+sigma = .6729                           # annualised volatility of 67.29%
+dt = 1/252                              # using annualised vol so need days as frac of yr
+r = 0.02                                # annualised expected return
+path_len = 252                          # only simulating 1y this time
+
+paths_n = 1000
 paths = []
-# Solve me!
+for i in range(paths_n):
+    s_t = 100
+    path = [s_t]
+    ...
+    # solve me!
 ```
+
+(The full solution takes about 3-4seconds to run on my macbook)
+TO verify your solution you should get
+```python
+>>> paths[3][:5]
+[100,
+ 104.481881330148,
+ 100.2784519513296,
+ 112.02421958412168,
+ 114.29778249864029]
+ ```
 
 ### Exercise 9.2.4: Plotting multiple lines on one plot
 Plot all 1000 paths with `pandas` using `dt` as the index. This is a little more involved so read carefully!
@@ -748,6 +793,13 @@ Now plot with the default `pandas` plot function. Make sure to pass the argument
 # Solve me!
 ```
 
+you should get the following
+<figure>
+  <img src="{{ site.baseurl }}/media{{page.redirect_from}}sln_img_1.png" />
+  <figcaption>Lots of stonks!</figcaption>
+</figure>
+
+
 ## Exercise 9.2.5: Prove empirically GBM returns are Normally distributed 
 Prove that the 1-step stock returns are normally distributed under the GBM model by fitting a Gaussian distribution to the probability distribution function of the 1-day returns - Don't worry it's not as hard as it sounds :)
 
@@ -766,7 +818,19 @@ Without proof 2 is equal to 1 if $\Delta t \ll T$
 
 
 ```python
+rets_1d = ...
 # Solve me!
+```
+
+You should get the following as a check
+
+```python
+>>> rets_1d.iloc[:3, :2]
+                 0         1
+years                       
+0.003968  0.020236  0.038088
+0.007937 -0.006680  0.089136
+0.011905  0.026636  0.042946
 ```
 
 ### Exercise 9.2.5.3: Check your results
@@ -798,8 +862,11 @@ print(f'Difference in stdv samples vs theory: {100*(stdv_th - stdv_ac)/stdv_ac:5
 **Note** Google `f-string` formatting!
 
 
+After running the code about you should get the following the show that you have converged to the mean
+and standard deviation of a normal distribution
 ```python
-# Solve me
+Difference in mean samples vs theory:  0.99%
+Difference in stdv samples vs theory: -0.01%
 ```
 
 ### Exercise 9.2.5.3: Plot theory vs. empirical results (reusing `matplotlib` axes)
@@ -828,11 +895,14 @@ ax.legend()
 ```
 
 
-```python
-# Solve me!
-```
+you should get the following
 
-### [Optional] Exercise 9.2.5.4: Show this holds for 20-day returns
+<figure>
+  <img src="{{ site.baseurl }}/media{{page.redirect_from}}sln_img_2.png" />
+  <figcaption>Standard!</figcaption>
+</figure>
+
+### [Optional: This requires undergrad maths!] Exercise 9.2.5.4: Show this holds for 20-day returns
 Show the same is true for 20day returns by plotting the relationship with 20-day returns
 
 Note that this exercise is really aimed at structurers, derivatives traders and quants - if you haven't studied stochastic calculus at university then just ignore this question or ask a quant if you find it interesting
@@ -842,7 +912,18 @@ Note that this exercise is really aimed at structurers, derivatives traders and 
 # Solve me!
 ```
 
+you should get the following
+
+<figure>
+  <img src="{{ site.baseurl }}/media{{page.redirect_from}}sln_img_3.png" />
+  <figcaption>Someone sat on this one</figcaption>
+</figure>
+
+
 # Next Topic
 {:toc}
 
-[10: Dictionaries and Sets](https://flipdazed.github.io/blog/python%20tutorial/10-dictionaries-and-sets)
+Wait until next week for "10: Dictionaries and Sets"
+
+
+<!-- [10: Dictionaries and Sets](https://flipdazed.github.io/blog/python%20tutorial/10-dictionaries-and-sets) -->

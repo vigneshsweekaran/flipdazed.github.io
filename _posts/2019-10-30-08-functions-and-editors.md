@@ -394,6 +394,5 @@ Explicitly
 
 # Next Topic
 {:toc}
-Wait until next week for "09: Lists and Tuples"
 
-<!-- [09: Lists and Tuples](https://flipdazed.github.io/blog/python%20tutorial/09-lists-and-tuples) -->
+[09: Lists and Tuples](https://flipdazed.github.io/blog/python%20tutorial/09-lists-and-tuples)
