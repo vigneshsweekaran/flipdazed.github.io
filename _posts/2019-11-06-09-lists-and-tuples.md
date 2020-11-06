@@ -923,7 +923,5 @@ you should get the following
 # Next Topic
 {:toc}
 
-Wait until next week for "10: Dictionaries and Sets"
 
-
-<!-- [10: Dictionaries and Sets](https://flipdazed.github.io/blog/python%20tutorial/10-dictionaries-and-sets) -->
+[10: Dictionaries and Sets](https://flipdazed.github.io/blog/python%20tutorial/10-dictionaries-and-sets)

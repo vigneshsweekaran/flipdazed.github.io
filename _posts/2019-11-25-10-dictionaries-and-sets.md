@@ -6,7 +6,7 @@ date: 2019-11-25 01:35:00 +0000
 tags: Python Tutorial Learning
 category: Python Tutorial
 author: am
-published: false
+published: true
 redirect_from: "/2019-11-25-10-dictionaries-and-sets/"
 language: EN
 comments: true
@@ -1191,8 +1191,11 @@ so we can calculate in `python` as
 It turns out that this is slightly off the mark with what I found on the internet but I suspect that is due to the $\beta$ on Yahoo Finance being paticularly high compared to other sources
 
 
+ -->
+
 # Next Topic
 {:toc}
 
-[11: Classes and Modules](https://flipdazed.github.io/blog/python%20tutorial/11-classes-and-modules)
- -->
+Wait until next week for "11: Classes and Modules"
+
+<!-- [11: Classes and Modules](https://flipdazed.github.io/blog/python%20tutorial/11-classes-and-modules) -->
