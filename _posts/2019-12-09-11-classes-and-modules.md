@@ -248,7 +248,7 @@ Remember that abstraction is a tool: You should only use tools if they make your
 
 
 #### Example: A bad class 
-I regularly see code from juniors that will define a single `class` in a module that will never
+I regularly see code from beginners that will define a single `class` in a module that will never
 change in its parameterisation and will only ever be called once with functions that do indepedent tasks.
 
 However, just because they functions were all for the specific task they may have wrote a class like
