@@ -243,7 +243,7 @@ Remember that abstraction is a tool: You should only use tools if they make your
 
 > An analogy is laying a drainage ditch in your back garden. An automated drainage ditcher
 > is clearly far more adept at this task. By the time you source one and finally figure out how it works
-> you could have already been at the pub: Garden swap free. Also in using this new tool, it's likely
+> you could have already been at the pub. Also in using this new tool, it's likely
 > that you may misconfigure it and have a lot of issues as a result! Pick the right tool for the right job!
 
 
