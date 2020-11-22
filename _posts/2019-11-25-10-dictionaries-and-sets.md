@@ -1196,6 +1196,6 @@ It turns out that this is slightly off the mark with what I found on the interne
 # Next Topic
 {:toc}
 
-Wait until next week for "11: Classes and Modules"
+<!-- Wait until next week for "11: Classes and Modules" -->
 
-<!-- [11: Classes and Modules](https://flipdazed.github.io/blog/python%20tutorial/11-classes-and-modules) -->
+[11: Classes and Modules](https://flipdazed.github.io/blog/python%20tutorial/11-classes-and-modules)
