@@ -661,4 +661,8 @@ Propose a fix to this!
 # Next Topic
 {:toc}
 
-That's all - No go roam the wild !
+That's it that's all - Now go roam the wild ! At this stage you should be fairly proficient at beginner concepts. The best way to progress is to find a project idea to implement. Aim small with a very well defined success criteria. This is important because you want an end point at which you can determine you have succeeded and move on. It is also important to find something that you genuinely find interesting as a first project idea.
+
+Migrating an Excel spreadsheet to python may seem useful but it is inantely boring as hell. How about controlling a toy drone? Scraping holiday websites for cheap deals? Silly fun ideas are by far the best ideas.
+
+You are now truly a master of computers so go and have some realy fun!
